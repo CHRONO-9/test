@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A8.net 広告コード一括取得ブックマークレット｜BizHack AI</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      margin: 0;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 640px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin-top: 0;
+      color: #38bdf8;
+    }
+    p {
+      line-height: 1.7;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+    .bookmarklet-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      cursor: grab;
+      margin: 1.5rem 0;
+      border: 2px dashed #93c5fd;
+      transition: transform 0.2s;
+    }
+    .bookmarklet-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+    }
+    .steps {
+      text-align: left;
+      background: #0f172a;
+      padding: 1.25rem 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      margin-top: 1.5rem;
+    }
+    .steps ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>⚡ A8.net コード一括取得ツール</h1>
+    <p>
+      下の青いボタンをブラウザの<strong>「ブックマークバー」にドラッグ＆ドロップ</strong>してください。<br>
+      A8.netの広告リンク作成画面で押すだけで、全コードを自動取得してコピーします。
+    </p>
+
+    <!-- ブックマークレットリンク -->
+    <a class="bookmarklet-btn" href="javascript:(function(){try{const textareas=Array.from(document.querySelectorAll('textarea,input[type=%22text%22]'));const codes=[];const seen=new Set();textareas.forEach(el=>{const val=(el.value||el.innerText||'').trim();if(val.includes('px.a8.net')&&(val.includes('<a href=')||val.includes('a8mat='))){if(!seen.has(val)){seen.add(val);codes.push(val);}}});if(codes.length===0){alert('【BizHack AI 取得ツール】\n画面から A8.net の広告コードが見つかりませんでした。\n「広告リンク作成」画面を開いてから再度実行してください。');return;}const resultText=codes.join('\n\n');navigator.clipboard.writeText(resultText).then(()=>{showModal(codes.length,resultText,true);}).catch(()=>{showModal(codes.length,resultText,false);});function showModal(count,text,copied){const old=document.getElementById('bizhack-a8-modal');if(old)old.remove();const modal=document.createElement('div');modal.id='bizhack-a8-modal';modal.style.cssText='position:fixed;top:20px;right:20px;z-index:999999;background:#0f172a;color:#fff;padding:20px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.5);font-family:sans-serif;max-width:420px;border:2px solid #38bdf8;';modal.innerHTML=`<div style=%22display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;%22><strong style=%22color:#38bdf8;font-size:16px;%22>⚡ BizHack AI コード抽出完了</strong><button id=%22bizhack-close-btn%22 style=%22background:transparent;border:none;color:#94a3b8;font-size:20px;cursor:pointer;%22>&times;</button></div><p style=%22margin:0 0 10px 0;font-size:14px;line-height:1.5;%22>${copied?`✅ <strong>${count}件</strong> の広告コードをコピーしました！`:`⚠️ <strong>${count}件</strong> を抽出しました`}</p><p style=%22margin:0 0 12px 0;font-size:12px;color:#94a3b8;%22>このまま AI チャットにペースト（Ctrl+V）してください。</p><textarea id=%22bizhack-copy-area%22 readonly style=%22width:100%;height:80px;background:#1e293b;color:#cbd5e1;border:1px solid #334155;border-radius:6px;font-size:11px;padding:6px;box-sizing:border-box;%22>${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</textarea><button id=%22bizhack-re-copy%22 style=%22margin-top:10px;width:100%;background:#2563eb;color:#fff;border:none;padding:8px;border-radius:6px;font-weight:bold;cursor:pointer;%22>もう一度コピーする</button>`;document.body.appendChild(modal);document.getElementById('bizhack-close-btn').onclick=()=>modal.remove();document.getElementById('bizhack-re-copy').onclick=()=>{const area=document.getElementById('bizhack-copy-area');area.select();document.execCommand('copy');alert('コピーしました！');};if(copied){setTimeout(()=>{if(modal)modal.remove();},8000);}}}catch(err){alert('エラー: '+err.message);}})();">
+      👉 【BizHack】A8コード取得
+    </a>
+
+    <div class="steps">
+      <h3 style="margin-top:0; color:#38bdf8; font-size:1rem;">📌 使い方（3ステップ）</h3>
+      <ol>
+        <li>上のボタン「<strong>👉 【BizHack】A8コード取得</strong>」を、ブラウザ上部の<strong>ブックマークバーへドラッグ＆ドロップ</strong>します。<br><small style="color:#64748b;">※ブックマークバーが表示されていない場合は「Ctrl + Shift + B」で表示</small></li>
+        <li>A8.net の「<strong>広告リンク作成</strong>」画面を開き、ブックマークに追加されたボタンを<strong>ポチッと1クリック</strong>します。</li>
+        <li>画面上の全広告コードが一瞬でクリップボードにコピーされるので、<strong>AIチャットに「Ctrl + V（貼り付け）」して送信</strong>するだけです！</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

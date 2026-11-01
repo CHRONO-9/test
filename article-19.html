@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術｜BizHack AI</title>
+  <meta name="description" content="VLOOKUPやピボットテーブルに挫折した全事務職へ。Excel on the WebとMicrosoft Copilotを連携させ、日本語の自然言語指示だけで複数条件のクロス集計・複合グラフ生成・前月比マイナス20%以上の異常値赤字ハイライトを1分で完了させる実践プロンプト集を徹底解説。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-19.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術｜BizHack AI">
+  <meta property="og:description" content="VLOOKUPやピボットテーブルに挫折した全事務職へ。Excel on the WebとMicrosoft Copilotを連携させ、日本語の自然言語指示だけで複数条件のクロス集計・複合グラフ生成・前月比マイナス20%以上の異常値赤字ハイライトを1分で完了させる実践プロンプト集を徹底解説。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-19.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-19.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術｜BizHack AI">
+  <meta name="twitter:description" content="VLOOKUPやピボットテーブルに挫折した全事務職へ。Excel on the WebとMicrosoft Copilotを連携させ、日本語の自然言語指示だけで複数条件のクロス集計・複合グラフ生成・前月比マイナス20%以上の異常値赤字ハイライトを1分で完了させる実践プロンプト集を徹底解説。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-19.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術",
+        "description": "VLOOKUPやピボットテーブルに挫折した全事務職へ。Excel on the WebとMicrosoft Copilotを連携させ、日本語の自然言語指示だけで複数条件のクロス集計・複合グラフ生成・前月比マイナス20%以上の異常値赤字ハイライトを1分で完了させる実践プロンプト集を徹底解説。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-19.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "桐生 健太（きりゅう けんた）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-19.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "事務職・エクセルDX", "item": "https://www.bizhack-ai.com/article-19.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+        <a href="privacy.html" class="nav-link">規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#latest-pickup" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">第19弾「Excel×Copilot実践集・関数の壁突破」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-hidden="false" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-24T00:00:00+09:00" class="update-time">2026.10.24 00:00</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-biz">事務職・エクセルDX</span>
+          <h1 class="article-title">【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026年10月24日</span>
+            <span>読了目安：約7分</span>
+            <span>ライター［業務プロセス改善］桐生 健太（きりゅう けんた・42歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-19.png" alt="【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card fv-theme-kiryu" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#2563eb; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太（きりゅう けんた・42歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">桐生 健太（きりゅう けんた・42歳）</span>
+                <span class="fv-author-badge" style="background:#dbeafe; color:#1e40af;">業務プロセス改善リード</span>
+              </div>
+              <p class="fv-author-comment">
+                「月末の集計作業で、SUMIFSやXLOOKUPの引数を1文字間違えて『#N/A』や『#VALUE!』と格闘していませんか？ Microsoft Copilot in Excelを使えば、数式を1文字も手打ちすることなく、日常会話の日本語1行でクロス集計もグラフ作成も一瞬で終わります。現場の事務職が今日からすぐ使える実践プロンプトをお届けします！」
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：ExcelのCopilotにそのまま投げるだけ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-19">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-19" class="fv-try-code">【担当者別・月別クロス集計プロンプト】
+担当者ごとの売上合計と受注件数を月別でクロス集計し、
+売上合計の降順で新しいシートにピボット集計表として出力してください。
+さらに、前月比マイナス20%以上のセルを薄い赤色でハイライトしてください。</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>Excelで対象データを「Ctrl + T（テーブル化）」した状態でCopilotウィンドウに貼り付けるだけで即実行されます。</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+              <div><strong>関数・ピボット操作の完全手放し</strong><br>複雑なSUMIFSやピボットテーブルを日本語1行で自動生成</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+              <div><strong>売上・コストの異常値を即時検知</strong><br>前月比や目標未達のセルを瞬時に赤字ハイライト</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+              <div><strong>上司が一目で納得する複合グラフ化</strong><br>棒グラフ×折れ線グラフを1クリックでシートに挿入</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-1" class="fv-quick-btn primary" style="background:#2563eb;">📋 1. なぜ関数で挫折するのか ↓</a>
+            <a href="#sec-2" class="fv-quick-btn secondary">2. Copilot必須ルール「Ctrl+T」 ↓</a>
+            <a href="#sec-3" class="fv-quick-btn secondary">3. 実践集計プロンプト集 ↓</a>
+            <a href="#sec-4" class="fv-quick-btn secondary">4. 異常値検出ハイライト ↓</a>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. 「関数の組み合わせ」で毎月何時間残業していますか？</a></li>
+            <li><a href="#sec-2">2. 【絶対前提】Copilot in Excelが100%動く「テーブル化（Ctrl+T）」の鉄則</a></li>
+            <li><a href="#sec-3">3. 【実践プロンプト①】日本語1行で複数条件クロス集計＆自動集計表作成</a></li>
+            <li><a href="#sec-4">4. 【実践プロンプト②】前月比マイナス20%以上の「異常値」を1秒で赤字ハイライト</a></li>
+            <li><a href="#sec-5">5. 【実践プロンプト③】上司が一目で納得する「売上推移×前年比較グラフ」の自動生成</a></li>
+            <li><a href="#sec-6">6. 読者モニター鈴木さん（32歳・総務経理）の実務検証レポート</a></li>
+            <li><a href="#sec-7">7. まとめ：数式を手打ちする時代から「AIに要件を語る時代」へ</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p class="article-lead">
+            「SUMIFSの条件範囲を間違えて数字が合わない」「VLOOKUPの参照列がズレて#REF!エラー」「ピボットテーブルのフィールド配置に毎回手こずる」――月末や期末のたびに、Excelの関数と格闘して深夜残業していませんか？ Microsoft 365の<strong>「Copilot in Excel」</strong>を使えば、そうした数式の手打ちは過去のものになります。Excelシート内のデータを対象に、日本語でやりたいことを伝えるだけで、<strong>集計列の追加、クロス集計表の新規シート展開、異常値の条件付き書式、複合グラフの挿入までが数秒で完結</strong>します。本記事では、事務職やバックオフィス担当者が今日からそのまま使える実践プロンプト集を徹底解説します。
+          </p>
+
+          <h2 id="sec-1">1. 「関数の組み合わせ」で毎月何時間残業していますか？</h2>
+          <p>
+            商社やメーカー、IT企業のバックオフィスで共通する最大の悩みは、「基幹システムから吐き出したCSVデータを、経営陣や上司が見やすい形に整形・集計する作業」に膨大な時間が奪われていることです。
+          </p>
+          <p>
+            特に、複数条件が絡む集計（例:「東日本エリアかつ商品カテゴリAで、前年同期比の売上推移を出してほしい」など）を求められた場合、関数を何重にも組み合わせたり、ピボットテーブルをイチから組んで微調整したりと、1つの資料に1〜2時間かかるのが日常茶飯事でした。
+          </p>
+          <div class="point-box">
+            <strong>❌ これまでのExcel作業のペイン：</strong><br>
+            ・関数の綴りやカンマ、絶対参照（$マーク）の位置ミスでエラー連発<br>
+            ・前任者が作った「複雑怪奇なマクロや数式」が壊れるのが怖くて触れない<br>
+            ・急な集計軸の変更（「商品別じゃなくて担当者別で出して」）に即座に対応できない
+          </div>
+
+          <h2 id="sec-2">2. 【絶対前提】Copilot in Excelが100%動く「テーブル化（Ctrl+T）」の鉄則</h2>
+          <p>
+            Copilot in Excelを使い始める前に、<strong>絶対に守らなければならないルールが1つだけ</strong>あります。それは、<strong>「集計対象のデータ範囲をExcelの『テーブル』に変換しておくこと」</strong>です。
+          </p>
+          <p>
+            通常のセル範囲のままだと、Copilotのアイコンがグレーアウトして「データをテーブルに変換してください」というメッセージが出ます。以下のショートカットキーを覚えておきましょう。
+          </p>
+          <div class="step-card">
+            <h4>💡 1秒でテーブル化するステップ</h4>
+            <ol>
+              <li>データが入力されているセルのどこか1箇所をクリック</li>
+              <li>キーボードの <code>Ctrl + T</code>（Macは <code>Cmd + T</code>）を押す</li>
+              <li>「先頭行をテーブルの見出しとして使用する」にチェックが入っていることを確認して [OK] を押す</li>
+            </ol>
+          </div>
+          <p>
+            これだけで準備完了です。画面右上の [Copilot] ボタンをクリックすると、AIチャットパネルが開き、対話形式で指示を出せるようになります。
+          </p>
+
+          <h2 id="sec-3">3. 【実践プロンプト①】日本語1行で複数条件クロス集計＆自動集計表作成</h2>
+          <p>
+            それでは、実際に現場で最も頻出する「クロス集計」のプロンプトを見ていきましょう。
+          </p>
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 実践プロンプト：部門別・商品別の売上クロス集計</span>
+              <button class="copy-btn" data-target="p-cross-19">プロンプトをコピー</button>
+            </div>
+            <pre id="p-cross-19">このテーブルのデータをもとに、
+行に「部門名」、列に「商品カテゴリ」、値に「売上金額の合計」を配置したクロス集計表を作成してください。
+結果は現在のシートを汚さず、新しいワークシートに追加してください。</pre>
+          </div>
+          <p>
+            Copilotはこの指示を受けると、瞬時にピボット集計をバックグラウンドで実行し、<strong>「集計表を新しいシートに挿入」ボタンを提案</strong>してくれます。クリックするだけで、完璧にレイアウトされた集計シートが1枚生成されます。
+          </p>
+
+          <h2 id="sec-4">4. 【実践プロンプト②】前月比マイナス20%以上の「異常値」を1秒で赤字ハイライト</h2>
+          <p>
+            データ集計の目的は、単に数字を並べることではなく、「問題のある箇所（異常値や目標未達）」を発見することです。従来は条件付き書式ダイアログを開いて数式ルールを手打ちしていましたが、Copilotなら日本語で指示するだけで完結します。
+          </p>
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 実践プロンプト：異常値の自動検出＆赤字ハイライト</span>
+              <button class="copy-btn" data-target="p-anomaly-19">プロンプトをコピー</button>
+            </div>
+            <pre id="p-anomaly-19">「前月比達成率」列の値を確認し、
+前月比が80%未満（マイナス20%以上）になっているセルを薄い赤色の背景色で塗りつぶし、
+文字色を濃い赤色にハイライトしてください。</pre>
+          </div>
+          <p>
+            数秒で条件付き書式が自動適用され、会議や経営報告で即座に「どこに課題があるか」を一目で説明できる資料に仕上がります。
+          </p>
+
+
+          <h2 id="sec-5">5. 【実践プロンプト③】上司が一目で納得する「売上推移×前年比較グラフ」の自動生成</h2>
+          <p>
+            数字の表だけでは上司やクライアントに伝わりません。グラフ化を指示する際も、専門的なグラフ設定メニューをいじる必要はありません。
+          </p>
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 実践プロンプト：売上推移と前年比較の複合グラフ生成</span>
+              <button class="copy-btn" data-target="p-graph-19">プロンプトをコピー</button>
+            </div>
+            <pre id="p-graph-19">月ごとの「今年度売上」を縦棒グラフで、
+「前年度売上」を折れ線グラフで重ね合わせた複合グラフを作成してください。
+タイトルは「2026年度 売上推移比較」とし、凡例を右上に配置してください。</pre>
+          </div>
+          <p>
+            Copilotは指示通りのグラフプレビューを生成し、ワンクリックでシート内の最適な余白位置に配置してくれます。色使いもOfficeテーマに沿って美しく調整されるため、そのまま報告スライドに貼り付けて利用できます。
+          </p>
+
+          <h2 id="sec-6">6. 読者モニター鈴木さん（32歳・総務経理）の実務検証レポート</h2>
+          <div class="voice-card">
+            <div class="voice-header">
+              <span class="voice-name">鈴木 美咲さん（32歳・メーカー総務経理担当）</span>
+              <span class="voice-tag">実務検証：月次売上レポート作成</span>
+            </div>
+            <p class="voice-text">
+              「毎月25日になると、各営業拠点から送られてくる売上データを集計して役員会用のレポートを作るのが私の担当でした。SUMIFSで条件を設定するだけで半日潰れ、数字が合わなくて泣きそうになっていました。<br><br>
+              今回、桐生さんのプロンプト通りに『データをCtrl+Tでテーブル化』してからCopilotに投げてみたところ、<strong>これまで4時間以上かかっていた拠点別・商品別のクロス集計と異常値チェックが、なんと『15分』で終わってしまいました。</strong>数式のエラーに怯えるストレスがゼロになったのが一番嬉しいです！」
+            </p>
+          </div>
+
+          <h2 id="sec-7">7. まとめ：数式を手打ちする時代から「AIに要件を語る時代」へ</h2>
+          <p>
+            これからのExcel実務において最も重要なスキルは、「関数の名前を暗記すること」ではありません。<strong>「自分がどんなアウトプットを求めているかを、明確な日本語でAIに指示できるプロンプト力」</strong>です。
+          </p>
+          <ul class="summary-list">
+            <li><strong>まずは <code>Ctrl + T</code> でテーブル化</strong>（これがCopilotの絶対スイッチ）</li>
+            <li><strong>集計軸（行・列・値）を言葉で指定するだけ</strong>でクロス集計シートが自動生成される</li>
+            <li><strong>前月比や目標未達の異常値は「条件付き書式」でAIに塗らせる</strong></li>
+            <li><strong>グラフ化も日常会話の日本語1行で複合グラフまで一発描画</strong></li>
+          </ul>
+          <p>
+            本記事のプロンプトを手元のExcelでコピペして、今月末の残業時間を劇的に削減してみてください！
+          </p>
+
+          <!-- 関連記事ナビゲーション -->
+          <div class="related-articles-box">
+            <div class="related-title">あわせて読みたい！おすすめのDX実践記事</div>
+            <div class="related-grid">
+              <a href="article-4.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第4弾・エクセル時短</span>
+                  <div class="related-card-title">【関数・マクロ不要】エクセルが苦手でも大丈夫！ChatGPTに「やりたいこと」を投げるだけの集計・VBA術</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+              <a href="article-11.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第11弾・スプシ自動化</span>
+                  <div class="related-card-title">【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにおまかせ！神ワザ7選</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 著者バイオカード -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #2563eb; overflow:hidden;">
+              <img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">桐生 健太（きりゅう けんた・42歳）</div>
+              <div class="bio-role">業務プロセス改善リード / 元・総合商社 バックオフィス統括</div>
+              <p class="bio-desc">
+                総合商社にて15年間にわたり全社のバックオフィス業務標準化およびERP・Excelマクロ刷新プロジェクトを主導。現場の事務職が数式やコードに悩まされず、本来のクリエイティブな業務に集中できる「ノーコード・対話型AI実務術」を提唱・啓発している。
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全18弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-18.html">一人起業のための完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notion手ぶらタスク管理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第16弾</span></div><a href="article-16.html">NotebookLMで社内文書ナレッジ化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第15弾</span></div><a href="article-15.html">ChatGPT Search競合調査術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第14弾</span></div><a href="article-14.html">Perplexity競合調査レポート術</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">当サイトについて（運営者情報）</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術｜BizHack AI</title>
+  <meta name="description" content="エンジニアに頼まず社内の見積計算機や工数シミュレーターを爆速自作！話題のClaude 3.5 SonnetとArtifacts機能を使って、コード知識ゼロで動くWebツールを作る超実践ガイド。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-13.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術｜BizHack AI">
+  <meta property="og:description" content="エンジニアに頼まず社内の見積計算機や工数シミュレーターを爆速自作！話題のClaude 3.5 SonnetとArtifacts機能を使って、コード知識ゼロで動くWebツールを作る超実践ガイド。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-13.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-13.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術｜BizHack AI">
+  <meta name="twitter:description" content="エンジニアに頼まず社内の見積計算機や工数シミュレーターを自作！コピペで動くプロンプト付き。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-13.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術",
+        "description": "エンジニアに頼まず社内の見積計算機や工数シミュレーターを爆速自作！話題のClaude 3.5 SonnetとArtifacts機能を使って、コード知識ゼロで動くWebツールを作る超実践ガイド。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-13.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "神崎 聡"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-13.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "業務アプリ・社内DX", "item": "https://www.bizhack-ai.com/article-13.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+        <a href="privacy.html" class="nav-link">規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#latest-pickup" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">第13弾「Claude 3.5×Artifacts 簡易Webツール作成術」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-18T00:00:00+09:00" class="update-time">2026.10.18 00:00</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-biz">現場実務・Web自作DX</span>
+          <h1 class="article-title">【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術</h1>
+          <div class="article-meta-bar">
+            <span>ライター［業務自動化］神崎 聡（かんざき さとし・51歳）</span>
+            <span>公開日：2026年10月18日</span>
+            <span>読了目安：約6分</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-13.png" alt="【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card fv-theme-kanzaki" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar">
+              <img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡（かんざき さとし・51歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">神崎 聡（かんざき さとし・51歳）</span>
+                <span class="fv-author-badge">データ実務・バックオフィスDX担当</span>
+              </div>
+              <p class="fv-author-comment">
+                「これまでエクセルマクロで作っていた計算ツールやシミュレーターは、誰かが計算式を壊してトラブルになりがちでした。Claude 3.5のArtifactsなら、HTML/CSS/JSで構成された壊れない独立ツールが一瞬で出力されます。チーム全員にファイルを渡すだけで即日共有できる、現場DXの最高峰ツールです！」
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：まずはこのままコピペ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-13">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-13" class="fv-try-code">以下の要件を満たす、ブラウザ上で直感的に動く「社内見積もり計算Webツール」をHTML/Tailwind CSS/JavaScriptで作成してください。
+
+# ツール要件:
+1. 商品プラン（基本プラン: 月額1万円、Proプラン: 月額3万円）をラジオボタンで選択
+2. 追加アカウント数（1人あたり月額1,000円）をスライダーで直感入力
+3. オプション項目（24時間サポート: +5,000円）をチェックボックスで選択
+4. 月額合計金額と年間合計金額（年払い10%割引）を画面右側に大きくリアルタイム表示
+5. 「見積書テキストを出力」ボタンを押すと、クリップボードにコピーされる機能</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>スマホ・PCのAIツールにそのまま貼って送信するだけで、即座に実務ツールや成果物が完成します。</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon">✓</span>
+              <div><strong>Artifactsの基本操作</strong><br>Claudeの画面右側でプレビューしながら動かす手法</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon">✓</span>
+              <div><strong>壊れない社内ツールの自作</strong><br>エクセルのマクロ崩れから永久に脱却</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon">✓</span>
+              <div><strong>チーム即時共有テクニック</strong><br>生成されたHTMLをワンクリックで配布する方法</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-1" class="fv-quick-btn primary">📋 1. Artifactsとは ↓</a>
+            <a href="#sec-2" class="fv-quick-btn secondary">2. ツール作成手順 ↓</a>
+            <a href="#sec-3" class="fv-quick-btn secondary">3. 実務プロンプト集 ↓</a>
+            <a href="#sec-5" class="fv-quick-btn secondary">4. チーム配布方法 ↓</a>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. 生成AIの歴史を変えた「Claude 3.5 Artifacts」とは？</a></li>
+            <li><a href="#sec-2">2. たった3ステップ！社内ツールを10分で作る黄金フロー</a></li>
+            <li><a href="#sec-3">3. 【実務で即役立つ】社内Webツール生成プロンプト3選</a></li>
+            <li><a href="#sec-4">4. 読者モニター高橋さん（30代チームリーダー）の実証レビュー</a></li>
+            <li><a href="#sec-5">5. 完成したツールをチームに安全に共有・配布する方法</a></li>
+            <li><a href="#sec-6">6. まとめ ＆ 自前DX人材へのステップアップ</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p class="article-lead">
+            「社内向けの見積もり計算ツールが欲しい」「毎月の工数シミュレーションを画面でポチポチ操作したい」。そう思っても、情シスや開発チームに依頼すると『数ヶ月待ち』と言われて諦めていませんか？Anthropic社の最新AI「Claude 3.5 Sonnet」に搭載された革命的機能<strong>「Artifacts（アーティファクト）」</strong>を使えば、プログラミング言語を1行も書かずに、日本語で要望を伝えるだけでブラウザ上で即動くWebアプリが10分で完成します。現場の自力DXを加速させる、まったく新しい仕事術をご紹介します。
+          </p>
+
+          <!-- 本文セクション -->
+          <h2 id="sec-1">1. 生成AIの歴史を変えた「Claude 3.5 Artifacts」とは？</h2>
+          <p>
+            従来のChatGPTなどの生成AIは、「質問するとチャット欄に長いコードが返ってくる」という形式でした。非エンジニアにとって、そのコードをどこに貼り付けてどう動かすのかは高いハードルでした。
+          </p>
+          <p>
+            それを一変させたのがClaude 3.5の<strong>「Artifacts（アーティファクト）」</strong>です。チャット画面の右側に専用の実行ウィンドウが開き、<strong>生成されたWebアプリやグラフがその場でリアルタイムに動き出します</strong>。ボタンをクリックしたり数値を打ち込んだりして、実際の使用感を試しながら「ボタンの色を変えて」「税率を10%にして」と日本語で修正していくだけで完成します。
+          </p>
+
+          <h2 id="sec-2">2. たった3ステップ！社内ツールを10分で作る黄金フロー</h2>
+          <ol>
+            <li><strong>Claude 3.5 Sonnetを開く</strong>：ブラウザで <code>claude.ai</code> にアクセスし、モデルにClaude 3.5 Sonnetを選択します。</li>
+            <li><strong>必要な入力項目と計算式を箇条書きで指示</strong>：「入力したい項目」「計算ルール」「表示させたいデザイン」を箇条書きで伝えます。</li>
+            <li><strong>右側ウィンドウで実際に動かして微調整</strong>：プレビュー画面を触りながら、「ここにもう1つ項目を追加して」と会話形式で磨き上げます。</li>
+          </ol>
+
+
+          <h2 id="sec-3">3. 【実務で即役立つ】社内Webツール生成プロンプト3選</h2>
+          <p>
+            Claude 3.5 Sonnet（Artifacts有効化状態）にそのままコピペするだけで、ブラウザ上で即座に動く3つの定番業務ツール用プロンプトです。
+          </p>
+
+          <div class="code-box">
+            <div class="code-header">
+              <span class="code-title">① 残業時間＆残業代シミュレーター</span>
+              <button type="button" class="copy-btn" data-target="prompt-claude-1">プロンプトをコピー</button>
+            </div>
+            <div class="code-content">
+              <pre id="prompt-claude-1">基本給と月の所定労働時間、残業時間、深夜労働時間を入力すると、割増賃金（1.25倍、1.5倍）を自動計算して総支給予測額を表示する社内用WebツールをHTML/Tailwind CSS/JavaScriptで作ってください。
+・36協定の上限（月45時間）に近づくと黄色・赤色のアラートバッジを表示する機能
+・見やすいカード型デザインで、リセットボタンと結果コピーボタンを付けてください。</pre>
+            </div>
+          </div>
+
+          <div class="code-box">
+            <div class="code-header">
+              <span class="code-title">② プロジェクト工数・人月計算ツール</span>
+              <button type="button" class="copy-btn" data-target="prompt-claude-2">プロンプトをコピー</button>
+            </div>
+            <div class="code-content">
+              <pre id="prompt-claude-2">タスク名と想定工数（時間）、担当者名を複数追加でき、人月換算（160時間=1人月）とチーム全体の稼働率プログレスバーをリアルタイム表示するWebツールをHTML/Tailwind CSS/JavaScriptで作ってください。
+・タスクの追加・削除が画面上で動的に行えること
+・合計工数と想定コスト（人月単価を入力可能）を自動算出してMarkdown表形式でコピーできるボタンを付けてください。</pre>
+            </div>
+          </div>
+
+          <div class="code-box">
+            <div class="code-header">
+              <span class="code-title">③ 営業案件・粗利率＆値引き限界シミュレーター</span>
+              <button type="button" class="copy-btn" data-target="prompt-claude-3">プロンプトをコピー</button>
+            </div>
+            <div class="code-content">
+              <pre id="prompt-claude-3">営業担当者が商談中にスマホやPCで即座に粗利を確認できる「値引き＆粗利率シミュレーター」をHTML/Tailwind CSS/JavaScriptで作ってください。
+・定価、仕入原価、数量、値引き率（0%〜30%のスライダー）を入力
+・売上合計、粗利額、粗利率（%）を大きく表示し、社内基準の粗利率（例：30%）を下回ったら赤字で「上長承認が必要」と警告表示する機能を入れてください。</pre>
+            </div>
+          </div>
+
+          <h2 id="sec-4">4. 読者モニター高橋さん（30代チームリーダー）の実証レビュー</h2>
+          <div class="monitor-review-box" style="background:#f8fafc; border-left:4px solid #0284c7; padding:1.25rem 1.5rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+            <div style="font-weight:700; color:#0369a1; margin-bottom:0.5rem;">🔍 読者モニター実証レビュー（高橋さん・30代チームリーダー）</div>
+            <p style="font-size:0.9rem; line-height:1.65; margin-bottom:0.75rem;">
+              「毎月のシフト作成と残業時間チェックに苦労していました。Claudeに『シフト希望時間を入力したら法令違反にならないか警告が出るツールを作って』と指示したら、本当に10分で色分け表示される画面が完成しました！社内の共有サーバーにHTMLファイルを1つ置くだけでメンバー全員が使えて感動しました。」
+            </p>
+          </div>
+
+          <h2 id="sec-5">5. 完成したツールをチームに安全に共有・配布する方法</h2>
+          <p>
+            Claudeの右上に表示される「Download HTML」ボタンを押すと、<code>.html</code> ファイルが保存されます。
+          </p>
+          <ul>
+            <li><strong>社内ファイルサーバーに置く</strong>：社内共有フォルダに置くだけで、ダブルクリックすれば誰のPC（EdgeやChrome）でも動きます。サーバーやデータベースの契約は不要です。</li>
+            <li><strong>NotionやTeamsに添付</strong>：タスク管理ツールにファイルを添付するだけで共有可能です。</li>
+          </ul>
+
+          <h2 id="sec-6">6. まとめ ＆ 自前DX人材へのステップアップ</h2>
+          <p>
+            「社内システムはIT部門が作るもの」という常識は崩れ去りました。現場の不満や非効率を最もよく知っているあなた自身が、AIの力を借りて解決ツールを生み出す時代です。ぜひ今日の午後、チームの面倒な計算をツール化してみてください！
+          </p>
+
+          <!-- あわせて読みたい関連記事2選 -->
+          <div class="related-articles-box">
+            <div class="related-articles-header">
+              <h3 class="related-articles-title">あわせて読みたい！業務自動化・ツール作成が加速する関連記事2選</h3>
+              <span class="related-articles-badge">おすすめ実践記事</span>
+            </div>
+            <div class="related-articles-grid">
+              <a href="article-11.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第11弾｜現場実務・スプシ時短</span>
+                  <div class="related-card-title">【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+              <a href="article-12.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第12弾｜日常実務・メール自動化</span>
+                  <div class="related-card-title">【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 著者バイオカード -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border-color:#0284c7;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="72" height="72" loading="lazy"></div>
+            <div>
+              <div class="bio-name">神崎 聡（かんざき さとし・51歳）｜データ実務・バックオフィスDX担当</div>
+              <div class="bio-role">熟練業務自動化コンサルタント（Excel / スプシ / 経理・法務文書DX）</div>
+              <p class="bio-desc">中堅・中小企業を中心に25年以上にわたり累計50社以上の総務・経理部門のペーパーレス化と表計算自動化を牽引。関数不要のエクセル・スプレッドシート集計、インボイス対応の請求書PDF自動仕訳、契約書・規程のAI要約で月末工数を平均80%削減。</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全13弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item is-current"><div class="item-meta"><span>第13弾（閲覧中）</span><span class="sidebar-badge-new">NEW</span></div><a href="article-13.html">Claude 3.5×Artifacts 社内ツール自作術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第12弾</span></div><a href="article-12.html">Gmail×GAS メール自動返信術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第11弾</span></div><a href="article-11.html">スプレッドシート×AI実務テクニック</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第10弾</span></div><a href="article-10.html">請求書・領収書PDFの自動仕訳術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第9弾</span></div><a href="article-9.html">難解な規程・書類を3分要約</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全13弾の実践特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32"></div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">当サイトについて（運営者情報）</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="privacy.html#contact">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

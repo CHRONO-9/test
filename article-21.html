@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術｜BizHack AI</title>
+  <meta name="description" content="1時間の会議の後に録音を聞き直して議事録を書く不毛な残業は今日で終わり。Nottaの自動文字起こしボットとChatGPTを連携させ、会議終了と同時に決定事項・次回アクション・ToDoリストがSlackや社内チャットへ即時配信される完全手放し自動化フローを徹底解説。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-21.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術｜BizHack AI">
+  <meta property="og:description" content="1時間の会議の後に録音を聞き直して議事録を書く不毛な残業は今日で終わり。Nottaの自動文字起こしボットとChatGPTを連携させ、会議終了と同時に決定事項・次回アクション・ToDoリストがSlackや社内チャットへ即時配信される完全手放し自動化フローを徹底解説。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-21.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-21.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術｜BizHack AI">
+  <meta name="twitter:description" content="1時間の会議の後に録音を聞き直して議事録を書く不毛な残業は今日で終わり。Nottaの自動文字起こしボットとChatGPTを連携させ、会議終了と同時に決定事項・次回アクション・ToDoリストがSlackや社内チャットへ即時配信される完全手放し自動化フローを徹底解説。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-21.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術",
+        "description": "1時間の会議の後に録音を聞き直して議事録を書く不毛な残業は今日で終わり。Nottaの自動文字起こしボットとChatGPTを連携させ、会議終了と同時に決定事項・次回アクション・ToDoリストがSlackや社内チャットへ即時配信される完全手放し自動化フローを徹底解説。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-21.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "桐生 健太（きりゅう けんた）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-21.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "現場実務・議事録DX", "item": "https://www.bizhack-ai.com/article-21.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="privacy.html" class="nav-link">サイト規約・問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#latest-pickup" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">第21弾「Zoom/Teams会議終了と同時に議事録自動配布」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-hidden="false" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-26T00:00:00+09:00" class="update-time">2026.10.26 00:00</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-office">現場実務・議事録DX</span>
+          <h1 class="article-title">【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026年10月26日</span>
+            <span>読了目安：約7分</span>
+            <span>ライター［業務プロセス改善］桐生 健太（きりゅう けんた・42歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-21.png" alt="【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card fv-theme-kiryu" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#2563eb; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太（きりゅう けんた・42歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">桐生 健太（きりゅう けんた・42歳）</span>
+                <span class="fv-author-badge" style="background:#dbeafe; color:#1e40af;">業務プロセス改善リード</span>
+              </div>
+              <p class="fv-author-comment">
+                「会議中に必死でタイピングして発言をメモし、会議後にさらに1時間かけて議事録を清書する……そんな時代は完全に終わりました。AI文字起こしボットとChatGPTを連動させれば、あなたが『お疲れ様でした』と言ってZoomを退出した瞬間、全員のチャットに決定事項とToDoが届いています！」
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：文字起こしテキストをそのまま貼るだけ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-21">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-21" class="fv-try-code">以下の【会議の自動文字起こしテキスト】を分析し、
+参加者が10秒で理解できる役員・チーム共有用エグゼクティブ・サマリーを作成してください。
+
+# 出力構成:
+1. 会議の結論・決定事項（箇条書き3点以内）
+2. 次回までのアクションアイテム（【誰が】【何を】【いつまでに】の表形式）
+3. 議論が持ち越しになった保留事項・リスク
+4. 共有用1行要約（Slack/Teams通知用）
+
+# 文字起こしテキスト:
+[NottaやTeamsから吐き出されたテキストを貼り付け]</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>発言者の雑談や言い淀み（「えーと」「あー」）をAIが自動除外して、重要な決定事項だけを濃縮抽出します。</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+              <div><strong>議事録作成時間を実質ゼロ化</strong><br>会議終了と同時に成形済み要約が完成</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+              <div><strong>タスクの「言った言わない」を完全撲滅</strong><br>担当者・期日・アクションが表形式で明文化</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+              <div><strong>会議中のタイピングから完全解放</strong><br>メモ取りをやめて本質的な議論に100%集中</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-1" class="fv-quick-btn primary" style="background:#2563eb;">📋 1. なぜ手作業メモは失敗するのか ↓</a>
+            <a href="#sec-2" class="fv-quick-btn secondary">2. Notta×AI連携の全体図 ↓</a>
+            <a href="#sec-3" class="fv-quick-btn secondary">3. 実践要約プロンプト ↓</a>
+            <a href="#sec-5" class="fv-quick-btn secondary">4. Slack自動配信フロー ↓</a>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. なぜ「手作業の会議メモ」は必ず失敗するのか？</a></li>
+            <li><a href="#sec-2">2. 【仕組み化】Zoom/TeamsにAIボットを同席させる全体連携フロー</a></li>
+            <li><a href="#sec-3">3. 【実践プロンプト】1時間の雑談混じりから「決定事項とToDo」を一撃抽出</a></li>
+            <li><a href="#sec-4">4. SlackやTeamsへ会議終了時に自動ポストするWebhook連携</a></li>
+            <li><a href="#sec-5">5. 読者モニター高橋リーダー（35歳・営業チーム）の実務検証レポート</a></li>
+            <li><a href="#sec-6">6. まとめ：会議は「記録する場」ではなく「意思決定する場」へ</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p class="article-lead">
+            会議中に必死でノートPCを叩いて発言をメモしていると、議論の内容が頭に入らず、重要な発言のタイミングを逃してしまいます。そして会議が終わった後、「えーと、誰が何を担当するんだっけ？」と録音を聞き返し、議事録の清書にさらに1時間……。そんな非効率はもう終わりにしましょう。<strong>「Notta」などの高精度AI音声認識とChatGPTを組み合わせれば、Web会議の開始から終了、議事録の整形、チームへの共有までが全自動で完結</strong>します。本記事では、今日から現場で導入できる完全手放しの会議DXフローを公開します。
+          </p>
+
+          <h2 id="sec-1">1. なぜ「手作業の会議メモ」は必ず失敗するのか？</h2>
+          <p>
+            人間の脳は「リアルタイムで発言を聞きながら同時にタイピングして構造化する」というマルチタスクをこなすようには設計されていません。手作業でメモを取ろうとすると、以下の致命的な問題が発生します。
+          </p>
+          <div class="point-box">
+            <strong>❌ 手作業メモの3大欠陥：</strong><br>
+            ・タイピングに気を取られて、肝心の議論に付加価値のある発言ができない<br>
+            ・メモを取った人の主観や解釈が混ざり、発言者の真意と食い違う<br>
+            ・議事録の共有が翌日以降になり、決まったアクションの初動が遅れる
+          </div>
+
+          <h2 id="sec-2">2. 【仕組み化】Zoom/TeamsにAIボットを同席させる全体連携フロー</h2>
+          <p>
+            解決策はシンプルです。<strong>「記録は100%AIに任せ、人間は意思決定と合意形成に集中する」</strong>ことです。
+          </p>
+          <div class="step-card">
+            <h4>💡 完全手放し会議DXの基本ステップ</h4>
+            <ol>
+              <li><strong>AIボットの自動参加</strong>：Googleカレンダーと連携したNottaが、定刻にZoom/Teamsミーティングへ自動参加。</li>
+              <li><strong>リアルタイム話者分離</strong>：「誰が何を話したか」を正確に識別しながらリアルタイムで文字起こし。</li>
+              <li><strong>終了トリガーでAI要約</strong>：ミーティング退出と同時にChatGPT APIが文字起こしデータを読み込み、決定事項とToDoを抽出。</li>
+              <li><strong>チャットへ即時配信</strong>：成形されたMarkdown議事録がSlackやTeamsの指定チャンネルへ自動投稿。</li>
+            </ol>
+          </div>
+
+          <h2 id="sec-3">3. 【実践プロンプト】1時間の雑談混じりから「決定事項とToDo」を一撃抽出</h2>
+          <p>
+            文字起こしテキストは膨大な分量になります。これをそのまま共有しても誰も読みません。以下のプロンプトを使って、役員や上司が10秒で判断できる形式に濃縮します。
+          </p>
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 プロンプト：会議議事録の超濃縮エグゼクティブサマリー生成</span>
+              <button class="copy-btn" data-target="p-meeting-sum-21">プロンプトをコピー</button>
+            </div>
+            <pre id="p-meeting-sum-21">あなたは超一流の経営企画室長兼プロジェクトマネージャーです。
+以下の【会議文字起こしテキスト】から不要な相槌や雑談を排除し、
+次の会議までにチーム全員が迷わず動ける議事録を出力してください。
+
+## 出力フォーマット:
+# 1. 会議の決定事項（合意に至ったポイント）
+・[決定事項1]
+・[決定事項2]
+
+# 2. タスク＆アクションアイテム（ToDo）
+| 担当者 | タスク内容 | 完了期日 | 成果物・確認方法 |
+| :--- | :--- | :--- | :--- |
+| [氏名] | [具体的アクション] | [YYYY/MM/DD] | [確認先] |
+
+# 3. 持ち越し・保留事項（検討が必要な論点）
+・[保留事項]
+
+# 4. チーム連絡用ワンライナー（30文字以内）
+[Slack等に流す要約文]</pre>
+          </div>
+
+
+          <h2 id="sec-4">4. SlackやTeamsへ会議終了時に自動ポストするWebhook連携</h2>
+          <p>
+            ZapierやMake、またはGoogle Apps Script（GAS）を使えば、NottaのWebhook（会議終了イベント）を受け取ってChatGPTで要約し、そのままSlackチャンネルへ自動投稿させることができます。
+          </p>
+          <p>
+            これにより、議事録作成担当者が一切介在することなく、<strong>「会議が終わった3分後にはチャンネルに決定事項が投稿されている」</strong>という神速のオペレーションが実現します。
+          </p>
+
+          <h2 id="sec-5">5. 読者モニター高橋リーダー（35歳・営業チーム）の実務検証レポート</h2>
+          <div class="voice-card">
+            <div class="voice-header">
+              <span class="voice-name">高橋 健司さん（35歳・営業チームリーダー）</span>
+              <span class="voice-tag">実務検証：週次営業ミーティング</span>
+            </div>
+            <p class="voice-text">
+              「週に3回ある定例会議で、新人に議事録を頼むと提出が翌日になり、アクションが遅れるのが慢性的な課題でした。<br><br>
+              今回、桐生さんの自動化フローをチームに導入したところ、<strong>会議が終わった瞬間に決定事項と各メンバーの宿題がSlackに投稿されるようになりました。</strong>『あれ、これ誰がやるんだっけ？』という確認作業がゼロになり、チームの行動速度が体感で2倍になりました！」
+            </p>
+          </div>
+
+          <h2 id="sec-6">6. まとめ：会議は「記録する場」ではなく「意思決定する場」へ</h2>
+          <p>
+            議事録作成という作業に、人間の貴重な知性を費やす必要はありません。
+          </p>
+          <ul class="summary-list">
+            <li><strong>AI文字起こしボットを同席させ、メモ取り作業を手放す</strong></li>
+            <li><strong>ChatGPTプロンプトで「決定事項」「ToDo表」「保留事項」へ自動構造化</strong></li>
+            <li><strong>会議終了直後にチャット配信し、アクションの初動を最速化</strong></li>
+          </ul>
+          <p>
+            ぜひ本記事のフローを導入して、チーム全体の生産性を劇的に向上させてください！
+          </p>
+
+          <!-- 関連記事ナビゲーション -->
+          <div class="related-articles-box">
+            <div class="related-title">あわせて読みたい！おすすめのDX実践記事</div>
+            <div class="related-grid">
+              <a href="article-3.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第3弾・議事録時短</span>
+                  <div class="related-card-title">【作業時間35分➔3分】雑な殴り書きメモを貼るだけ！上司に一発で通る「ChatGPT議事録」神速プロンプト</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+              <a href="article-17.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第17弾・音声DX</span>
+                  <div class="related-card-title">【音声AI×Notion】歩きながら話すだけでタスク化完了！スマホ手ぶらToDo管理術</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 著者バイオカード -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #2563eb; overflow:hidden;">
+              <img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">桐生 健太（きりゅう けんた・42歳）</div>
+              <div class="bio-role">業務プロセス改善リード / 元・総合商社 バックオフィス統括</div>
+              <p class="bio-desc">
+                総合商社にて15年間にわたり全社のバックオフィス業務標準化およびERP・Excelマクロ刷新プロジェクトを主導。現場の事務職が数式やコードに悩まされず、本来のクリエイティブな業務に集中できる「ノーコード・対話型AI実務術」を提唱・啓発している。
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全20弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第20弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-20.html">スプシ×GAS定型通知全自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第19弾</span></div><a href="article-19.html">Excel×Copilotクロス集計術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span></div><a href="article-18.html">一人起業の完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notionタスク自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第16弾</span></div><a href="article-16.html">NotebookLMで社内ナレッジ化</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

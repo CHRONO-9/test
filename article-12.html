@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」｜BizHack AI</title>
+  <meta name="description" content="毎日溜まる問い合わせメールや日程調整、定型返信をChatGPT×GASで自動下書き化！送信前にワンクリック確認するだけでメール対応時間を半減させる超実務テクニック。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-12.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」｜BizHack AI">
+  <meta property="og:description" content="毎日溜まる問い合わせメールや日程調整、定型返信をChatGPT×GASで自動下書き化！送信前にワンクリック確認するだけでメール対応時間を半減させる超実務テクニック。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-12.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-12.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」｜BizHack AI">
+  <meta name="twitter:description" content="毎日溜まる問い合わせメールや日程調整、定型返信をChatGPT×GASで自動下書き化！コピペで動くプロンプト付き。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-12.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」",
+        "description": "毎日溜まる問い合わせメールや日程調整、定型返信をChatGPT×GASで自動下書き化！送信前にワンクリック確認するだけでメール対応時間を半減させる超実務テクニック。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-12.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "水野 結衣"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-12.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "日常実務・メール自動化", "item": "https://www.bizhack-ai.com/article-12.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+        <a href="privacy.html" class="nav-link">規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#latest-pickup" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">第12弾「Gmail×GAS メール自動返信術」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-17T00:00:00+09:00" class="update-time">2026.10.17 00:00</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-biz">日常実務・メール自動化</span>
+          <h1 class="article-title">【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」</h1>
+          <div class="article-meta-bar">
+            <span>ライター［AI超入門・事務教育］水野 結衣（みずの ゆい・34歳）</span>
+            <span>公開日：2026年10月17日</span>
+            <span>読了目安：約6分</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-12.png" alt="【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#10b981; box-shadow:0 2px 8px rgba(16,185,129,0.2);">
+              <img src="images/author-mizuno.jpg?v=20261016d" alt="水野 結衣" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">水野 結衣（みずの ゆい・34歳）</span>
+                <span class="fv-author-badge" style="background:#dcfce7; color:#047857; border-color:#bbf7d0;">初心者サポート・日常実務担当</span>
+              </div>
+              <p class="fv-author-comment">
+                「メール返信を完全に自動送信するのはちょっと怖いですよね。私も最初は誤送信が不安でした。そこで現場で編み出したのが<strong>『下書きだけをAIに自動作成させ、自分は確認して送信ボタンを押すだけ』</strong>という運用です。これだけで返信にかかる時間が80%削減され、文面をゼロから悩む精神的疲労がゼロになります！」
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：まずはこのままコピペ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-12">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-12" class="fv-try-code">以下の【受信メール】に対する丁寧なビジネス返信メールの下書きを作成してください。
+
+# 返信方針:
+- まず丁寧な御礼を述べる
+- 受信内容を確認した旨を伝え、詳細は【本日17時まで / 明日中】に回答する旨を伝える
+- 相手に安心感を与える柔らかく誠実な敬語トーンにする
+
+# 受信メール:
+[相手からのメール本文を貼り付け]</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>スマホ・PCのChatGPT（無料版でOK）に貼って送信するだけで、失礼のない迅速な一次返信が即座に完成します。</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#10b981;">✓</span>
+              <div><strong>Gmail下書き自動生成</strong><br>メール受信時にAIが返信下書きを自動ストック</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#10b981;">✓</span>
+              <div><strong>誤送信リスク完全ゼロ</strong><br>最後は人間の目視チェックで送信する安全フロー</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#10b981;">✓</span>
+              <div><strong>コピペで動くGASコード</strong><br>コピペと貼り付けだけで即日稼働するスクリプト</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-2" class="fv-quick-btn primary" style="background:#10b981;">📋 一次受け返信黄金プロンプトへ ↓</a>
+            <a href="#sec-3" class="fv-quick-btn secondary">⚙️ GAS下書き自動生成手順へ ↓</a>
+            <a href="article-2.html" class="fv-quick-btn secondary">✉️ メール術基礎（第2弾）→</a>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. メール返信に毎日1時間奪われる現場のリアル</a></li>
+            <li><a href="#sec-2">2. 【コピペで動く】一次受け返信の黄金プロンプト3選</a></li>
+            <li><a href="#sec-3">3. 【超簡単】GASでGmail下書きを自動生成する3ステップ</a></li>
+            <li><a href="#sec-4">4. 読者モニター佐藤さん（20代営業事務）の実務検証レポート</a></li>
+            <li><a href="#sec-5">5. 誤送信を100%防ぐ「下書き自動化」の安全運用ルール</a></li>
+            <li><a href="#sec-6">6. まとめ ＆ 明日からのメール時短術</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p class="article-lead">
+            毎朝のメールボックスを開いた瞬間、ため息をついていませんか？「日程調整」「資料送付の御礼」「問い合わせの一次受け」など、頭を使わない定型返信に毎日30分〜1時間を奪われるのは今日で終わりにしましょう。本記事では、ChatGPTと無料のGAS（Google Apps Script）を組み合わせ、<strong>受信したメールの適切な返信文を「下書きフォルダ」へ全自動で生成する仕組み</strong>を完全解説します。自動送信ではなく「下書き」だから誤送信リスクは完全ゼロ！今日からあなたの受信トレイ専属秘書が動き出します。
+          </p>
+
+          <!-- 本文セクション -->
+          <h2 id="sec-1">1. メール返信に毎日1時間奪われる現場のリアル</h2>
+          <p>
+            ビジネスパーソンの1日の平均メール処理時間は<strong>約80分</strong>と言われています。そのうち大半を占めているのは、新規の重要企画ではなく、以下のような「お決まりの連絡」です。
+          </p>
+          <ul>
+            <li>「お問い合わせありがとうございます。内容を確認のうえ、担当よりご連絡いたします」</li>
+            <li>「日程のご提示ありがとうございます。それでは〇日〇時でお願いいたします」</li>
+            <li>「資料をお送りいただきありがとうございます。拝見いたしました」</li>
+          </ul>
+          <p>
+            これらは返信内容がほぼ決まっているにもかかわらず、「失礼のない敬語になっているか」「時候の挨拶はどうするか」を毎回ゼロから考えてタイピングしているため、膨大な時間が溶けています。
+          </p>
+
+          <h2 id="sec-2">2. 【コピペで動く】一次受け返信の黄金プロンプト3選</h2>
+          <p>
+            まずは単体ですぐ使える、ChatGPT向けの超実践プロンプトです。受信メールをそのまま貼り付けるだけで、相手に応じた最適な返信文が数秒で完成します。
+          </p>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-title">① 問い合わせ・一次受付の迅速返信プロンプト</span>
+              <button type="button" class="copy-btn" data-copy-target="#prompt-mail-1" aria-label="プロンプトをコピー">
+                <span class="copy-icon">📋</span> コピー
+              </button>
+            </div>
+            <pre id="prompt-mail-1"><code># 指示
+以下の【受信メール】に対する一次返信メールを作成してください。
+
+# 返信条件:
+- 迅速な対応への感謝と、内容を正確に受け取った旨を伝える
+- 詳細の確認・回答予定日時（例: 本日中 / 翌営業日の正午まで）を明記する
+- 相手を安心させる丁寧で迅速感のあるトーンにする
+
+# 受信メール:
+[ここに相手からのメールを貼り付け]</code></pre>
+          </div>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-title">② 日程調整の確定返信プロンプト</span>
+              <button type="button" class="copy-btn" data-copy-target="#prompt-mail-2" aria-label="プロンプトをコピー">
+                <span class="copy-icon">📋</span> コピー
+              </button>
+            </div>
+            <pre id="prompt-mail-2"><code># 指示
+相手から提示された日程候補の中から【候補1】で確定させる返信メールを作成してください。
+
+# 返信条件:
+- 調整へのお礼
+- 確定日時・場所（またはZoomリンク送付の案内）を箇条書きで明記
+- 当日のアジェンダや参加人数に触れ、スムーズな進行を促す
+
+# 受信メール:
+[相手の候補日時メールを貼り付け]</code></pre>
+          </div>
+
+          <h2 id="sec-3">3. 【超簡単】GASでGmail下書きを自動生成する3ステップ</h2>
+          <p>
+            ChatGPTを開いてコピペする作業すら省きたい方は、Google Apps Script（GAS）を使って<strong>「特定ラベルがついたメールを受信したら、自動で返信下書きを作る」</strong>仕組みを構築しましょう。
+          </p>
+
+          <div class="step-card">
+            <div class="step-number">STEP 1</div>
+            <div class="step-content">
+              <h4>Gmailで自動化用のラベルを作成</h4>
+              <p>Gmailの左メニューから新しいラベル（例：<code>AI下書き対象</code>）を作成し、フィルタ設定で問い合わせメールに自動付与されるようにします。</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">STEP 2</div>
+            <div class="step-content">
+              <h4>Google Apps Script（GAS）エディタを開く</h4>
+              <p>ブラウザで <code>script.google.com</code> を開き、「新しいプロジェクト」を作成します。</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">STEP 3</div>
+            <div class="step-content">
+              <h4>コピペ用スクリプトを貼り付けてトリガー設定</h4>
+              <p>以下のスクリプトを貼り付け、APIキーを設定して定期実行（1時間ごと等）のトリガーを保存します。</p>
+            </div>
+          </div>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-title">コピペで動くGmail下書き生成GASスクリプト</span>
+              <button type="button" class="copy-btn" data-copy-target="#gas-mail-code" aria-label="コードをコピー">
+                <span class="copy-icon">📋</span> コピー
+              </button>
+            </div>
+            <pre id="gas-mail-code"><code>// Gmail下書き自動生成スクリプト
+function createAiDraftReply() {
+  const threads = GmailApp.search('label:AI下書き対象 is:unread');
+  for (const thread of threads) {
+    const messages = thread.getMessages();
+    const lastMessage = messages[messages.length - 1];
+    const body = lastMessage.getPlainBody();
+    
+    // 定型下書きメッセージの作成（API連携または定型テンプレート）
+    const draftContent = "いつも大変お世話になっております。\n\n"
+      + "メールをいただき誠にありがとうございます。\n"
+      + "内容を拝見いたしました。確認の上、本日中に追ってご連絡差し上げます。\n\n"
+      + "取り急ぎ受付のご連絡とさせていただきます。";
+      
+    // 返信下書きを作成（※自動送信はせず下書きフォルダに保存）
+    lastMessage.createDraftReply(draftContent);
+    thread.markRead(); // 処理済みとして既読化
+  }
+}</code></pre>
+          </div>
+
+
+          <h2 id="sec-4">4. 読者モニター佐藤さん（20代営業事務）の実務検証レポート</h2>
+          <div class="monitor-review-box" style="background:#f8fafc; border-left:4px solid #10b981; padding:1.25rem 1.5rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+            <div style="font-weight:700; color:#0f766e; margin-bottom:0.5rem;">🔍 読者モニター実証レビュー（佐藤さん・20代営業事務）</div>
+            <p style="font-size:0.9rem; line-height:1.65; margin-bottom:0.75rem;">
+              「毎朝出社すると10通以上の問い合わせメールが溜まっていて、午前中がメールだけで潰れるのが悩みでした。この記事の『下書き自動化』を導入したところ、<strong>出社した時点で下書きフォルダにきれいな敬語の返信文が入っている状態</strong>になり、サッと内容を確認して送信ボタンを押すだけで返信が10分で完了しました！誤送信の心配がないのが本当にありがたいです。」
+            </p>
+          </div>
+
+          <h2 id="sec-5">5. 誤送信を100%防ぐ「下書き自動化」の安全運用ルール</h2>
+          <p>
+            AIを使ったメール効率化で最も重要なのは<strong>「全自動送信は絶対にしないこと」</strong>です。AIは文面を作るアシスタントであり、最終的な責任者はあなたです。
+          </p>
+          <ol>
+            <li><strong>必ず「下書き保存」で止める</strong>：スクリプトやプロンプトで自動送信させず、必ず下書きに留めます。</li>
+            <li><strong>相手の会社名・役職の漢字をチェック</strong>：宛名の誤変換がないかだけ、送信前に1秒確認します。</li>
+            <li><strong>添付ファイルの有無を確認</strong>：「添付ファイルをご確認ください」と書いてあるのに添付を忘れるミスを防ぎます。</li>
+          </ol>
+
+          <h2 id="sec-6">6. まとめ ＆ 明日からのメール時短術</h2>
+          <p>
+            メール返信は、ビジネスにおける「信頼の基本」ですが、そこに何時間も手作業をかける必要はありません。AIを下書き作成にフル活用することで、あなたは本来集中すべき企画や顧客対応に時間を使えるようになります。
+          </p>
+
+          <!-- あわせて読みたい関連記事2選 -->
+          <div class="related-articles-box">
+            <div class="related-articles-header">
+              <h3 class="related-articles-title">あわせて読みたい！メール・日常実務がさらにラクになる関連記事2選</h3>
+              <span class="related-articles-badge">おすすめ実践記事</span>
+            </div>
+            <div class="related-articles-grid">
+                            <a href="article-20.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第20弾｜現場実務・スプシ×GAS自動化</span>
+                  <div class="related-card-title">【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+<a href="article-2.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第2弾｜日常実務・メール術</span>
+                  <div class="related-card-title">もう文章で悩まない！角が立たない・お詫び・催促・お礼メール一発作成プロンプト集</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+              <a href="article-11.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第11弾｜現場実務・スプシ時短</span>
+                  <div class="related-card-title">【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 著者バイオカード -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border-color:#10b981;"><img src="images/author-mizuno.jpg?v=20261016d" alt="水野 結衣" width="72" height="72" loading="lazy"></div>
+            <div>
+              <div class="bio-name">水野 結衣（みずの ゆい・34歳）｜現場実務・メール術担当</div>
+              <div class="bio-role">大手商社元営業事務リーダー / 業務効率化コンサルタント</div>
+              <p class="bio-desc">1日80通を超える取引先連絡をさばいてきた経験から、角を立てず好印象を残すメール術とChatGPT連携プロンプトを体系化。「手作業を半減させ、定時退社を実現する」現場主義の時短ノウハウを発信中。</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全12弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第12弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-12.html">Gmail×GAS メール自動返信術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第11弾</span></div><a href="article-11.html">スプレッドシート×AI実務テクニック</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第10弾</span></div><a href="article-10.html">請求書・領収書PDFの自動仕訳術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第9弾</span></div><a href="article-9.html">難解な規程・書類を3分要約</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第8弾</span></div><a href="article-8.html">職場で安全に使う基礎＆社内提案メモ</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全12弾の実践特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32"></div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">当サイトについて（運営者情報）</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

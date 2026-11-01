@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順｜BizHack AI</title>
+  <meta name="description" content="「あの申請書の書き方は？」「社内規程のどこに書いてある？」と毎日繰り返される社内質問。ノーコードAI開発ツール「Dify」を活用し、社内のPDFやWordマニュアルをドラッグ＆ドロップするだけで、嘘をつかずに正確に回答する「社内専用AI質問ボット」を30分で自作する全手順を徹底解説。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-22.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順｜BizHack AI">
+  <meta property="og:description" content="「あの申請書の書き方は？」「社内規程のどこに書いてある？」と毎日繰り返される社内質問。ノーコードAI開発ツール「Dify」を活用し、社内のPDFやWordマニュアルをドラッグ＆ドロップするだけで、嘘をつかずに正確に回答する「社内専用AI質問ボット」を30分で自作する全手順を徹底解説。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-22.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-22.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順｜BizHack AI">
+  <meta name="twitter:description" content="「あの申請書の書き方は？」「社内規程のどこに書いてある？」と毎日繰り返される社内質問。ノーコードAI開発ツール「Dify」を活用し、社内のPDFやWordマニュアルをドラッグ＆ドロップするだけで、嘘をつかずに正確に回答する「社内専用AI質問ボット」を30分で自作する全手順を徹底解説。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-22.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順",
+        "description": "「あの申請書の書き方は？」「社内規程のどこに書いてある？」と毎日繰り返される社内質問。ノーコードAI開発ツール「Dify」を活用し、社内のPDFやWordマニュアルをドラッグ＆ドロップするだけで、嘘をつかずに正確に回答する「社内専用AI質問ボット」を30分で自作する全手順を徹底解説。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-22.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "神崎 聡（かんざき さとし）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-22.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "現場実務・社内AI自作", "item": "https://www.bizhack-ai.com/article-22.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="privacy.html" class="nav-link">サイト規約・問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#featured" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">最新第22弾「【Dify超入門】社内マニュアル専用AIボット自作手順」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-27T05:54:24+09:00" class="update-time">2026.10.27 05:54</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-tech">現場実務・社内AI自作</span>
+          <h1 class="article-title">【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026年10月27日</span>
+            <span>読了目安：約8分</span>
+            <span>ライター［業務自動化］神崎 聡（かんざき さとし・51歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-22.png" alt="【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card fv-theme-kanzaki" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#0284c7; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kanzaki.jpg" alt="神崎 聡（かんざき さとし・51歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">神崎 聡（かんざき さとし・51歳）</span>
+                <span class="fv-author-badge" style="background:#e0f2fe; color:#0369a1;">現場DX・ツール自作エンジニア</span>
+              </div>
+              <p class="fv-author-comment">
+                「出張旅費の精算方法ってどうでしたっけ？」「有給申請のルールを教えてください」。総務や情シス、現場リーダーを疲弊させる日々の定型質問。今世界中で大注目のオープンソースAI開発ツール『Dify』を使えば、プログラミング知識ゼロでも社内規程PDFを投入するだけで、嘘をつかず根拠ページ付きで即答する専任AIアシスタントが30分で完成します！
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：ハルシネーション（嘘回答）防止システム指示文</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-22">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-22" class="fv-try-code"># 役割と目的
+あなたは社内問い合わせに特化した「社内コンシェルジュAI」です。
+社員からの質問に対し、提供された【ナレッジ（社内文書）】の情報のみに基づいて、正確・丁寧・分かりやすく回答してください。
+
+# 厳格な遵守ルール
+1. 【ナレッジ】に記載されている事実のみを根拠として回答してください。
+2. ナレッジに記載がない事項、または曖昧な点については、絶対に推測や一般論で回答してはいけません。必ず「申し訳ございません。提供された社内マニュアルには記載がございませんでした。詳細は担当部署（総務部：内線xxxx）へ直接ご確認ください」と明確に伝えてください。
+3. 回答の最後には、必ず参照した「マニュアルの名称」および「該当の章・条項」を明記してください。
+
+# 回答フォーマット
+【結論】
+質問に対する端的な答え
+
+【詳細手順・ルール】
+- 箇条書きで分かりやすくステップを記載
+
+【参照元】
+- 〇〇規程 第○条（ページ番号）</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>記事内のプロンプトはすべて「プロンプトをコピー」ボタンからワンタッチでコピペして今すぐ試せます！</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#0284c7;">✓</span>
+              <div><strong>Difyの無料クラウド環境構築</strong><br>ブラウザだけで完結。登録から5分でRAG（社内文書検索AI）の基盤を準備。</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#0284c7;">✓</span>
+              <div><strong>ハルシネーション（嘘回答）防止プロンプト</strong><br>社内文書に記載がない情報は勝手に想像せず「記載がありません」と誠実に答えるシステム指示文。</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#0284c7;">✓</span>
+              <div><strong>URL共有＆Web埋め込みの実装コード</strong><br>社内ポータルやNotion、社内チャットに貼るだけですぐ全社展開できる配布設定。</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-1" class="fv-quick-btn primary" style="background:#0284c7;">📋 1. なぜ普通のChatGPTは駄目なのか ↓</a>
+            <a href="#sec-2" class="fv-quick-btn secondary">2. Difyが最強である3つの理由 ↓</a>
+            <a href="#sec-3" class="fv-quick-btn secondary">3. ボット作成3ステップ ↓</a>
+            <a href="#sec-4" class="fv-quick-btn secondary">4. 鉄壁システムプロンプト ↓</a>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. なぜ「普通のChatGPT」では社内質問に答えられないのか？</a></li>
+            <li><a href="#sec-2">2. Dify（ディファイ）が社内ボット自作に最強である3つの理由</a></li>
+            <li><a href="#sec-3">3. 【3ステップ】Difyで社内マニュアルボットを作る手順</a></li>
+            <li><a href="#sec-4">4. 嘘（ハルシネーション）をゼロにする「鉄壁のシステムプロンプト」</a></li>
+            <li><a href="#sec-5">5. 完成したボットを社内に安全に共有・埋め込む方法</a></li>
+            <li><a href="#sec-6">6. まとめ＆次のステップ</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p class="article-lead">
+            「あの申請書の書き方は？」「社内規程のどこに書いてある？」と毎日繰り返される社内質問。総務や情シス、現場リーダーを疲弊させる日々の定型質問。今世界中で大注目のオープンソースAI開発ツール「Dify」を使えば、プログラミング知識ゼロでも社内のPDFやWordマニュアルをドラッグ＆ドロップするだけで、嘘をつかずに正確に回答する「社内専用AI質問ボット」を30分で自作できます。
+          </p>
+
+          <h2 id="sec-1">1. なぜ「普通のChatGPT」では社内質問に答えられないのか？</h2>
+          <p>
+            「ChatGPTに社内規程を読ませて質問ボットを作りたい」と考えたことのある方は多いはずです。しかし、通常のChatGPTで運用しようとすると、以下の致命的な課題に直面します。
+          </p>
+
+          <div class="point-box">
+            <strong>⚠️ 通常のChatGPT運用の2大欠陥：</strong><br>
+            ・<strong>最新の自社ルールを知らない</strong>：一般的なAIはWeb上の公開データを学習しているため、自社独自の「就業規則」「経費規程」「業務マニュアル」は一切知りません。<br>
+            ・<strong>知ったかぶり（ハルシネーション）を起こす</strong>：マニュアルに書いていない内容でも、それらしい嘘を堂々と回答してしまい、社内トラブルの原因になります。
+          </div>
+
+          <p>
+            この問題を一撃で解決するのが、<strong>RAG（検索拡張生成：Retrieval-Augmented Generation）</strong>という技術です。社内文書をデータベース化し、社員からの質問に関連するページだけをAIがピンポイントで探し出して回答の根拠とします。そして、このRAGをコード一行書かずにマウス操作だけで作れるのが<strong>「Dify（ディファイ）」</strong>です。
+          </p>
+
+          <h2 id="sec-2">2. Dify（ディファイ）が社内ボット自作に最強である3つの理由</h2>
+          <p>
+            現在、エンジニアから非エンジニアの現場リーダーまで急速に支持を広げているDifyには、他のツールを圧倒する強みがあります。
+          </p>
+
+          <div class="step-card">
+            <h4>💡 Difyが選ばれる3つの決定的理由</h4>
+            <ol>
+              <li><strong>完全ノーコードでPDF・Word・Notionを丸ごと読み込める</strong><br>社内マニュアルのファイルをドラッグ＆ドロップするだけで、AIが検索しやすい形式に自動分割（チャンク化）してくれます。</li>
+              <li><strong>「回答の根拠元（出典）」が画面に表示される</strong><br>AIの回答とともに「社内規程PDF 第12条 3項より引用」のように根拠が表示されるため、社員自身も一次情報を確認できて安心です。</li>
+              <li><strong>社内WebポータルやSlackにワンクリックで埋め込める</strong><br>共有用URLを発行したり、数行のHTMLコードをコピーして社内サイトに貼り付けるだけで、全社員が使えるボットになります。</li>
+            </ol>
+          </div>
+
+          <h2 id="sec-3">3. 【3ステップ】Difyで社内マニュアルボットを作る手順</h2>
+          <p>
+            実際にDifyを使って、社内規程ボットを作成する3ステップを見ていきましょう。所要時間は約15分〜30分です。
+          </p>
+
+          <div class="step-card">
+            <h4>ステップ①：Difyにサインアップしてナレッジ（知識庫）を作成</h4>
+            <p>
+              Difyの公式サイト（dify.ai）にアクセスし、無料アカウントを作成します（Googleアカウント等でログイン可能）。<br>
+              画面左側のメニューから<strong>「ナレッジ（Knowledge）」</strong>を選択し、「ナレッジを作成」をクリック。社内のPDFやWordファイル（例：就業規則、交通費精算マニュアルなど）をアップロードします。分割設定（チャンキング）は、まずは「自動」のままで問題ありません。
+            </p>
+          </div>
+
+          <div class="step-card">
+            <h4>ステップ②：チャットボットアプリを作成し、ナレッジを紐付ける</h4>
+            <p>
+              メニューの<strong>「スタジオ（Studio）」</strong>から「最初から作成」を選び、タイプとして<strong>「チャットボット（Chatbot）」</strong>を選択します。<br>
+              アプリの編集画面が開いたら、右側の「コンテキスト」設定枠にある「追加」ボタンを押し、先ほど作成した「ナレッジ」を指定します。これだけで、AIが社内文書を参照できる状態が完成します。
+            </p>
+          </div>
+
+          <div class="step-card">
+            <h4>ステップ③：モデルの選択（GPT-4o mini または Claude 3.5 Sonnet）</h4>
+            <p>
+              モデル設定では、コストパフォーマンスと速度に優れた「GPT-4o mini」または、長文の文脈理解が極めて正確な「Claude 3.5 Sonnet」を選択するのがおすすめです。
+            </p>
+          </div>
+
+          <h2 id="sec-4">4. 嘘（ハルシネーション）をゼロにする「鉄壁のシステムプロンプト」</h2>
+          <p>
+            社内マニュアルボットで最もやってはならないのが、「書いていないルールを勝手に作り出して回答すること」です。以下の指示文をDifyの「指示（Instructions / System Prompt）」欄にそのままコピペしてください。
+          </p>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 プロンプト：ハルシネーション（嘘回答）防止システム指示文</span>
+              <button class="copy-btn" data-target="dify-system-prompt">プロンプトをコピー</button>
+            </div>
+            <pre id="dify-system-prompt"># 役割と目的
+あなたは社内問い合わせに特化した「社内コンシェルジュAI」です。
+社員からの質問に対し、提供された【ナレッジ（社内文書）】の情報のみに基づいて、正確・丁寧・分かりやすく回答してください。
+
+# 厳格な遵守ルール
+1. 【ナレッジ】に記載されている事実のみを根拠として回答してください。
+2. ナレッジに記載がない事項、または曖昧な点については、絶対に推測や一般論で回答してはいけません。必ず「申し訳ございません。提供された社内マニュアルには記載がございませんでした。詳細は担当部署（総務部：内線xxxx）へ直接ご確認ください」と明確に伝えてください。
+3. 回答の最後には、必ず参照した「マニュアルの名称」および「該当の章・条項」を明記してください。
+
+# 回答フォーマット
+【結論】
+質問に対する端的な答え
+
+【詳細手順・ルール】
+- 箇条書きで分かりやすくステップを記載
+
+【参照元】
+- 〇〇規程 第○条（ページ番号）</pre>
+          </div>
+
+          <div class="alert-box alert-success">
+            <strong><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>現場で失敗しないコツ</strong><br>
+            Difyの「リトリーバル設定（検索設定）」で、類似度しきい値（Score Threshold）を「0.6〜0.7」程度に設定しておくと、関係の薄い情報を無理やり拾ってきて誤答するリスクをほぼ100%遮断できます。
+          </div>
+
+          <h2 id="sec-5">5. 完成したボットを社内に安全に共有・埋め込む方法</h2>
+          <p>
+            ボットのテストが完了したら、社内メンバーが使えるように公開します。Difyには便利な共有方法が標準装備されています。
+          </p>
+
+          <div class="point-box">
+            <strong>🚀 Difyの2大配布方法：</strong><br>
+            ・<strong>① 専用URLの社内配布</strong>：Difyが自動発行するWebアプリURLをコピーし、社内ポータルやチャットツールの固定アナウンスに貼るだけ。ログイン不要で即座に使えます。<br>
+            ・<strong>② 社内イントラへのWeb埋め込み</strong>：「Webサイトに埋め込む」をクリックすると、iframeコードが発行されます。Notionや自社の社内ポータルに貼り付けるだけで、右下にチャットウィジェットが出現します。
+          </div>
+
+          <div class="alert-box alert-warning">
+            <strong>🔒 社内セキュリティの注意点</strong><br>
+            マイナンバーや顧客の個人情報、極秘の役員会議事録などはナレッジに含めないようにしましょう。一般社員に公開されている「就業規則」「福利厚生の手引き」「出張旅費規程」「ITツールの操作マニュアル」からスタートするのが安全運用の王道です。
+          </div>
+
+          <h2 id="sec-6">6. まとめ＆次のステップ</h2>
+          <p>
+            毎日10分、20分と奪われていた「社内マニュアルの確認・取り次ぎ時間」。Difyを使った専用AIボットがあれば、質問する側も「待ち時間ゼロ」で即座に疑問が解消し、回答する側も本来のコア業務に集中できるようになります。
+          </p>
+
+          <div class="point-box">
+            <strong>📌 今日の持ち帰りまとめ：</strong><br>
+            1. <strong>Difyで無料作成</strong>：ノーコードで誰でも直感的に設定可能。まずは規程PDF1枚から。<br>
+            2. <strong>ハルシネーション防止</strong>：厳格なシステムプロンプトで知ったかぶりを防止し、根拠を明示。<br>
+            3. <strong>社内ポータルに設置</strong>：URL共有や埋め込みで、チーム全体の問い合わせ業務をゼロに。
+          </div>
+
+          <p>
+            まずはあなたのPCにある「よく質問されるマニュアル1点」をDifyに読み込ませることから試してみてください。あまりの簡単さと賢さに驚くはずです！
+          </p>
+
+          <!-- 著者バイオカード -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #0284c7; overflow:hidden;">
+              <img src="images/author-kanzaki.jpg" alt="神崎 聡" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">神崎 聡（かんざき さとし・51歳）</div>
+              <div class="bio-role">現場DX・ツール自作エンジニア / 元・製造業 情シス部門長</div>
+              <p class="bio-desc">
+                非エンジニアが自ら業務効率化ツールを作れる世界を目指し、Dify、GAS、Claude、Notionなどを組み合わせた社内自動化の実践ノウハウを発信中。「現場の面倒な作業を今日中に消し去る」がモットー。
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全22弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第21弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-21.html">Notta×ChatGPT議事録自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第20弾</span></div><a href="article-20.html">スプシ×GAS定型通知全自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第19弾</span></div><a href="article-19.html">Excel×Copilotクロス集計術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span></div><a href="article-18.html">一人起業の完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notionタスク自動化</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+        <!-- 著者情報カード -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">執筆・監修</h3>
+          <div class="sidebar-author">
+            <img src="images/author-kanzaki.jpg" alt="神崎 聡" width="60" height="60" class="sidebar-author-img">
+            <div class="sidebar-author-name">神崎 聡（51歳）</div>
+            <div class="sidebar-author-title">現場DXエンジニア</div>
+            <p class="sidebar-author-desc">現場の日常業務をノーコードとAIで自動化するスペシャリスト。</p>
+          </div>
+        </div>
+
+        <!-- 関連記事枠 -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">おすすめの関連記事</h3>
+          <ul class="sidebar-recent-list">
+            <li><a href="article-13.html">【Claude 3.5 Sonnet Artifacts】非エンジニアでも社内Webツールが爆速自作できる！</a></li>
+            <li><a href="article-21.html">【Zoom・Teams完全手放し】Notta×ChatGPTで会議終了と同時に議事録とToDoが配られる自動化術</a></li>
+            <li><a href="article-12.html">【Gmail×GAS】毎朝の定型メール下書きをAIが自動作成する無料ボット構築術</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

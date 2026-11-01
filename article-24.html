@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト｜BizHack AI</title>
+  <meta name="description" content="取引先から送られてきた難解な契約書。法務専任がいない中小企業や個人事業主でも、ChatGPTを使って「一方的に不利な条件」「損害賠償の青天井」「知財の奪われ」などの落とし穴を5分で検知し、角の立たない修正対案メールまで作成する実践プロンプトを徹底解説。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-24.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト｜BizHack AI">
+  <meta property="og:description" content="取引先から送られてきた難解な契約書。法務専任がいない中小企業や個人事業主でも、ChatGPTを使って「一方的に不利な条件」「損害賠償の青天井」「知財の奪われ」などの落とし穴を5分で検知し、角の立たない修正対案メールまで作成する実践プロンプトを徹底解説。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-24.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-24.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト｜BizHack AI">
+  <meta name="twitter:description" content="取引先から送られてきた難解な契約書。法務専任がいない中小企業や個人事業主でも、ChatGPTを使って「一方的に不利な条件」「損害賠償の青天井」「知財の奪われ」などの落とし穴を5分で検知し、角の立たない修正対案メールまで作成する実践プロンプトを徹底解説。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-24.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト",
+        "description": "取引先から送られてきた難解な契約書。法務専任がいない中小企業や個人事業主でも、ChatGPTを使って「一方的に不利な条件」「損害賠償の青天井」「知財の奪われ」などの落とし穴を5分で検知し、角の立たない修正対案メールまで作成する実践プロンプトを徹底解説。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-24.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "桐生 健太（きりゅう けんた）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-24.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Office・法務DX", "item": "https://www.bizhack-ai.com/article-24.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="privacy.html" class="nav-link">サイト規約・問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#featured" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">最新の実践AI活用ノウハウを毎日お届け中！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-27T05:54:24+09:00" class="update-time">2026.10.27 05:54</time>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <!-- ファーストビュー・ヘッダー -->
+        <header class="article-header">
+          <span class="category-tag cat-office">Office・法務DX</span>
+          <h1 class="article-title">【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026.10.29 公開</span>
+            <span>読了目安：約 8 分で読めます</span>
+            <span>ライター［業務プロセス改善］桐生 健太（きりゅう けんた・42歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-24.png" alt="【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#2563eb; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kiryu.jpg" alt="桐生 健太（きりゅう けんた・42歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">桐生 健太（きりゅう けんた・42歳）</span>
+                <span class="fv-author-badge" style="background:#dbeafe; color:#1e40af;">業務プロセス・法務ガバナンス時短</span>
+              </div>
+              <p class="fv-author-comment">
+                「取引先から送られてきた契約書、このままサインして本当に大丈夫だろうか……」。社内に法務部がない中小企業や一人起業家にとって、難解な法律用語が並ぶ契約書のチェックは最大のストレス源です。生成AIを活用して、自社に不利な「地雷条項」を5分で浮き彫りにし、相手の機嫌を損ねずに修正交渉できる「プロ仕様の対案プロンプト」を公開します。
+              </p>
+            </div>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる成果＆特徴</div>
+          <ul class="fv-takeaways-list">
+<li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>不利条項のあぶり出しプロンプト</strong><br>損害賠償の青天井、一方的解約、著作権の全譲渡など、危険な条項を瞬時に特定。</div>
+              </li>
+              <li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>「角が立たない」修正条文＆交渉文作成</strong><br>「ここを直してください」と棘のないビジネス敬語で提案する対案文をワンクリック生成。</div>
+              </li>
+              <li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>絶対遵守のマスキング（匿名化）ルール</strong><br>社名や取引金額など機密情報をAIに学習させないための安全チェックリスト。</div>
+              </li>
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：ChatGPTにこのまま投げるだけ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-24">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-24" class="fv-try-code"># あなたの役割
+あなたは企業の法務コンサルタントおよび契約実務のエキスパートです。
+以下の契約書ドラフトを詳細にレビューし、当事者である【自社（受託側/乙）】の立場から見て、不当に不利な条項や法的なリスク、曖昧な表現を抽出してください。
+
+# 重点チェック項目
+1. 損害賠償責任の範囲（上限の有無、直接損害に限定されているか）
+2. 秘密保持の対象範囲および保持期間（一方的になっていないか）
+3. 成果物の権利帰属（著作権・特許権が一方的に相手に移転していないか、著作者人格権の不行使条項）
+4. 契約の解除条件（相手側からの一方的・即時解除条項がないか）
+5. 支払い期日・検収基準（検収合格とみなす期日が明確か）
+
+# 出力フォーマット
+1. 【総合リスク判定】：（高 / 中 / 低）とその要約理由
+2. 【要修正条項リスト】：
+   - 条文番号と該当箇所
+   - 指摘理由（どのような実害・リスクが想定されるか）
+   - 推奨される修正案（条文の差し替えテキスト）
+3. 【契約交渉におけるワンポイント助言】
+
+# 契約書ドラフト本文
+（ここにマスキング済みの契約書条文を貼り付け）</pre>
+            <p class="fv-try-hint">💡 使い方：会社名や金額など秘密情報を【甲】【乙】にマスキングした上で、ChatGPTへ送信してください。</p>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#section-1">1. 契約書チェックを放置すると起きる「3大リスク」</a></li>
+            <li><a href="#section-2">2. AIに契約書を読ませる前の「情報マスキング」鉄則</a></li>
+            <li><a href="#section-3">3. 【コピペ用】不利条項検知＆リスク分析プロンプト</a></li>
+            <li><a href="#section-4">4. 相手と揉めずに合意できる「修正対案・交渉メール」生成術</a></li>
+            <li><a href="#section-5">5. 弁護士法72条（非弁行為）とAIレビューの正しい付き合い方</a></li>
+            <li><a href="#section-6">6. まとめ＆チェックシート</a></li>
+          </ul>
+        </nav>
+
+        <section id="section-1">
+          <h2>1. 契約書チェックを放置すると起きる「3大リスク」</h2>
+          <p>「相手は大企業だから大丈夫だろう」「テンプレート通りだろう」と盲目的に署名・押印してしまうのは非常に危険です。特に以下の3つの条項には注意が必要です。</p>
+
+          <div class="card-grid-3">
+            <div class="summary-card">
+              <div class="summary-card-number">01</div>
+              <h4>損害賠償の青天井</h4>
+              <p>賠償上限が「委託料の額」等に限定されておらず、万が一の際に数千万円を請求されるリスク。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">02</div>
+              <h4>知的財産権の丸獲られ</h4>
+              <p>自分が開発・制作した素材やノウハウの権利まで相手方にすべて譲渡させられる条項。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">03</div>
+              <h4>過度な競業避止義務</h4>
+              <p>契約終了後も同業種での活動が制限され、他のクライアントと取引できなくなる罠。</p>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="section-2">
+          <h2>2. AIに契約書を読ませる前の「情報マスキング」鉄則</h2>
+          <p>AIに契約書をレビューさせる際、**「機密情報の漏洩」**を絶対に防がなければなりません。ChatGPTに入力する前に、必ず以下の単語をプレースホルダーに置き換えてください。</p>
+
+          <div class="code-window">
+            <div class="code-header">
+              <span class="code-title">置換例（マスキングルール）</span>
+            </div>
+            <pre class="code-body"><code>自社名（株式会社アルファ） ➡ 【甲】または【自社】
+相手先企業名（株式会社ベータ） ➡ 【乙】または【取引先】
+金額（月額50万円、総額300万円） ➡ 【〇〇円】
+特定の人名、住所、電話番号 ➡ 【担当者名】【住所】</code></pre>
+          </div>
+          <p>※ChatGPTの「オプトアウト設定（Data Controlsで学習オフ）」を有効にしておくことも必須です。</p>
+        </section>
+
+        <section id="section-3">
+          <h2>3. 【コピペ用】不利条項検知＆リスク分析プロンプト</h2>
+          <p>以下のプロンプトをChatGPTまたはClaudeに入力し、末尾に契約書の条文テキストを貼り付けてください。</p>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-badge">契約書リスク分析プロンプト</span>
+              <button class="copy-btn" data-target="contract-review-prompt">プロンプトをコピー</button>
+            </div>
+            <pre class="prompt-body" id="contract-review-prompt"><code># あなたの役割
+あなたは企業の法務コンサルタントおよび契約実務のエキスパートです。
+以下の契約書ドラフトを詳細にレビューし、当事者である【自社（受託側/乙）】の立場から見て、不当に不利な条項や法的なリスク、曖昧な表現を抽出してください。
+
+# 重点チェック項目
+1. 損害賠償責任の範囲（上限の有無、直接損害に限定されているか）
+2. 秘密保持の対象範囲および保持期間（一方的になっていないか）
+3. 成果物の権利帰属（著作権・特許権が一方的に相手に移転していないか、著作者人格権の不行使条項）
+4. 契約の解除条件（相手側からの一方的・即時解除条項がないか）
+5. 支払い期日・検収基準（検収合格とみなす期日が明確か）
+
+# 出力フォーマット
+1. 【総合リスク判定】：（高 / 中 / 低）とその要約理由
+2. 【要修正条項リスト】：
+   - 条文番号と該当箇所
+   - 指摘理由（どのような実害・リスクが想定されるか）
+   - 推奨される修正案（条文の差し替えテキスト）
+3. 【契約交渉におけるワンポイント助言】
+
+# 契約書ドラフト本文
+（ここにマスキング済みの契約書条文を貼り付け）</code></pre>
+          </div>
+        </section>
+
+        <section id="section-4">
+          <h2>4. 相手と揉めずに合意できる「修正対案・交渉メール」生成術</h2>
+          <p>修正案が出たとしても、「この条文は不利なので直してください」とストレートに伝えると角が立ちます。AIに対案メールを作成させましょう。</p>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-badge">修正依頼メール作成プロンプト</span>
+              <button class="copy-btn" data-target="contract-negotiation-email">プロンプトをコピー</button>
+            </div>
+            <pre class="prompt-body" id="contract-negotiation-email"><code># 依頼内容
+先ほど検出された修正箇所に基づき、相手方の担当者に送る「契約書修正のお願いメール」を作成してください。
+
+# トーン＆マナー
+- 相手への感謝と取引開始への前向きな姿勢を明確にする
+- 相手を責めるニュアンスを完全に排除し、「社内法務（顧問弁護士）の確認ルールに基づき、双方の公平性の観点から微修正をご相談させていただく」という建前をとる
+- どの条文を、どのように、なぜ変更したいのかを箇条書きで分かりやすく整理する</code></pre>
+          </div>
+        </section>
+
+        <section id="section-5">
+          <h2>5. 弁護士法72条（非弁行為）とAIレビューの正しい付き合い方</h2>
+          <p>法律業務を扱う上で、**弁護士法（非弁護士の法律事務の取扱い等の禁止）**の理解は不可欠です。</p>
+
+          <div class="alert-box alert-warning">
+            <strong>⚠️ 法務上の重要注意事項</strong><br>
+            AIによる契約書レビューは「自社のリスク確認・思考の補助ツール（壁打ち）」として利用するものです。第三者に対して有償で法的判断を提供する行為や、数千万円規模の大型契約・複雑な係争事案においては、必ず顧問弁護士や弁護士ドットコム等の専門資格者による最終リーガルチェックを受けてください。
+          </div>
+        </section>
+
+        <section id="section-6">
+          <h2>6. まとめ＆チェックシート</h2>
+          <p>AIを活用した契約書チェックは、社内リソースが限られる現場にとって最強の防衛シールドとなります。</p>
+
+          <div class="card-grid-3">
+            <div class="summary-card">
+              <div class="summary-card-number">01</div>
+              <h4>マスキング徹底</h4>
+              <p>社名や金額を伏せ、機密漏洩を完全に防止する。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">02</div>
+              <h4>プロンプトで抽出</h4>
+              <p>賠償・知財・解除条件などの地雷条項を5分で検知。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">03</div>
+              <h4>角を立てずに交渉</h4>
+              <p>公平性を盾にした丁寧なメール対案でスムーズに合意。</p>
+            </div>
+          </div>
+
+          <p>「サインする前の5分間」のAIチェックを習慣化し、自社の権利と利益をスマートに守り抜きましょう！</p>
+        </section>
+
+        <!-- 著者プロフィール -->
+        <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #2563eb; overflow:hidden;">
+              <img src="images/author-kiryu.jpg" alt="桐生 健太" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">桐生 健太（きりゅう けんた）</div>
+              <div class="bio-role">BizHack AI 業務プロセス・ガバナンス担当</div>
+              <p class="bio-desc">大手メーカーおよびベンチャーでの法務・総務・経理の実務経験を持つ。契約書管理、社内規程策定、電子契約導入を推進。「法務知識を武器にして、現場のリスクをゼロにする」ノウハウを発信。</p>
+            </div>
+          </div>
+
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全20弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第20弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-20.html">スプシ×GAS定型通知全自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第19弾</span></div><a href="article-19.html">Excel×Copilotクロス集計術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span></div><a href="article-18.html">一人起業の完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notionタスク自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第16弾</span></div><a href="article-16.html">NotebookLMで社内ナレッジ化</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+        <!-- 著者情報カード -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">執筆・監修</h3>
+          <div class="sidebar-author">
+            <img src="images/author-kiryu.jpg" alt="桐生 健太" width="60" height="60" class="sidebar-author-img">
+            <div class="sidebar-author-name">桐生 健太</div>
+            <div class="sidebar-author-title">業務プロセス・法務担当</div>
+            <p class="sidebar-author-desc">中小企業・バックオフィスのリスク管理と時短を支援。</p>
+          </div>
+        </div>
+
+
+        <!-- 関連記事枠 -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">おすすめの関連記事</h3>
+          <ul class="sidebar-recent-list">
+            <li><a href="article-9.html">【PDF・文書時短】難解なお役所文書・契約書・社内規程を3分で要約＆チェックするAI活用術</a></li>
+            <li><a href="article-8.html">【ChatGPT安全運用】職場で怒られない！情報漏洩を防ぐセキュリティ設定</a></li>
+            <li><a href="article-22.html">【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

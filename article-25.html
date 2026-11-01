@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順｜BizHack AI</title>
+  <meta name="description" content="「計算式が壊れやすい巨大Excelの見積書をなんとかしたい」「Web上で誰でもサクサク計算できる社内ツールが欲しい」。プログラミング経験ゼロの文系事務職が、AI特化型エディタ『Cursor（カーソル）』を使って、わずか1時間で自社専用の見積シミュレーターを開発する手順を完全解説。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-25.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順｜BizHack AI">
+  <meta property="og:description" content="「計算式が壊れやすい巨大Excelの見積書をなんとかしたい」「Web上で誰でもサクサク計算できる社内ツールが欲しい」。プログラミング経験ゼロの文系事務職が、AI特化型エディタ『Cursor（カーソル）』を使って、わずか1時間で自社専用の見積シミュレーターを開発する手順を完全解説。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-25.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-25.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順｜BizHack AI">
+  <meta name="twitter:description" content="「計算式が壊れやすい巨大Excelの見積書をなんとかしたい」「Web上で誰でもサクサク計算できる社内ツールが欲しい」。プログラミング経験ゼロの文系事務職が、AI特化型エディタ『Cursor（カーソル）』を使って、わずか1時間で自社専用の見積シミュレーターを開発する手順を完全解説。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-25.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順",
+        "description": "「計算式が壊れやすい巨大Excelの見積書をなんとかしたい」「Web上で誰でもサクサク計算できる社内ツールが欲しい」。プログラミング経験ゼロの文系事務職が、AI特化型エディタ『Cursor（カーソル）』を使って、わずか1時間で自社専用の見積シミュレーターを開発する手順を完全解説。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-25.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "神崎 聡（かんざき さとし）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-25.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "現場実務・Web自作DX", "item": "https://www.bizhack-ai.com/article-25.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="privacy.html" class="nav-link">サイト規約・問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#featured" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">最新の実践AI活用ノウハウを毎日お届け中！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-27T05:54:24+09:00" class="update-time">2026.10.27 05:54</time>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <!-- ファーストビュー・ヘッダー -->
+        <header class="article-header">
+          <span class="category-tag cat-field">現場実務・Web自作DX</span>
+          <h1 class="article-title">【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026.10.30 公開</span>
+            <span>読了目安：約 8 分で読めます</span>
+            <span>ライター［業務自動化］神崎 聡（かんざき さとし・51歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-25.png" alt="【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#2563eb; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kanzaki.jpg" alt="神崎 聡（かんざき さとし・51歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">神崎 聡（かんざき さとし・51歳）</span>
+                <span class="fv-author-badge" style="background:#dbeafe; color:#1e40af;">現場DX・ツール自作エンジニア</span>
+              </div>
+              <p class="fv-author-comment">
+                「誰かが計算式を消してしまった」「スマホで見積もり計算ができない」。属人化したExcel見積もりに悩まされる事務職や営業現場は後を絶ちません。いま世界中で開発革命を起こしているAIコードエディタ『Cursor（カーソル）』を使えば、プログラムの文法を一切知らなくても、「日本語で要望を伝えるだけ」で美しいWebアプリを今日中に完成させられます。
+              </p>
+            </div>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる成果＆特徴</div>
+          <ul class="fv-takeaways-list">
+<li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>Cursorの導入と初期セッティング</strong><br>VS Codeベースで誰でも使いやすい環境を5分でインストール。</div>
+              </li>
+              <li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>「指示出し（プロンプト）」の黄金テンプレート</strong><br>「こんな見た目で、この計算をして」と日本語でアプリを作らせるプロンプト構成。</div>
+              </li>
+              <li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>社内配布とPDFダウンロード機能</strong><br>計算結果をそのままワンクリックでPDF出力する営業向け便利機能の実装。</div>
+              </li>
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：ChatGPTにこのまま投げるだけ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-25">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-25" class="fv-try-code">HTML、CSS、JavaScriptを単一のファイル（index.html）にまとめた「社内用・見積シミュレーターWebアプリ」を作成してください。
+
+# 要件とデザイン
+- モダンで清潔感のあるビジネス向けUI（Tailwind CSSのCDNを利用）
+- レスポンシブ対応（スマートフォンでも快適に入力・計算できる）
+
+# 機能要件
+1. 基本プラン選択（ラジオボタンまたはドロップダウン）：
+   - スタンダードプラン：100,000円
+   - プレミアムプラン：200,000円
+   - エンタープライズプラン：400,000円
+2. オプション項目の選択（チェックボックス）：
+   - 初期導入サポート：+50,000円
+   - データ移行代行：+80,000円
+   - 24時間365日保守：+30,000円/月
+3. 利用期間（月数）の入力スライダー（1ヶ月〜24ヶ月）
+4. リアルタイム計算表示：
+   - 小計、消費税（10%）、総額を即時更新して大きく表示
+5. 「見積書PDF印刷」ボタン：
+   - ブラウザの印刷ダイアログ（window.print）を呼び出し、A4一枚で見積書として綺麗にプリントアウトできるようにする</pre>
+            <p class="fv-try-hint">💡 使い方：Cursorエディタを開き、[Ctrl + L] でチャット欄に貼り付けて [Enter] を押してください。</p>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#section-1">1. Excelの限界と「専用Webツール」の圧倒的なメリット</a></li>
+            <li><a href="#section-2">2. なぜAI特化エディタ「Cursor」なら非エンジニアでも作れるのか？</a></li>
+            <li><a href="#section-3">3. 【実践】見積シミュレーターを1時間で開発する4ステップ</a></li>
+            <li><a href="#section-4">4. AIにアプリを作らせる「指示出しプロンプト」実例</a></li>
+            <li><a href="#section-5">5. 完成したWebアプリを社内で安全に動かす方法</a></li>
+            <li><a href="#section-6">6. まとめ＆次の自作ツールへの展望</a></li>
+          </ul>
+        </nav>
+
+        <section id="section-1">
+          <h2>1. Excelの限界と「専用Webツール」の圧倒的なメリット</h2>
+          <p>現場の見積計算において、多くの会社がExcelに依存しています。しかし、Excelには以下の構造的弱点があります。</p>
+
+          <div class="card-grid-2">
+            <div class="feature-card">
+              <div class="feature-card-icon">💥</div>
+              <h4>数式の誤削除・誤操作</h4>
+              <p>誰かが関数セルを上書きしてしまい、間違った金額でお客様に提示してしまう事故。</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">📱</div>
+              <h4>スマホ・タブレットでの絶望的な使いにくさ</h4>
+              <p>出先で営業担当がスマートフォンから入力しようとしても、画面が小さく入力が困難。</p>
+            </div>
+          </div>
+
+          <p>これに対し、ブラウザで動く**「専用Webアプリ」**なら、数式は裏側で固定され誤操作がゼロに。スマホでもボタンをポチポチ押すだけで瞬時に金額が算出されます。</p>
+        </section>
+
+        <section id="section-2">
+          <h2>2. なぜAI特化エディタ「Cursor」なら非エンジニアでも作れるのか？</h2>
+          <p>『Cursor』は、世界標準のエディタ「VS Code」をフォークし、Claude 3.5 SonnetやGPT-4oをネイティブ統合した開発環境です。</p>
+
+          <ol class="styled-numbered-list">
+            <li><strong>「Ctrl + K」でファイル内に直接コードを生成</strong><br>白紙のファイルに向かって「見積もり計算ができるHTMLを作って」と日本語で打つだけで、数秒でコードが書かれます。</li>
+            <li><strong>「Ctrl + L」でチャットしながらデザインや機能を追加</strong><br>「ボタンを青色にして」「消費税10%の計算を加えて」と修正点を指示するだけで、AIが自動で差分を反映してくれます。</li>
+            <li><strong>エラーが起きても「Fix」ボタン一発で自己修復</strong><br>動かない原因をAI自身が解析し、ワンクリックで修正案を適用してくれます。</li>
+          </ol>
+        </section>
+
+
+        <section id="section-3">
+          <h2>3. 【実践】見積シミュレーターを1時間で開発する4ステップ</h2>
+          <p>開発環境のセットアップから動作確認までの流れです。</p>
+
+          <h3>ステップ①：Cursorのダウンロードとインストール</h3>
+          <p>Cursor公式サイト（cursor.com）からインストーラーをダウンロードしてインストールします。日本語化パック（Japanese Language Pack）を入れておくと操作も安心です。</p>
+
+          <h3>ステップ②：作業用フォルダを作成して開く</h3>
+          <p>デスクトップ等に「`mitsumori-app`」という空のフォルダを作り、Cursorの「フォルダを開く」で読み込みます。</p>
+
+          <h3>ステップ③：`index.html` を作成してプロンプトを入力</h3>
+          <p>新規ファイル `index.html` を作成し、ショートカット `Ctrl + K`（Macは `Cmd + K`）を押して、後述の指示プロンプトを送信します。</p>
+
+          <h3>ステップ④：ブラウザでダブルクリックして動作確認</h3>
+          <p>生成された `index.html` を保存し、エクスプローラーからChrome等のブラウザにドラッグ＆ドロップするだけで、その場で動く見積アプリが起動します。</p>
+        </section>
+
+        <section id="section-4">
+          <h2>4. AIにアプリを作らせる「指示出しプロンプト」実例</h2>
+          <p>以下のプロンプトをCursorの生成ウィンドウに入力してください。</p>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-badge">Cursor用アプリ生成プロンプト</span>
+              <button class="copy-btn" data-target="cursor-app-prompt">プロンプトをコピー</button>
+            </div>
+            <pre class="prompt-body" id="cursor-app-prompt"><code>HTML、CSS、JavaScriptを単一のファイル（index.html）にまとめた「社内用・見積シミュレーターWebアプリ」を作成してください。
+
+# 要件とデザイン
+- モダンで清潔感のあるビジネス向けUI（Tailwind CSSのCDNを利用）
+- レスポンシブ対応（スマートフォンでも快適に入力・計算できる）
+
+# 機能要件
+1. 基本プラン選択（ラジオボタンまたはドロップダウン）：
+   - スタンダードプラン：100,000円
+   - プレミアムプラン：200,000円
+   - エンタープライズプラン：400,000円
+2. オプション項目の選択（チェックボックス）：
+   - 初期導入サポート：+50,000円
+   - データ移行代行：+80,000円
+   - 24時間365日保守：+30,000円/月
+3. 利用期間（月数）の入力スライダー（1ヶ月〜24ヶ月）
+4. リアルタイム計算表示：
+   - 小計、消費税（10%）、総額を即時更新して大きく表示
+5. 「見積書PDF印刷」ボタン：
+   - ブラウザの印刷ダイアログ（window.print）を呼び出し、A4一枚で見積書として綺麗にプリントアウトできるようにする</code></pre>
+          </div>
+        </section>
+
+        <section id="section-5">
+          <h2>5. 完成したWebアプリを社内で安全に動かす方法</h2>
+          <p>外部サーバーを契約しなくても、安全に社内共有する方法がいくつかあります。</p>
+
+          <div class="card-grid-2">
+            <div class="feature-card">
+              <h4>① 社内共有フォルダ（ファイルサーバー）</h4>
+              <p>作成した `index.html` を社内ファイルサーバーに置くだけ。全員がダブルクリックすればブラウザで動きます。外部への通信がないため機密情報も安全です。</p>
+            </div>
+            <div class="feature-card">
+              <h4>② 社内Notionやポータルへの埋め込み</h4>
+              <p>HTMLファイルを社内イントラ等にアップロードしてリンクを設置。営業メンバーがブックマークしておけば、商談の場で即座に見積もりを提示できます。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-6">
+          <h2>6. まとめ＆次の自作ツールへの展望</h2>
+          <p>「システム開発はエンジニアに依頼するもの」「予算が何百万円もかかるもの」という常識は、Cursorの登場で完全に過去のものとなりました。</p>
+
+          <div class="card-grid-3">
+            <div class="summary-card">
+              <div class="summary-card-number">01</div>
+              <h4>Cursorで日本語指示</h4>
+              <p>コードが読めなくても「どんな画面を作りたいか」を伝えるだけ。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">02</div>
+              <h4>1ファイル完結</h4>
+              <p>HTML/CSS/JSがまとまっているため、管理も共有も極めて簡単。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">03</div>
+              <h4>現場の課題を即解決</h4>
+              <p>「壊れない・使いやすい」Webツールを自分の手で量産できる。</p>
+            </div>
+          </div>
+
+          <p>見積計算だけでなく、社内アンケート集計ツール、業務チェックリスト、在庫確認画面など、現場の「あったらいいな」をぜひCursorで形にしてみてください！</p>
+        </section>
+
+        <!-- 著者プロフィール -->
+        <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #2563eb; overflow:hidden;">
+              <img src="images/author-kanzaki.jpg" alt="神崎 聡" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">神崎 聡（かんざき さとし）</div>
+              <div class="bio-role">BizHack AI 現場DX・ツール自作担当エンジニア</div>
+              <p class="bio-desc">非エンジニアが自ら業務効率化ツールを作れる世界を目指し、Dify、GAS、Claude、Notionなどを組み合わせた社内自動化の実践ノウハウを発信中。「現場の面倒な作業を今日中に消し去る」がモットー。</p>
+            </div>
+          </div>
+
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全20弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第20弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-20.html">スプシ×GAS定型通知全自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第19弾</span></div><a href="article-19.html">Excel×Copilotクロス集計術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span></div><a href="article-18.html">一人起業の完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notionタスク自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第16弾</span></div><a href="article-16.html">NotebookLMで社内ナレッジ化</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+        <!-- 著者情報カード -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">執筆・監修</h3>
+          <div class="sidebar-author">
+            <img src="images/author-kanzaki.jpg" alt="神崎 聡" width="60" height="60" class="sidebar-author-img">
+            <div class="sidebar-author-name">神崎 聡</div>
+            <div class="sidebar-author-title">現場DXエンジニア</div>
+            <p class="sidebar-author-desc">現場の日常業務をノーコードとAIで自動化するスペシャリスト。</p>
+          </div>
+        </div>
+
+
+        <!-- 関連記事枠 -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">おすすめの関連記事</h3>
+          <ul class="sidebar-recent-list">
+            <li><a href="article-13.html">【Claude 3.5 Sonnet Artifacts】非エンジニアでも社内Webツールが爆速自作できる！</a></li>
+            <li><a href="article-22.html">【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順</a></li>
+            <li><a href="article-19.html">【Excel×Copilot】月末の集計作業を5分に圧縮するピボットテーブル＆クロス集計術</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

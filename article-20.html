@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術｜BizHack AI</title>
+  <meta name="description" content="プログラミング未経験でも大丈夫！ChatGPTに自然言語で要件を投げるだけで、Googleスプレッドシートの集計からGmail・Slackへの定期自動通知までを全自動化するGAS（Google Apps Script）コード生成プロンプトと設定手順を完全図解。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-20.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術｜BizHack AI">
+  <meta property="og:description" content="プログラミング未経験でも大丈夫！ChatGPTに自然言語で要件を投げるだけで、Googleスプレッドシートの集計からGmail・Slackへの定期自動通知までを全自動化するGAS（Google Apps Script）コード生成プロンプトと設定手順を完全図解。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-20.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-20.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術｜BizHack AI">
+  <meta name="twitter:description" content="プログラミング未経験でも大丈夫！ChatGPTに自然言語で要件を投げるだけで、Googleスプレッドシートの集計からGmail・Slackへの定期自動通知までを全自動化するGAS（Google Apps Script）コード生成プロンプトと設定手順を完全図解。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-20.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術",
+        "description": "プログラミング未経験でも大丈夫！ChatGPTに自然言語で要件を投げるだけで、Googleスプレッドシートの集計からGmail・Slackへの定期自動通知までを全自動化するGAS（Google Apps Script）コード生成プロンプトと設定手順を完全図解。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-20.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "神崎 聡（かんざき さとし）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-20.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "現場実務・スプシ自動化", "item": "https://www.bizhack-ai.com/article-20.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+        <a href="privacy.html" class="nav-link">規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#latest-pickup" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">第20弾「スプシ×GAS自動化・毎日の定型通知全自動化」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-hidden="false" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-25T00:00:00+09:00" class="update-time">2026.10.25 00:00</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-field">現場実務・スプシ自動化</span>
+          <h1 class="article-title">【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026年10月25日</span>
+            <span>読了目安：約8分</span>
+            <span>ライター［業務自動化］神崎 聡（かんざき さとし・51歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-20.png" alt="【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card fv-theme-kanzaki" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#059669; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡（かんざき さとし・51歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">神崎 聡（かんざき さとし・51歳）</span>
+                <span class="fv-author-badge" style="background:#d1fae5; color:#065f46;">自前DX・完全自動化担当</span>
+              </div>
+              <p class="fv-author-comment">
+                「毎朝9時にスプレッドシートを開いて、前日の数字を手動でコピペしてチームのSlackやメールに流す……そんな単純作業で脳のエネルギーを消費していませんか？ GAS（Google Apps Script）を使えば、PCを開いていなくてもクラウド上で勝手に集計・通知が終わります。プログラミング知識ゼロでもChatGPTに丸投げして動くコードを書かせる秘伝テンプレートを公開します！」
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：ChatGPTにこのまま投げるだけ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-20">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-20" class="fv-try-code">あなたはGoogle Apps Script（GAS）のエキスパートエンジニアです。
+以下の仕様を満たす安全でエラーの起きないGASスクリプトを書いてください。
+
+# 目的:
+Googleスプレッドシートの「案件管理」シートを確認し、
+「ステータス（E列）」が『未着手』または『進行中』で、
+かつ「納期（F列）」が今日から3日以内の行を抽出して、
+毎朝9時に指定のGmail宛（またはSlack Webhook）にリマインド通知を送りたいです。
+
+# 出力要件:
+1. 初心者でも迷わないコードコメント（日本語）付きで出力
+2. シート名や列番号の定義を変数化してメンテナンスしやすくする
+3. 実行時の「権限承認」「時間トリガー設定」の具体的な手順も解説してください</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>ChatGPTに貼って送信するだけで、スプレッドシートのツールメニューから1クリックで動くGASコードが手に入ります。</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#059669;">✓</span>
+              <div><strong>毎朝の定型集計・報告を完全自動化</strong><br>PCを起動していなくてもクラウドが勝手に実行</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#059669;">✓</span>
+              <div><strong>期限切れ・未対応タスクのゼロ化</strong><br>条件一致の案件だけを自動抽出してリマインド</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon" style="color:#059669;">✓</span>
+              <div><strong>プログラミング学習不要のAI開発術</strong><br>ChatGPTに日本語で伝えるだけでコードが完成</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-1" class="fv-quick-btn primary" style="background:#059669;">📋 1. なぜGAS×AIなのか ↓</a>
+            <a href="#sec-2" class="fv-quick-btn secondary">2. GAS生成5大構文 ↓</a>
+            <a href="#sec-3" class="fv-quick-btn secondary">3. 未完了タスク自動通知 ↓</a>
+            <a href="#sec-5" class="fv-quick-btn secondary">4. トリガー設定3ステップ ↓</a>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. なぜ「毎日のスプシ確認と連絡」に1日30分も奪われるのか？</a></li>
+            <li><a href="#sec-2">2. 【ChatGPTへの投げ方】GASコードを一発で成功させる「5大プロンプト構文」</a></li>
+            <li><a href="#sec-3">3. 【実践コード①】「未完了タスク」を毎朝9時に自動検知してリマインドメール送信</a></li>
+            <li><a href="#sec-4">4. 【実践コード②】前日売上を自動集計してSlackやChatworkに朝イチ速報</a></li>
+            <li><a href="#sec-5">5. スクリプトエディタへの貼り付け＆時間指定トリガー設定の3ステップ</a></li>
+            <li><a href="#sec-6">6. 読者モニター高橋さん（35歳・チームリーダー）の実務検証レポート</a></li>
+            <li><a href="#sec-7">7. まとめ：ルーチン作業はすべてAIとGASに預け、人間は判断に集中しよう</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p class="article-lead">
+            日々の業務で最も疲弊するのは、「売上シートの数字を確認してSlackに共有する」「期限が近い案件を探して担当者に『これ進んでいますか？』とメールする」といった定型的な確認・連絡業務です。これらは1回10〜15分程度ですが、毎日繰り返すと<strong>年間で100時間以上</strong>をドブに捨てる計算になります。Googleスプレッドシートには、完全無料で使える強力な自動化エンジン<strong>「GAS（Google Apps Script）」</strong>が標準搭載されています。プログラミングを勉強する必要はありません。ChatGPTに正しいフォーマットで指示を出せば、<strong>コピペするだけで動く完全な自動化プログラムが1分で生成</strong>できます。
+          </p>
+
+          <h2 id="sec-1">1. なぜ「毎日のスプシ確認と連絡」に1日30分も奪われるのか？</h2>
+          <p>
+            多くのビジネス現場でGASの自動化が進まない理由は、「自分はプログラマーではないから」「JavaScriptの文法が分からないから」という思い込みにあります。
+          </p>
+          <p>
+            しかし、生成AIが登場した現在、プログラミング言語の文法を覚える必要は一切ありません。必要なのは<strong>「スプレッドシートのどのシートの、何列目をチェックして、どんな条件のときに、誰にどんなメッセージを送りたいか」という業務ルールを日本語で正しく言語化すること</strong>だけです。
+          </p>
+          <div class="point-box">
+            <strong>💡 GAS自動化の圧倒的な3大メリット：</strong><br>
+            ・<strong>完全無料</strong>：Googleアカウントがあれば月額ツール費用は0円<br>
+            ・<strong>24時間クラウド稼働</strong>：PCの電源を切っていても、深夜や土日でも勝手に実行される<br>
+            ・<strong>他ツールと連携自由自在</strong>：Gmail、Googleカレンダー、Slack、LINE、Chatworkと簡単に連動可能
+          </div>
+
+          <h2 id="sec-2">2. 【ChatGPTへの投げ方】GASコードを一発で成功させる「5大プロンプト構文」</h2>
+          <p>
+            ChatGPTに「GAS書いて」とだけ投げると、シート名が違ったり列のインデックス（0始まりか1始まりか）がズレて動かないコードが出力されがちです。以下の<strong>「5大要素」</strong>をプロンプトに盛り込むのが、一発成功の秘訣です。
+          </p>
+          <div class="step-card">
+            <h4>📌 GAS生成プロンプトの5大必須要素</h4>
+            <ol>
+              <li><strong>対象シート名</strong>（例: 「案件一覧」シート）</li>
+              <li><strong>データ開始行と見出し行</strong>（例: 1行目が見出し、2行目からデータ）</li>
+              <li><strong>判定列と条件</strong>（例: E列が「未完了」かつ F列の期日が「今日以前」）</li>
+              <li><strong>アクション内容</strong>（例: G列のメールアドレス宛にリマインド送信）</li>
+              <li><strong>二重送信防止ルール</strong>（例: 送信済みの行はH列に「送信済」と書き込む）</li>
+            </ol>
+          </div>
+
+          <h2 id="sec-3">3. 【実践コード①】「未完了タスク」を毎朝9時に自動検知してリマインドメール送信</h2>
+          <p>
+            まずは最も汎用性の高い「期限が迫った未完了タスクの自動検知＆メール通知」の実践コードです。以下のプロンプトをChatGPTに入力してください。
+          </p>
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 プロンプト：期日直前タスクの自動リマインドGAS生成</span>
+              <button class="copy-btn" data-target="p-gas-task-20">プロンプトをコピー</button>
+            </div>
+            <pre id="p-gas-task-20">Googleスプレッドシートで動くGASを作成してください。
+
+【シート仕様】
+・シート名: "タスク管理"
+・A列: タスク名
+・B列: 担当者氏名
+・C列: 担当者メールアドレス
+・D列: 期日（YYYY/MM/DD形式）
+・E列: ステータス（「完了」「進行中」「未着手」）
+・F列: リマインド状態（送信したら「送信済」と記録する列）
+
+【処理要件】
+1. E列が「完了」以外で、かつD列の期日が「今日から2日以内」の行を検索する。
+2. F列がまだ「送信済」でない場合のみ、C列のアドレス宛に以下のGmailを送信する。
+   件名: 【期日間近】タスク「{A列}」のリマインド
+   本文: {B列}さん、お疲れ様です。タスク「{A列}」の期日が {D列} に迫っています。進捗のご確認をお願いいたします。
+3. 送信後、F列に「送信済」と書き込んで二重送信を防ぐ。</pre>
+          </div>
+          <p>
+            ChatGPTはこの指示から、エラーハンドリング付きの完全なJavaScriptコードを出力してくれます。これをスプレッドシートの「拡張機能」→「Apps Script」に貼り付けるだけで機能します。
+          </p>
+
+          <h2 id="sec-4">4. 【実践コード②】前日売上を自動集計してSlackやChatworkに朝イチ速報</h2>
+          <p>
+            営業チームやマーケティングチームで重宝するのが、スプレッドシートに入力された売上データを集計して毎朝Slackへ自動投稿するスクリプトです。
+          </p>
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-label">📋 プロンプト：前日売上集計＆Slack速報GAS生成</span>
+              <button class="copy-btn" data-target="p-gas-slack-20">プロンプトをコピー</button>
+            </div>
+            <pre id="p-gas-slack-20">スプレッドシートの「売上明細」シートから、
+前日分の日付（A列）の行だけを抽出し、
+「受注件数（行数）」と「売上金額（C列の合計）」を集計してください。
+その結果を、Incoming Webhookを利用してSlackの #sales-report チャンネルに毎朝8時半に通知するGASコードを書いてください。
+Webhook URLはコード先頭の定数で差し替え可能にしてください。</pre>
+          </div>
+          <p>
+            毎朝チームメンバーが起きる前に、前日の確定数字がチャットへ綺麗にフォーマットされて届くため、朝礼や確認の手間がゼロになります。
+          </p>
+
+
+          <h2 id="sec-5">5. スクリプトエディタへの貼り付け＆時間指定トリガー設定の3ステップ</h2>
+          <p>
+            コードが生成できたら、あとは以下の3ステップでスプレッドシートに組み込むだけです。
+          </p>
+          <div class="step-card">
+            <h4>💡 GASを定期実行させる3ステップ</h4>
+            <ol>
+              <li><strong>Apps Scriptを開く</strong>：スプレッドシート上部メニュー「拡張機能」＞「Apps Script」をクリック。</li>
+              <li><strong>コードを貼り付けて保存</strong>：エディタに表示された <code>myFunction()</code> をすべて削除し、ChatGPTのコードを貼り付けてフロッピーアイコン（保存）を押す。</li>
+              <li><strong>トリガーを設定</strong>：左メニューの時計アイコン「トリガー」＞「トリガーを追加」をクリック。「時間主導型」「日付ベースのタイマー」「午前8時〜9時」を選択して保存。</li>
+            </ol>
+          </div>
+          <p>
+            ※初回の実行時のみ、Googleのセキュリティ確認画面が表示されます。「詳細を表示」＞「〇〇（安全ではないページ）に移動」をクリックして権限を許可してください。
+          </p>
+
+          <h2 id="sec-6">6. 読者モニター高橋さん（35歳・チームリーダー）の実務検証レポート</h2>
+          <div class="voice-card">
+            <div class="voice-header">
+              <span class="voice-name">高橋 健司さん（35歳・営業チームリーダー）</span>
+              <span class="voice-tag">実務検証：朝の進捗確認とリマインド</span>
+            </div>
+            <p class="voice-text">
+              「毎朝出社すると、まずスプレッドシートを開いてメンバー10人の案件進捗を確認し、期限切れそうな案件をSlackでメンションするのが日課でした。毎朝30分以上かかり、朝一番の大事な集中力を奪われていました。<br><br>
+              神崎さんの記事の通り、ChatGPTに条件を伝えてGASを生成し、毎朝8時半にトリガー設定したところ、<strong>私がPCを開く前にSlackへ未対応タスクが自動で通知されるようになりました。</strong>メンバーも自動通知を見て勝手に動き出すようになり、チーム全体の期限遅れがゼロになりました！」
+            </p>
+          </div>
+
+          <h2 id="sec-7">7. まとめ：ルーチン作業はすべてAIとGASに預け、人間は判断に集中しよう</h2>
+          <p>
+            スプレッドシートの確認や定型通知は、人間が時間をかけて手作業で行うべき仕事ではありません。
+          </p>
+          <ul class="summary-list">
+            <li><strong>ChatGPTに業務要件（5大構文）を伝えるだけでGASコードは即完成する</strong></li>
+            <li><strong>二重送信防止ルールを設けることで誤配信のトラブルを防止</strong></li>
+            <li><strong>時間主導型トリガーを設定すればPCオフでもクラウドが自動巡回</strong></li>
+            <li><strong>定型作業を手放すことで、チームマネジメントや重要商談に100%集中できる</strong></li>
+          </ul>
+          <p>
+            今日ご紹介したプロンプトをそのままChatGPTに投げて、あなただけの「24時間働くクラウド秘書」を作ってみてください！
+          </p>
+
+          <!-- 関連記事ナビゲーション -->
+          <div class="related-articles-box">
+            <div class="related-title">あわせて読みたい！おすすめのDX実践記事</div>
+            <div class="related-grid">
+              <a href="article-11.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第11弾・スプシ自動化</span>
+                  <div class="related-card-title">【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにおまかせ！神ワザ7選</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+              <a href="article-12.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第12弾・メール自動化</span>
+                  <div class="related-card-title">【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る時短プロンプト</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 著者バイオカード -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #059669; overflow:hidden;">
+              <img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">神崎 聡（かんざき さとし・51歳）</div>
+              <div class="bio-role">自前DX・完全自動化エンジニア / 現場DXスペシャリスト</div>
+              <p class="bio-desc">
+                中小企業および個人事業主向けに、Google Apps Script（GAS）やPython、ノーコードツールを活用した「金をかけない自前DX」を多数構築。高価なシステム導入に頼らず、現場にあるツールとAIを組み合わせて業務工数を極限まで削る実践指導に定評がある。
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全18弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-18.html">一人起業のための完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notion手ぶらタスク管理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第16弾</span></div><a href="article-16.html">NotebookLMで社内文書ナレッジ化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第15弾</span></div><a href="article-15.html">ChatGPT Search競合調査術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第14弾</span></div><a href="article-14.html">Perplexity競合調査レポート術</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">当サイトについて（運営者情報）</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊｜BizHack AI</title>
+  <meta name="description" content="毎朝30分かけて業界ニュースや競合企業のWebサイトをチェックしていませんか？自律型AIエージェントとWebリサーチツールを連携させ、競合のプレスリリースや新機能、業界の重大トレンドだけを自動巡回・要約し、毎朝8時にSlackやメールへお届けする「専属情報部隊」の構築手順を徹底解説。">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-27.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊｜BizHack AI">
+  <meta property="og:description" content="毎朝30分かけて業界ニュースや競合企業のWebサイトをチェックしていませんか？自律型AIエージェントとWebリサーチツールを連携させ、競合のプレスリリースや新機能、業界の重大トレンドだけを自動巡回・要約し、毎朝8時にSlackやメールへお届けする「専属情報部隊」の構築手順を徹底解説。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-27.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-27.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊｜BizHack AI">
+  <meta name="twitter:description" content="毎朝30分かけて業界ニュースや競合企業のWebサイトをチェックしていませんか？自律型AIエージェントとWebリサーチツールを連携させ、競合のプレスリリースや新機能、業界の重大トレンドだけを自動巡回・要約し、毎朝8時にSlackやメールへお届けする「専属情報部隊」の構築手順を徹底解説。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-27.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊",
+        "description": "毎朝30分かけて業界ニュースや競合企業のWebサイトをチェックしていませんか？自律型AIエージェントとWebリサーチツールを連携させ、競合のプレスリリースや新機能、業界の重大トレンドだけを自動巡回・要約し、毎朝8時にSlackやメールへお届けする「専属情報部隊」の構築手順を徹底解説。",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-27.png?v=20261025",
+        "author": {
+          "@type": "Person",
+          "name": "黒澤 拓海（くろさわ たくみ）"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-27.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "企画・リサーチDX", "item": "https://www.bizhack-ai.com/article-27.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="privacy.html" class="nav-link">サイト規約・問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時 -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#featured" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">最新の実践AI活用ノウハウを毎日お届け中！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-27T05:54:24+09:00" class="update-time">2026.10.27 05:54</time>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <!-- ファーストビュー・ヘッダー -->
+        <header class="article-header">
+          <span class="category-tag cat-creative">企画・リサーチDX</span>
+          <h1 class="article-title">【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊</h1>
+          <div class="article-meta-bar">
+            <span>公開日：2026.11.01 公開</span>
+            <span>読了目安：約 8 分で読めます</span>
+            <span>ライター［法人AI導入］黒澤 拓海（くろさわ たくみ・44歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-27.png" alt="【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+        <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar" style="border-color:#2563eb; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+              <img src="images/author-kurosawa.jpg" alt="黒澤 拓海（くろさわ たくみ・44歳）" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">黒澤 拓海（くろさわ たくみ・44歳）</span>
+                <span class="fv-author-badge" style="background:#dbeafe; color:#1e40af;">事業開発・企画戦略リサーチ</span>
+              </div>
+              <p class="fv-author-comment">
+                「競合他社が昨日発表した新機能を知らなかった」「業界の法改正ニュースを見落としていた……」。ビジネスの成敗を分ける情報収集ですが、毎日いくつものWebサイトやニュースアプリを巡回するのは大変な労力です。命令を一度セットしておけば、人間が寝ている間に自律してWebを調査し、毎朝重要トピックだけを要約して届けてくれる「AIリサーチ部隊」の作り方を解説します。
+              </p>
+            </div>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる成果＆特徴</div>
+          <ul class="fv-takeaways-list">
+<li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>「自律型AIエージェント」の仕組みと選び方</strong><br>単なるチャットAIと何が違うのか？自分で計画してWebを探しに行く次世代ツールの全体像。</div>
+              </li>
+              <li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>ノイズを排除する「競合モニタリング指示書」</strong><br>無駄なコタツ記事を弾き、新製品・価格改定・業務提携だけをピンポイント抽出するプロンプト。</div>
+              </li>
+              <li class="fv-takeaway-item">
+                <span class="fv-takeaway-icon" style="color:#2563eb;">✓</span>
+                <div><strong>毎朝8時配信の自動通知パイプライン</strong><br>SlackやGmail、Notionに毎朝「3分で読める重要ブリーフィング」として届く仕組み。</div>
+              </li>
+          </ul>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：ChatGPTにこのまま投げるだけ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-instant-27">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-instant-27" class="fv-try-code"># あなたの役割
+あなたは当社の「競合インテリジェンス専属リサーチャー」です。
+指定された競合企業【A社、B社、C社】および対象業界【〇〇市場】に関する直近24時間の最新情報をリサーチし、経営陣および企画チーム向けの朝刊ブリーフィングを作成してください。
+
+# 抽出の対象とする重要シグナル（以下のいずれかに該当するもののみ）
+1. 新製品・新機能のリリースや大型アップデート
+2. 価格改定（値上げ・値下げ）や料金プランの変更
+3. 業務提携、M&A、資金調達、上場に関する発表
+4. 業界に関わる重要な法改正、ガイドライン変更
+
+# 除外するノイズ
+- 単なる社員インタビューや日常のブログ記事
+- 取引実績の単発の小規模な紹介
+- 憶測や噂レベルの未確定情報
+
+# 出力フォーマット（毎朝3分で読める構成）
+【競合インテリジェンス朝刊：YYYY/MM/DD】
+
+■ 本日の最重要トピック（1件）
+- 企業名 / 見出し
+- 概要（何が起きたか：2行）
+- 自社への影響・示唆（自社が警戒すべき点：2行）
+- 出典URL</pre>
+            <p class="fv-try-hint">💡 使い方：競合企業名と業界名を書き換えてChatGPT（GPT-4o / Search機能推奨）へ送信してください。</p>
+          </div>
+        </section>
+
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#section-1">1. チャットAIから「勝手に働いてくれるAIエージェント」への大進化</a></li>
+            <li><a href="#section-2">2. 競合・業界リサーチAIを動かす3大アプローチ</a></li>
+            <li><a href="#section-3">3. ノイズを極限まで削る「調査ディレクション・プロンプト」</a></li>
+            <li><a href="#section-4">4. 毎朝8時にSlackやメールへダイジェストを届ける連携手順</a></li>
+            <li><a href="#section-5">5. 社内共有で「情報感度の高いリーダー」として評価される活用術</a></li>
+            <li><a href="#section-6">6. まとめ＆実践ロードマップ</a></li>
+          </ul>
+        </nav>
+
+        <section id="section-1">
+          <h2>1. チャットAIから「勝手に働いてくれるAIエージェント」への大進化</h2>
+          <p>これまでの生成AI（ChatGPTなど）は、「人間が質問を投げて、AIが答える」という1往復のやり取りが基本でした。しかし、これでは毎日人間が指示を入力しなければなりません。</p>
+          <p>いま急速に普及している**「自律型AIエージェント（Autonomous Agent）」**は、ゴールを一度設定しておくだけで、自らタスクを細分化し、Webを巡回して情報を集め、まとめた結果を報告してくれます。</p>
+
+          <div class="card-grid-2">
+            <div class="feature-card">
+              <h4>💬 従来のチャットAI</h4>
+              <p>「毎朝自分でAIを開き、プロンプトを入力して回答を待つ」という手作業が必要。</p>
+            </div>
+            <div class="feature-card">
+              <h4>🤖 自律型AIエージェント</h4>
+              <p>「毎朝定時に自動で情報収集・精査・要約・チャット送信まで」全自動で完結。</p>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="section-2">
+          <h2>2. 競合・業界リサーチAIを動かす3大アプローチ</h2>
+          <p>自律リサーチを実現する方法は、難易度や予算に応じて3つの選択肢があります。</p>
+
+          <div class="flow-steps">
+            <div class="step-card">
+              <div class="step-badge">方法 1</div>
+              <h4>Perplexity Pro / Gensparkの定期スケジューリング</h4>
+              <p>最も手軽。高度なAI検索エンジンでコレクションを作成し、毎朝のリサーチレポートを自動生成。</p>
+            </div>
+            <div class="step-card">
+              <div class="step-badge">方法 2</div>
+              <h4>Dify / Make × Google News RSS連携</h4>
+              <p>業界のRSSフィードやPR TIMESの新着通知をトリガーにし、AIが要約してSlackへ流し込む。</p>
+            </div>
+            <div class="step-card">
+              <div class="step-badge">方法 3</div>
+              <h4>Pythonスクリプト（BeautifulSoup + OpenAI API）のCron実行</h4>
+              <p>競合サイトの更新差分を機械的に検知し、自社サーバーやGitHub Actionsから完全自動実行。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-3">
+          <h2>3. ノイズを極限まで削る「調査ディレクション・プロンプト」</h2>
+          <p>自動収集で最も困るのは、「どうでもいい噂や無関係なニュース」でチャットが埋め尽くされることです。以下の**「重要度フィルタリングプロンプト」**をエージェントに設定しましょう。</p>
+
+          <div class="prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-badge">競合モニタリング指示プロンプト</span>
+              <button class="copy-btn" data-target="agent-research-prompt">プロンプトをコピー</button>
+            </div>
+            <pre class="prompt-body" id="agent-research-prompt"><code># あなたの役割
+あなたは当社の「競合インテリジェンス専属リサーチャー」です。
+指定された競合企業【A社、B社、C社】および対象業界【〇〇市場】に関する直近24時間の最新情報をリサーチし、経営陣および企画チーム向けの朝刊ブリーフィングを作成してください。
+
+# 抽出の対象とする重要シグナル（以下のいずれかに該当するもののみ）
+1. 新製品・新機能のリリースや大型アップデート
+2. 価格改定（値上げ・値下げ）や料金プランの変更
+3. 業務提携、M&A、資金調達、上場に関する発表
+4. 業界に関わる重要な法改正、ガイドライン変更
+
+# 除外するノイズ
+- 単なる社員インタビューや日常のブログ記事
+- 取引実績の単発の小規模な紹介
+- 憶測や噂レベルの未確定情報
+
+# 出力フォーマット（毎朝3分で読める構成）
+【競合インテリジェンス朝刊：YYYY/MM/DD】
+
+■ 本日の最重要トピック（1件）
+- 企業名 / 見出し
+- 概要（何が起きたか：2行）
+- 自社への影響・示唆（自社が警戒すべき点：2行）
+- 出典URL
+
+■ その他の注目ニュース（最大3件）
+- [企業名] 要約見出し（URL）
+
+※該当する重要ニュースがゼロ件の場合は、「本日は警戒すべき重要ニュースはありませんでした」と報告すること。</code></pre>
+          </div>
+        </section>
+
+        <section id="section-4">
+          <h2>4. 毎朝8時にSlackやメールへダイジェストを届ける連携手順</h2>
+          <p>作成したレポートは、毎朝出勤直後（8:00〜8:30）にチームのSlackやTeamsチャンネル、あるいは自分のメールへ自動配信されるようにセットします。</p>
+
+          <div class="card-grid-2">
+            <div class="feature-card">
+              <h4>💬 Slack / Teams連携</h4>
+              <p>Incoming Webhookを使って、チーム専用の「#news-ai-briefing」チャンネルに投稿。メンバー全員が自然に最新ニュースをキャッチアップできます。</p>
+            </div>
+            <div class="feature-card">
+              <h4>📧 朝刊メール配信</h4>
+              <p>GASやMakeのGmail送信モジュールを使い、毎朝の通勤電車の中でスマホからサッと読めるメールとして配信します。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-5">
+          <h2>5. 社内共有で「情報感度の高いリーダー」として評価される活用術</h2>
+          <p>この仕組みを導入すると、単に自分のリサーチ時間がゼロになるだけでなく、社内でのプレゼンスが劇的に向上します。</p>
+          <p>「競合のあの発表、もう知ってる？」「業界のあの動き、どう対応する？」と社内で話題になったとき、すでに朝一番に示唆付きで共有しているあなたの評価は圧倒的なものになります。</p>
+        </section>
+
+        <section id="section-6">
+          <h2>6. まとめ＆実践ロードマップ</h2>
+          <p>情報収集は「探すこと」自体には価値がありません。「集まった情報から示唆を得て、自社の次の一手を打つこと」にこそ価値があります。</p>
+
+          <div class="card-grid-3">
+            <div class="summary-card">
+              <div class="summary-card-number">01</div>
+              <h4>監視対象を絞る</h4>
+              <p>追うべき競合3社と主要キーワードを明確にする。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">02</div>
+              <h4>ノイズを排除</h4>
+              <p>厳格なフィルタリング指示で重要なシグナルだけを抽出。</p>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-number">03</div>
+              <h4>毎朝自動通知</h4>
+              <p>手動検索を完全にやめ、毎朝自動で届く習慣を作る。</p>
+            </div>
+          </div>
+
+          <p>自律型AIエージェントを味方につけて、競合の一歩先を行く情報スピードを手に入れましょう！</p>
+        </section>
+
+        <!-- 著者プロフィール -->
+        <div class="author-bio-card">
+            <div class="bio-avatar" style="border:2px solid #2563eb; overflow:hidden;">
+              <img src="images/author-kurosawa.jpg" alt="黒澤 拓海" width="64" height="64" style="object-fit:cover;">
+            </div>
+            <div>
+              <div class="bio-name">黒澤 拓海（くろさわ たくみ）</div>
+              <div class="bio-role">BizHack AI 企画戦略・競合リサーチ担当</div>
+              <p class="bio-desc">大手Webサービス企画、新規事業立ち上げ、スタートアップ支援を経験。AI検索・自律エージェントを駆使した「競合インテリジェンス・市場調査の圧倒的時短」を追求している。</p>
+            </div>
+          </div>
+
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全20弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第20弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-20.html">スプシ×GAS定型通知全自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第19弾</span></div><a href="article-19.html">Excel×Copilotクロス集計術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第18弾</span></div><a href="article-18.html">一人起業の完全自動経理</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第17弾</span></div><a href="article-17.html">音声AI×Notionタスク自動化</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第16弾</span></div><a href="article-16.html">NotebookLMで社内ナレッジ化</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全特集一覧を見る →
+            </a>
+          </div>
+        </div>
+        <!-- 著者情報カード -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">執筆・監修</h3>
+          <div class="sidebar-author">
+            <img src="images/author-kurosawa.jpg" alt="黒澤 拓海" width="60" height="60" class="sidebar-author-img">
+            <div class="sidebar-author-name">黒澤 拓海</div>
+            <div class="sidebar-author-title">企画戦略リサーチャー</div>
+            <p class="sidebar-author-desc">市場調査と競合分析の完全自動化を推進。</p>
+          </div>
+        </div>
+
+
+        <!-- 関連記事枠 -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">おすすめの関連記事</h3>
+          <ul class="sidebar-recent-list">
+            <li><a href="article-14.html">【業界・競合リサーチ完全自動化】Perplexity×ChatGPTで市場調査レポートを15分でまとめる技</a></li>
+            <li><a href="article-5.html">【企画書・プレゼン時短】ChatGPTで「通る企画書」の骨子とスライド構成案を30分で仕上げる方法</a></li>
+            <li><a href="article-22.html">【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

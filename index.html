@@ -1,0 +1,1746 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>BizHack AI｜現場の仕事を3時間短縮する生成AI・SaaS実践マガジン</title>
+  <meta name="description" content="AI初心者から現場の実務家まで、明日すぐ職場で役立つ生成AIツール・業務効率化SaaSのリアルな検証データと実践プロンプトを発信する特化Webマガジン。">
+  <meta name="google-site-verification" content="azecMWp7qMu1Xkv_tUHpbUazXbi6S2zvrYw4drMPBXw" />
+  <link rel="canonical" href="https://www.bizhack-ai.com/">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BizHack AI｜現場の仕事を3時間短縮する生成AI・SaaS実践マガジン">
+  <meta property="og:description" content="AI初心者から現場の実務家まで、明日すぐ職場で役立つ生成AIツール・業務効率化SaaSのリアルな検証データと実践プロンプトを発信する特化Webマガジン。">
+  <meta property="og:url" content="https://www.bizhack-ai.com/">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/bizhack-icon-main.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BizHack AI｜現場の仕事を3時間短縮する生成AI・SaaS実践マガジン">
+  <meta name="twitter:description" content="無料・コピペで今日から動く生成AI実践プロンプト集（全20弾）。">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/bizhack-icon-main.jpg">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.bizhack-ai.com/#website",
+        "url": "https://www.bizhack-ai.com/",
+        "name": "BizHack AI",
+        "description": "現場の仕事を3時間短縮する生成AI・SaaS実践マガジン",
+        "inLanguage": "ja",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "url": "https://www.bizhack-ai.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "BizHack AI 実践記事一覧（全20弾）",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://www.bizhack-ai.com/article-1.html", "name": "ゼロから始めるChatGPT超入門！今日から仕事で使える神質問テクニック7選" },
+          { "@type": "ListItem", "position": 2, "url": "https://www.bizhack-ai.com/article-2.html", "name": "もう文章で悩まない！角が立たない・お詫び・催促・お礼メール一発作成プロンプト集" },
+          { "@type": "ListItem", "position": 3, "url": "https://www.bizhack-ai.com/article-3.html", "name": "雑な殴り書きメモを貼るだけ！上司に一発で通る「ChatGPT議事録作成プロンプト」" },
+          { "@type": "ListItem", "position": 4, "url": "https://www.bizhack-ai.com/article-4.html", "name": "エクセルが苦手でも大丈夫！ChatGPTに「やりたいこと」を日本語で丸投げする超簡単データ集計術" },
+          { "@type": "ListItem", "position": 5, "url": "https://www.bizhack-ai.com/article-5.html", "name": "箇条書きを投げるだけでPowerPointのスライド構成案ができる「企画・プレゼン下書き術」" },
+          { "@type": "ListItem", "position": 6, "url": "https://www.bizhack-ai.com/article-6.html", "name": "ChatGPT×無料Canvaで作る「売れるSNS画像・Webバナー」爆速制作術" },
+          { "@type": "ListItem", "position": 7, "url": "https://www.bizhack-ai.com/article-7.html", "name": "Notion×AIで「やること・スケジュール・顧客メモ」を一括管理する超シンプル仕事術" },
+          { "@type": "ListItem", "position": 8, "url": "https://www.bizhack-ai.com/article-8.html", "name": "ChatGPTを職場で安全に使う基礎知識と、上司を納得させる「無料提案メモ」" },
+          { "@type": "ListItem", "position": 9, "url": "https://www.bizhack-ai.com/article-9.html", "name": "難解な契約書・公的書類・社内規程を3分で噛み砕く！ChatGPT文書添削＆要約術" },
+          { "@type": "ListItem", "position": 10, "url": "https://www.bizhack-ai.com/article-10.html", "name": "ChatGPTにPDFを投げるだけ！請求書・領収書の手入力をゼロにする自動仕訳＆データ抽出術" },
+          { "@type": "ListItem", "position": 11, "url": "https://www.bizhack-ai.com/article-11.html", "name": "スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック" },
+          { "@type": "ListItem", "position": 12, "url": "https://www.bizhack-ai.com/article-12.html", "name": "【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」" },
+          { "@type": "ListItem", "position": 13, "url": "https://www.bizhack-ai.com/article-13.html", "name": "【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術" },
+          { "@type": "ListItem", "position": 14, "url": "https://www.bizhack-ai.com/article-14.html", "name": "【Perplexity AI】競合調査・業界分析レポートを30分で仕上げる神リサーチ術" },
+          { "@type": "ListItem", "position": 15, "url": "https://www.bizhack-ai.com/article-15.html", "name": "【Microsoft Copilot】Word・Excel・パワポが激変！Officeで使うAI実践テクニック｜BizHack AI" },
+          { "@type": "ListItem", "position": 16, "url": "https://www.bizhack-ai.com/article-16.html", "name": "【年収UPを掴む】ChatGPTで実績を投げるだけ！受かる職務経歴書＆面接対策プロンプト｜BizHack AI" },
+          { "@type": "ListItem", "position": 17, "url": "https://www.bizhack-ai.com/article-17.html", "name": "【音声AI×Notion】歩きながら話すだけでタスク化完了！スマホ手ぶらToDo管理術｜BizHack AI" },
+          { "@type": "ListItem", "position": 18, "url": "https://www.bizhack-ai.com/article-18.html", "name": "【手入力ゼロ】一人起業・副業のための「完全手放し」経理自動化フロー｜BizHack AI" },
+          { "@type": "ListItem", "position": 19, "url": "https://www.bizhack-ai.com/article-19.html", "name": "【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術｜BizHack AI" },
+          { "@type": "ListItem", "position": 20, "url": "https://www.bizhack-ai.com/article-20.html", "name": "【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術｜BizHack AI" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:1rem; text-decoration:none;">
+          <div class="logo-mark">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="56" height="56">
+          </div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="#featured" class="nav-link">実践記事一覧</a>
+        <a href="#authors" class="nav-link">執筆陣・体制</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+        <a href="privacy.html" class="nav-link">規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時（上段左右バランス配置） -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="article-27.html" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">最新第27弾「【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊」を公開！</span>
+        <span class="announcement-cta">今すぐ読む →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-11-01T00:30:47+09:00" class="update-time">2026.11.01 00:30</time>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-wrapper">
+    <!-- サイト公式トップ看板バナー（栞さん新キービジュアル・フラッグシップバナー） -->
+    <section class="site-top-banner-section" aria-label="BizHack AI 公式トップ看板バナー">
+      <div class="top-banner-wrapper">
+        <img src="images/banners/banner-pattern-2-friendly-blue.png?v=20261029c" 
+             alt="BizHack AI 現場の仕事を3時間短縮する生成AI・SaaS実践マガジン 残業をゼロにする「職場のAI仕事術」 公式キャラクター栞（しおり）" 
+             width="1200" height="500" 
+             class="site-top-banner-img" 
+             fetchpriority="high">
+        <!-- SEO用セマンティック隠しテキスト（検索エンジン＆スクリーンリーダー用） -->
+        <h1 class="visually-hidden">BizHack AI｜現場の仕事を3時間短縮する生成AI・SaaS実践マガジン - 残業をゼロにする「職場のAI仕事術」。コピペで今日から3時間短縮、現場実機で検証済みの実践プロンプト集</h1>
+      </div>
+    </section>
+
+    <!-- 公式イメージキャラクター「栞（しおり）」からのデスクエール（更新するたびに変化） -->
+    <section class="desk-cheer-bar" aria-label="BizHack AI 公式イメージキャラクター 栞からのひとこと">
+      <div class="desk-cheer-container">
+        <div class="desk-cheer-label">
+          <span class="desk-cheer-badge">
+            <img src="images/avatar-shiori.jpg?v=20261025c" alt="BizHack AI 公式イメージキャラクター 栞" width="26" height="26" class="cheer-avatar-img">
+            <span>栞（しおり）のひとこと</span>
+          </span>
+        </div>
+        <div class="desk-cheer-content">
+          <p id="desk-cheer-text" class="desk-cheer-message">
+            完璧な100点より、まずは動く60点。残りの40点はAIと一緒に後からのんびり埋めれば大丈夫ですよ。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⚡ トップページ即効体験：今日の神プロンプト枠（登録不要・その場で1秒実行） -->
+    <section class="top-instant-prompt-section" aria-label="今日すぐ使える実践神プロンプト">
+      <div class="top-instant-prompt-container">
+        <div class="top-instant-prompt-badge-row">
+          <span class="top-instant-kicker">⚡ 今日の神プロンプト</span>
+          <span class="top-instant-tag">登録不要・コピペで即実行</span>
+        </div>
+        <h2 class="top-instant-heading">【アポ獲得率UP】相手のHPを貼るだけ！「営業メール＆課題仮説」自動生成</h2>
+        <p class="top-instant-desc">
+          記事を開かなくても、下のボタンを1クリックするだけでコピー＆ChatGPTが即起動します。相手企業のURLや特徴を貼り付けるだけで、刺さる提案骨子をAIが一瞬で構築します。
+        </p>
+
+        <div class="fv-try-box" style="margin-top: 0.85rem;">
+          <div class="fv-try-header">
+            <span class="fv-try-title">📋 営業メール＆課題仮説プロンプト</span>
+            <div class="prompt-btn-group">
+              <button class="copy-btn fv-copy-btn" data-target="top-instant-code">プロンプトをコピー</button>
+            </div>
+          </div>
+          <pre id="top-instant-code" class="fv-try-code"># 依頼：取引先候補へのアプローチメールと課題仮説の作成
+以下の【相手企業の公開情報】を読み込み、相手の立場に立った「刺さる課題仮説」と「初回アポ打診メール」を作成してください。
+
+【相手企業の公開情報】
+・会社名：[相手企業名]
+・事業概要やHPのテキスト：[URLまたはHPの概要をコピペ]
+・自社の強み・提供サービス：[自社サービス名または特徴]
+
+【出力フォーマット】
+1. 相手企業が直面していそうな「業務課題の仮説」3選
+2. 課題に寄り添った「初回アポ打診メール案」（件名・本文、300文字以内）
+3. 返信率を高める「角が立たないクッション言葉」</pre>
+          <div class="top-instant-footer">
+            <span class="top-instant-hint">💡 ボタンを押すとコピーされ、開いたChatGPTで【Ctrl+V】で貼り付けて即実行できます。</span>
+            <a href="article-28.html" class="top-instant-link">完全版の解説・応用テクニックはこちら（第28弾） →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- あなたの課題から選ぶ 目的別ショートカット（どこから読めばいいか迷ったら） -->
+    <section id="quick-roadmap" class="quick-roadmap-section" aria-label="目的別ショートカット案内">
+      <div class="roadmap-container">
+        <div class="roadmap-header">
+          <div class="roadmap-kicker">
+            <span class="roadmap-kicker-dot" aria-hidden="true"></span>
+            <span>NAVIGATION ROADMAP</span>
+          </div>
+          <h2 class="roadmap-title">「どこから読めばいい？」あなたの仕事の課題から探す</h2>
+          <p class="roadmap-subtitle">
+            全25弾の実践ノウハウを4つのテーマに整理。今のあなたの状況や直面している業務課題に合わせて、最短ルートで時短をはじめましょう。
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- カード1: 初めて・超入門 -->
+          <div class="roadmap-card" data-target-filter="beginner">
+            <div class="roadmap-card-header">
+              <span class="roadmap-card-icon">🔰</span>
+              <span class="roadmap-card-badge">はじめての方向け</span>
+            </div>
+            <h3 class="roadmap-card-title">超入門・安心活用</h3>
+            <p class="roadmap-card-desc">「AIを今日初めて使う」「安全な社内ルールや情報収集のコツを知りたい」という方に最適。</p>
+            <div class="roadmap-card-pick">
+              <span class="roadmap-pick-label">おすすめ第1歩：</span>
+              <span class="roadmap-pick-text">神質問テクニック7選</span>
+            </div>
+            <a href="#cat-beginner" class="roadmap-filter-btn" style="text-decoration:none;">
+              この分野の記事を見る（4本） ↓
+            </a>
+          </div>
+
+          <!-- カード2: 日常実務・文書術 -->
+          <div class="roadmap-card" data-target-filter="routine">
+            <div class="roadmap-card-header">
+              <span class="roadmap-card-icon">✉️</span>
+              <span class="roadmap-card-badge">即効・日常業務</span>
+            </div>
+            <h3 class="roadmap-card-title">メール・議事録・文書</h3>
+            <p class="roadmap-card-desc">「毎日の文章作成に時間がかかる」「難解な契約書や会議メモを一瞬でまとめたい」ときに。</p>
+            <div class="roadmap-card-pick">
+              <span class="roadmap-pick-label">おすすめ第1歩：</span>
+              <span class="roadmap-pick-text">角が立たないメール作成</span>
+            </div>
+            <a href="#cat-routine" class="roadmap-filter-btn" style="text-decoration:none;">
+              この分野の記事を見る（6本） ↓
+            </a>
+          </div>
+
+          <!-- カード3: Excel・データ集計 -->
+          <div class="roadmap-card" data-target-filter="data">
+            <div class="roadmap-card-header">
+              <span class="roadmap-card-icon">📊</span>
+              <span class="roadmap-card-badge">数字・バックオフィス</span>
+            </div>
+            <h3 class="roadmap-card-title">Excel・データ・経理</h3>
+            <p class="roadmap-card-desc">「複雑な関数やグラフが苦手」「領収書・請求書の手入力をなくしたい」という現場の強い味方。</p>
+            <div class="roadmap-card-pick">
+              <span class="roadmap-pick-label">おすすめ第1歩：</span>
+              <span class="roadmap-pick-text">丸投げエクセル集計術</span>
+            </div>
+            <a href="#cat-data" class="roadmap-filter-btn" style="text-decoration:none;">
+              この分野の記事を見る（6本） ↓
+            </a>
+          </div>
+
+          <!-- カード4: 自動化・アプリ自作 -->
+          <div class="roadmap-card" data-target-filter="automate">
+            <div class="roadmap-card-header">
+              <span class="roadmap-card-icon">⚙️</span>
+              <span class="roadmap-card-badge">脱ルーチン・応用</span>
+            </div>
+            <h3 class="roadmap-card-title">自動化・ツール自作</h3>
+            <p class="roadmap-card-desc">「定型通知をGASで全自動化したい」「Office Copilotや自社専用Webアプリを作りたい」方に。</p>
+            <div class="roadmap-card-pick">
+              <span class="roadmap-pick-label">おすすめ第1歩：</span>
+              <span class="roadmap-pick-text">Gmail×GAS 返信ボット</span>
+            </div>
+            <a href="#cat-automate" class="roadmap-filter-btn" style="text-decoration:none;">
+              この分野の記事を見る（9本） ↓
+            </a>
+          </div>
+        </div>
+
+        <div class="roadmap-bottom-cta" style="margin-top:1.25rem; text-align:right;">
+          <a href="#featured" style="font-size:0.85rem; font-weight:700; color:#475569; text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">
+            <span>全27弾を体系順にすべて見る</span>
+            <span style="font-size:1rem;">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最新記事ハイライト枠（案1：最新公開記事特集） -->
+    <section id="latest-pickup" class="latest-pickup-section">
+      <div class="latest-header">
+        <div>
+          <div class="latest-badge-tag">最新公開記事</div>
+          <h2 class="latest-title">現場の即効ノウハウ！最新公開の注目記事</h2>
+          <p class="latest-subtitle">直近に公開された最新2本の実践ノウハウ。全プロンプトは現場の読者モニターによる動作検証済みです。</p>
+        </div>
+        <div>
+          <a href="#featured" class="latest-jump-link">
+            全27弾の一覧（体系順）を見る ↓
+          </a>
+        </div>
+      </div>
+
+      <div class="latest-grid">
+                <!-- 最新・第27弾 -->
+        <article class="latest-card">
+          <div class="latest-card-thumb" style="background: linear-gradient(135deg, #1e1b4b, #312e81);">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-glow"></div>
+            <div class="thumb-header">
+              <div class="thumb-header-left">
+                <span class="series-badge" style="background:#ef4444; color:white; font-weight:800;">最新 第27弾</span>
+                <span class="category-tag" style="background:rgba(0,0,0,0.3); color:white;">企画・リサーチDX</span>
+              </div>
+              <span class="thumb-tag-right">NEW</span>
+            </div>
+            <div class="thumb-visual">
+              <div class="thumb-main-title">自律型AI競合ニュース部隊</div>
+            </div>
+            <div class="thumb-footer">
+              <span class="thumb-date">公開日：2026.11.01</span>
+            </div>
+          </div>
+          <div class="latest-card-body">
+            <h3 class="latest-card-title">
+              <a href="article-27.html">【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊</a>
+            </h3>
+            <p class="latest-card-excerpt">
+              毎朝30分かけて業界ニュースや競合企業のWebサイトをチェックしていませんか？自律型AIエージェントとWebリサーチツールを連携させ、競合のプレスリリースや新機能、業界の重大トレンドだけを自動巡回・要約し、毎朝8時にSlackやメールへお届けする「専属情報部隊」の構築手順を徹底解説。
+            </p>
+            <div class="latest-card-tags">
+              <span class="latest-card-tag">読了目安 6分</span>
+              <span class="latest-card-tag">コピペOK</span>
+              <span class="latest-card-tag">実務検証済み</span>
+            </div>
+            <a href="article-27.html" class="latest-card-cta">
+              第27弾（自律型AI競合ニュース部隊）を今すぐ読む →
+            </a>
+          </div>
+        </article>
+
+
+        <!-- 最新・第26弾 -->
+        <article class="latest-card">
+          <div class="latest-card-thumb" style="background: linear-gradient(135deg, #db2777, #f43f5e);">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-glow"></div>
+            <div class="thumb-header">
+              <div class="thumb-header-left">
+                <span class="series-badge" style="background:#ef4444; color:white; font-weight:800;">人気 第26弾</span>
+                <span class="category-tag" style="background:rgba(0,0,0,0.3); color:white;">企画・デザインDX</span>
+              </div>
+              <span class="thumb-tag-right">HOT</span>
+            </div>
+            <div class="thumb-visual">
+              <div class="thumb-main-title">Canva×ChatGPTバナー量産</div>
+            </div>
+            <div class="thumb-footer">
+              <span class="thumb-date">公開日：2026.10.31</span>
+            </div>
+          </div>
+          <div class="latest-card-body">
+            <h3 class="latest-card-title">
+              <a href="article-26.html">【Canva×ChatGPT一括生成】30枚のSNS告知バナーを10分で量産するテンプレ流し込み術</a>
+            </h3>
+            <p class="latest-card-excerpt">
+              InstagramやX（旧Twitter）の投稿画像、セミナー告知バナーを1枚ずつ手作業で作っていませんか？ChatGPTでキャッチコピーやテキスト案をCSV形式で一括出力し、Canvaの「一括作成機能」に流し込むだけで、わずか10分で30枚のデザイン画像を自動生成する神ワザを徹底解説。
+            </p>
+            <div class="latest-card-tags">
+              <span class="latest-card-tag">読了目安 6分</span>
+              <span class="latest-card-tag">コピペOK</span>
+              <span class="latest-card-tag">実務検証済み</span>
+            </div>
+            <a href="article-26.html" class="latest-card-cta">
+              第26弾（Canva×ChatGPTバナー量産）を今すぐ読む →
+            </a>
+          </div>
+        </article>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </div>
+    </section>
+
+    <!-- 特集記事グリッド（均整レイアウト） -->
+    <section id="featured">
+      <div class="section-header">
+        <h2 class="section-title">体系的に学べる実践記事パッケージ（全27弾）</h2>
+        <span class="section-header-sub">初心者から応用まで・即コピペ可能</span>
+      </div>
+
+      <!-- 2カラムレイアウト：左カラム（今後の発行予定） ＋ 右カラム（特集記事一覧） -->
+      <div class="featured-layout-split">
+        <!-- 左サイドバー：今後の発行予定タイムライン（スクロール追従 Sticky） -->
+        <aside class="upcoming-sidebar" aria-label="今後の記事発行予定">
+          <div class="upcoming-card">
+            <div class="upcoming-card-header">
+              <div class="upcoming-header-top">
+                <div class="upcoming-header-badge">
+                  <span class="upcoming-pulse-dot" aria-hidden="true"></span>
+                  <span>EDITORIAL ROADMAP</span>
+                </div>
+                <span class="upcoming-cadence-pill">順次公開</span>
+              </div>
+              <h3 class="upcoming-card-title">📅 編集部・検証ロードマップ</h3>
+              <p class="upcoming-card-sub">専属モニターと実証テスト中の先行テーマ</p>
+            </div>
+
+            <div id="upcoming-timeline" class="upcoming-timeline">
+              <!-- 第28弾 (11/02 (月)) -->
+              <div class="timeline-item timeline-item-next">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/02 (月)</span>
+                  <span class="timeline-badge badge-next">明日公開</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第28弾・営業・BizDev DX</span>
+                  <h4 class="timeline-title">【コピペで刺さる】相手のHPを貼るだけ！アポ獲得率を跳ね上げる「営業メール＆課題仮説」自動生成プロンプト</h4>
+                  <p class="timeline-desc">相手企業の会社概要やURLを貼るだけで、業界の課題仮説を瞬時に分析し、テンプレ臭ゼロの刺さる営業メール・問い合わせ文を3分で自動生成するChatGPTプロンプト集。</p>
+                </div>
+              </div>
+
+              <!-- 第29弾 (11/03 (火)) -->
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/03 (火)</span>
+                  <span class="timeline-badge">準備完了</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第29弾・マネジメント・リーダーDX</span>
+                  <h4 class="timeline-title">【感情的衝突ゼロ】部下のタイプ別！強みを伸ばして課題を伝える「1on1面談＆評価コメント」壁打ちプロンプト</h4>
+                  <p class="timeline-desc">部下のモチベーションを折らずに課題を伝えるSBIモデルフィードバックや、人事考課の評価コメント作文を劇的に時短するChatGPT実践プロンプト集。</p>
+                </div>
+              </div>
+
+              <!-- 第30弾 (11/04 (水)) -->
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/04 (水)</span>
+                  <span class="timeline-badge">1週間前ストック</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第30弾・総務・経理DX</span>
+                  <h4 class="timeline-title">【毎年同じ質問を撃退】総務・経理の電話が鳴り止む！「年末調整・控除Q&A」即答作成プロンプト集</h4>
+                  <p class="timeline-desc">毎年繰り返される住宅ローン控除や配偶者控除の質問攻めを瞬殺！ChatGPTを活用して社内用「年末調整即答ボット＆案内文」を爆速作成する実務プロンプト集。</p>
+                </div>
+              </div>
+
+              <!-- 第31弾 (11/05 (木)) -->
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/05 (木)</span>
+                  <span class="timeline-badge">1週間前ストック</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第31弾・企画・マーケティングDX</span>
+                  <h4 class="timeline-title">【年末商戦・初売り特需】購買心理を一撃で刺激する！「売れるLP構成案＆キャッチコピー」10連発プロンプト</h4>
+                  <p class="timeline-desc">年末年始のセールや新春初売りに向けて、PASONAの法則に基づき成約率を跳ね上げる「売れるLP構成案」と「キャッチコピー10選」をChatGPTで爆速量産する実践プロンプト集。</p>
+                </div>
+              </div>
+
+              <!-- 第32弾 (11/06 (金)) -->
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/06 (金)</span>
+                  <span class="timeline-badge">1週間前ストック</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第32弾・GitHub×AI 入門DX</span>
+                  <h4 class="timeline-title">【黒い画面一切なし】非エンジニアのためのGitHub超入門！ブラウザだけでマニュアル＆メモを「絶対消えないクラウド保存」にする方法</h4>
+                  <p class="timeline-desc">コマンド入力不要！非エンジニア向けにGitHubの基本を完全図解。</p>
+                </div>
+              </div>
+
+              <!-- 第33弾 (11/07 (土)) -->
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/07 (土)</span>
+                  <span class="timeline-badge">1週間前ストック</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第33弾・GitHub×AI 入門DX</span>
+                  <h4 class="timeline-title">【サーバー代0円】ChatGPTで作ったHTMLを置くだけ！「GitHub Pages」で社内ポータルやLPを3分で無料Web公開する手順</h4>
+                  <p class="timeline-desc">レンタルサーバー契約もドメイン取得も不要！ChatGPTに作らせたHTMLファイルをGitHubに置くだけで、自分だけのWebサイトや社内ポータル、LPを完全無料で世界中に公開できる「GitHub Pages」の超簡単手順を解説。</p>
+                </div>
+              </div>
+
+              <!-- 第34弾 (11/08 (日)) -->
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">11/08 (日)</span>
+                  <span class="timeline-badge">1週間前ストック</span>
+                </div>
+                <div class="timeline-body">
+                  <span class="timeline-series-tag">第34弾・スマホ・画像認識DX</span>
+                  <h4 class="timeline-title">【スマホで撮って投げるだけ】手書きホワイトボード・領収書の山を一撃でMarkdown表にする画像認識実務ハック7選</h4>
+                  <p class="timeline-desc">PCに向かって文字を打ち直す手作業は今日で全廃！スマホのChatGPTアプリでホワイトボードの板書や領収書、名刺の山を撮影して投げるだけで、一瞬で整理された表やToDoリストに変換する画像認識（マルチモーダル）神ワザ7選。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming-card-footer">
+              <div class="upcoming-footer-info">
+                <span class="footer-check-icon">✓</span>
+                <span>読者モニター事前検証済み原稿を順次配備中</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="articles-grid">
+          <!-- カテゴリーグリッド見出し：超入門・基本・安心活用 -->
+          <div id="cat-beginner" class="category-grid-header" role="region" aria-label="超入門・基本・安心活用">
+            <div class="category-grid-header-top">
+              <span class="category-grid-header-icon">🔰</span>
+              <h3 class="category-grid-header-title">超入門・基本・安心活用</h3>
+              <span class="category-grid-header-badge">全4本</span>
+            </div>
+            <p class="category-grid-header-sub">ChatGPTの基本操作、神質問テクニック、職場の安全利用ルール、情報収集リサーチなど</p>
+          </div>
+
+          <article class="article-card" data-category="beginner">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #047857, #10b981);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第1弾</span>
+                          <span class="category-tag cat-field">AI超入門</span>
+                        </div>
+                        <span class="thumb-tag-right">スマホ＆PC対応</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">ChatGPT超入門</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-1.html">ゼロから始めるChatGPT超入門！今日から仕事で使える神質問テクニック7選</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        「難しそうで手を出せていない」「ありきたりな返答しか来ない」とお悩みの方必見。登録手順から、思い通りの回答を引き出す質問のコツ、日常業務を劇的に時短する7つの実践テクニックを解説。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#10b981;"><img src="images/author-mizuno.jpg?v=20261016d" alt="水野 結衣" width="26" height="26" loading="lazy"></div>
+                          <span>水野 結衣（AI入門）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="beginner">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第8弾</span>
+                          <span class="category-tag cat-biz">職場導入・セキュリティ</span>
+                        </div>
+                        <span class="thumb-tag-right">社内提案メモ付</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">職場で安全に使う基礎</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-8.html">【会社で使いたい人へ】ChatGPTを職場で安全に使う基礎知識と、上司を納得させる「無料提案メモ」</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        会社で堂々とChatGPTを使いたい方必見！情報漏洩を防ぐオプトアウト設定のやり方から、上司や情シスに「使っていいですか」と相談するためのコピペ用提案メモテンプレートまで徹底解説。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#ec4899;"><img src="images/author-kurosawa.jpg?v=20261016d" alt="黒澤 拓海" width="26" height="26" loading="lazy"></div>
+                          <span>黒澤 拓海（セキュリティ）</span>
+                        </div>
+                        <span>読了目安 8分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="beginner">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1e293b, #334155);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第14弾</span>
+                          <span class="category-tag cat-design">企画・リサーチDX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">業界・競合リサーチ自動化</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.19</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-14.html">【Perplexity AI】競合調査・業界分析レポートを30分で仕上げる神リサーチ術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        何十サイトもググる時代は終わり！対話型検索AI「Perplexity」を使って、出典URL付きの正確な市場調査・競合比較表・SWOT分析を30分で完成させる超実践リサーチテクニック。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#334155;"><img src="images/author-kurosawa.jpg?v=20261016d" alt="黒澤 拓海（企画リサーチ）" width="26" height="26" loading="lazy"></div>
+                          <span>黒澤 拓海（企画リサーチ）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="beginner">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #334155, #475569);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第16弾</span>
+                          <span class="category-tag cat-biz">キャリア・転職DX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">職務経歴書・面接対策AI</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.21</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-16.html">【年収UPを掴む】ChatGPTで実績を投げるだけ！受かる職務経歴書＆面接対策プロンプト｜BizHack AI</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        自分のこれまでの業務を箇条書きで投げるだけ！採用担当者を唸らせる「数字で語る職務経歴書」と、面接通過率を跳ね上げる「逆質問・想定問答」をChatGPTで一撃生成する実践キャリアハック。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#334155;"><img src="images/author-kurosawa.jpg?v=20261016d" alt="黒澤 拓海（キャリア戦略）" width="26" height="26" loading="lazy"></div>
+                          <span>黒澤 拓海（キャリア戦略）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <!-- カテゴリーグリッド見出し：日常実務・メール・議事録・文書術 -->
+          <div id="cat-routine" class="category-grid-header" role="region" aria-label="日常実務・メール・議事録・文書術">
+            <div class="category-grid-header-top">
+              <span class="category-grid-header-icon">✉️</span>
+              <h3 class="category-grid-header-title">日常実務・メール・議事録・文書術</h3>
+              <span class="category-grid-header-badge">全6本</span>
+            </div>
+            <p class="category-grid-header-sub">角の立たないビジネスメール、殴り書き議事録、パワポ構成案、難解な契約書・規程の要約添削など</p>
+          </div>
+
+          <article class="article-card" data-category="routine">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第2弾</span>
+                          <span class="category-tag cat-biz">日常実務・メール術</span>
+                        </div>
+                        <span class="thumb-tag-right">コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">ビジネスメール一発作成</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-2.html">もう文章で悩まない！角が立たない・お詫び・催促・お礼メール一発作成プロンプト集</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        「催促しづらい…」「お詫びの文面どうしよう…」と悩む時間をゼロに。要件を殴り書きするだけで、失礼がなく好印象を与えるビジネスメールが5秒で完成するコピペ用プロンプト集。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#059669;"><img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太" width="26" height="26" loading="lazy"></div>
+                          <span>桐生 健太（時短実務）</span>
+                        </div>
+                        <span>読了目安 7分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="routine">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #065f46, #059669);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第3弾</span>
+                          <span class="category-tag cat-field">現場実務・時短</span>
+                        </div>
+                        <span class="thumb-tag-right">コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">35分 ➔ 3分</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-3.html">雑な殴り書きメモを貼るだけ！上司に一発で通る「ChatGPT議事録作成プロンプト」</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        「会議後の議事録まとめが一番憂鬱…」そんな悩みを抱える営業・企画・バックオフィス必見。作業時間91%減の実測データと、殴り書きメモを一発で整頓するプロンプトを無料公開。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#059669;"><img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太" width="26" height="26" loading="lazy"></div>
+                          <span>桐生 健太（議事録術）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="routine">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #be185d, #ec4899);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第5弾</span>
+                          <span class="category-tag" style="background:#ec4899; color:white;">企画・プレゼン</span>
+                        </div>
+                        <span class="thumb-tag-right">白紙から3分</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">パワポスライド構成案</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-5.html">【白紙から3分で完成】箇条書きを投げるだけでPowerPointのスライド構成案ができる「企画・プレゼン下書き術」</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        白紙のパワポを開いてフリーズする時間をゼロに！企画メモを投げるだけで「1枚目：表紙」「2枚目：課題」「3枚目：解決策」の論理構成とキーメッセージが3分で完成するプレゼン下書き術。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#ec4899;"><img src="images/author-kurosawa.jpg?v=20261016d" alt="黒澤 拓海" width="26" height="26" loading="lazy"></div>
+                          <span>黒澤 拓海（企画プレゼン）</span>
+                        </div>
+                        <span>読了目安 7分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="routine">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1e40af, #0284c7);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第9弾</span>
+                          <span class="category-tag cat-biz">文書・PDF時短</span>
+                        </div>
+                        <span class="thumb-tag-right">改行崩れ一発修正</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">長文PDF・規程を3分要約</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.17</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-9.html">【文書・PDF時短】難解な契約書・公的書類・社内規程を3分で噛み砕く！ChatGPT文書添削＆要約術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        何十ページもあるPDF資料や自治体の公募要領・NDA・社内規程を「要点3つ」「自社の義務」「リスク条項」に3分で整理！PDFコピペ特有の改行崩れを一瞬で直す神プロンプト付き。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0ea5e9;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（文書法務DX）</span>
+                        </div>
+                        <span>読了目安 7分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="routine">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #0f766e, #0d9488);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第21弾</span>
+                          <span class="category-tag cat-field">現場実務・議事録DX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Notta×ChatGPT議事録自動化</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.26</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-21.html">【Zoom・Teams完全手放し】Notta×ChatGPTで「会議終了と同時に議事録とToDoが配られている」リアルタイム自動化術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        1時間の会議の後に録音を聞き直して議事録を書く不毛な残業は今日で終わり。Nottaの自動文字起こしボットとChatGPTを連携させ、会議終了と同時に決定事項・次回アクション・ToDoリストがSlackや社内チャットへ即時配信される完全手放し自動化フローを徹底解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0d9488;"><img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太（議事録DX）" width="26" height="26" loading="lazy"></div>
+                          <span>桐生 健太（議事録DX）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="routine">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1e293b, #475569);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第24弾</span>
+                          <span class="category-tag cat-office">Office・法務DX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">契約書・法務AIレビュー</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.29</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-24.html">【契約書・法務AIレビュー】NDA・業務委託の落とし穴を検知する対案作成プロンプト</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        取引先から送られてきた難解な契約書。法務専任がいない中小企業や個人事業主でも、ChatGPTを使って「一方的に不利な条件」「損害賠償の青天井」「知財の奪われ」などの落とし穴を5分で検知し、角の立たない修正対案メールまで作成する実践プロンプトを徹底解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#475569;"><img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太（法務ガバナンス）" width="26" height="26" loading="lazy"></div>
+                          <span>桐生 健太（法務ガバナンス）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <!-- カテゴリーグリッド見出し：Excel・データ集計・経理DX -->
+          <div id="cat-data" class="category-grid-header" role="region" aria-label="Excel・データ集計・経理DX">
+            <div class="category-grid-header-top">
+              <span class="category-grid-header-icon">📊</span>
+              <h3 class="category-grid-header-title">Excel・データ集計・経理DX</h3>
+              <span class="category-grid-header-badge">全6本</span>
+            </div>
+            <p class="category-grid-header-sub">日本語で丸投げするエクセル集計、領収書PDF自動仕訳、スプレッドシート時短、一人経理の完全自動化など</p>
+          </div>
+
+          <article class="article-card" data-category="data">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #0369a1, #0ea5e9);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第4弾</span>
+                          <span class="category-tag cat-tech">事務職・エクセル時短</span>
+                        </div>
+                        <span class="thumb-tag-right">関数・マクロ不要</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">エクセル丸投げ集計</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-4.html">【関数・マクロ不要】エクセルが苦手でも大丈夫！ChatGPTに「やりたいこと」を日本語で丸投げする超簡単データ集計術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        VLOOKUPや数式が苦手な事務職必見！エクセルやCSVを添付して「月別売上をグラフにして」と頼むだけで、表記ゆれの整頓からクロス集計・グラフ出力まで3分で完了。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0ea5e9;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（表計算DX）</span>
+                        </div>
+                        <span>読了目安 8分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="data">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #b45309, #f59e0b);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第7弾</span>
+                          <span class="category-tag cat-solo">個人事業・副業DX</span>
+                        </div>
+                        <span class="thumb-tag-right">無料テンプレ配布</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Notion × AI 一括管理</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-7.html">【一人起業・副業】Notion×AIで「やること・スケジュール・顧客メモ」を一括管理する超シンプル仕事術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        仕事があちこちに散らばってパンクしそうなソロプレナー必見！NotionとAIを組み合わせて、日々のタスク、商談メモ、顧客情報を1箇所で超シンプルに一括管理する実践ワークフロー。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#f59e0b;"><img src="images/author-tachibana.jpg?v=20261016d" alt="橘 颯太" width="26" height="26" loading="lazy"></div>
+                          <span>橘 颯太（ソロプレナー）</span>
+                        </div>
+                        <span>読了目安 8分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="data">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第10弾</span>
+                          <span class="category-tag" style="background:#0f766e; color:white;">経理・バックオフィスDX</span>
+                        </div>
+                        <span class="thumb-tag-right">手入力ゼロ化</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">請求書・領収書PDF</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.15</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-10.html">【事務・経理DX】ChatGPTにPDFを投げるだけ！請求書・領収書の手入力をゼロにする自動仕訳＆データ抽出術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        インボイス制度や電帳法で増えたPDF請求書の手入力を一瞬でCSV化！取引先名・金額・T番号・勘定科目を自動抽出して月末の転記残業をゼロにする神プロンプト。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0ea5e9;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（経理DX）</span>
+                        </div>
+                        <span>読了目安 7分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="data">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #15803d, #22c55e);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第11弾</span>
+                          <span class="category-tag" style="background:#15803d; color:white;">現場実務・スプシ時短</span>
+                        </div>
+                        <span class="thumb-tag-right">関数・GAS不要</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">スプシ丸投げ自動化</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.15</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-11.html">【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        QUERY関数やARRAYFORMULAのエラーにさようなら！名寄せ・重複削除から、フォーム連携の自動通知GASまで、コピペだけで動くGoogleスプレッドシート神技集。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0ea5e9;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（スプシDX）</span>
+                        </div>
+                        <span>読了目安 7分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="data">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第18弾</span>
+                          <span class="category-tag cat-biz">起業・副業・完全自動化</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">ひとり起業・完全自動化フロー</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.23</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-18.html">【手入力ゼロ】一人起業・副業のための「完全手放し」経理自動化フロー</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        領収書の山に追われる月末はもう終わり！AI×クラウド会計ソフトを連携させ、領収書スマホ撮影から自動仕訳・確定申告準備まで「手入力ゼロ」で完結させる一人起業・副業の完全バックオフィスDX術。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0284c7;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡 × 橘 颯太" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡 × 橘 颯太</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="data">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1d4ed8, #2563eb);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第19弾</span>
+                          <span class="category-tag cat-biz">事務職・エクセルDX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Excel×Copilotクロス集計術</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.24</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-19.html">【Excel×Copilot実践集】関数の壁を完全突破！複雑なクロス集計・グラフ・異常値検出を日本語1行で片付けるプロンプト術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        VLOOKUPやピボットテーブルに挫折した全事務職へ。Excel on the WebとMicrosoft Copilotを連携させ、日本語の自然言語指示だけで複数条件のクロス集計・複合グラフ生成・前月比マイナス20%以上の異常値赤字ハイライトを1分で完了させる実践プロンプト集を徹底解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#2563eb;"><img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太（業務プロセス改善）" width="26" height="26" loading="lazy"></div>
+                          <span>桐生 健太（業務プロセス改善）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <!-- カテゴリーグリッド見出し：自動化・自作Webツール・Copilot -->
+          <div id="cat-automate" class="category-grid-header" role="region" aria-label="自動化・自作Webツール・Copilot">
+            <div class="category-grid-header-top">
+              <span class="category-grid-header-icon">⚙️</span>
+              <h3 class="category-grid-header-title">自動化・自作Webツール・Copilot</h3>
+              <span class="category-grid-header-badge">全9本</span>
+            </div>
+            <p class="category-grid-header-sub">Gmail×GAS定型返信、社内用見積Webアプリ自作、Office Copilot、Difyボット、LINE自動化など</p>
+          </div>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #6d28d9, #8b5cf6);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第6弾</span>
+                          <span class="category-tag" style="background:#8b5cf6; color:white;">デザイン・Web作成</span>
+                        </div>
+                        <span class="thumb-tag-right">無料Canva連携</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">ChatGPT × Canva</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">更新日：2026.10.14</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-6.html">【デザインセンス不要】ChatGPT×無料Canvaで作る「売れるSNS画像・Webバナー」爆速制作術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        Photoshopやデザイン経験は不要！ChatGPTで刺さるキャッチコピーを出し、無料ツールCanvaのプロ製テンプレートに当てはめるだけで、30分でおしゃれな画像を作る爆速ワークフロー。
+                      </p>
+                      <div class="card-meta">
+                                      <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#8b5cf6;"><img src="images/author-shiraishi.jpg?v=20261016d" alt="白石 彩乃" width="26" height="26" loading="lazy"></div>
+                          <span>白石 彩乃（Webデザイン）</span>
+                        </div>
+                        <span>読了目安 8分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #047857, #10b981);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第12弾</span>
+                          <span class="category-tag cat-biz">日常実務・メール自動化</span>
+                        </div>
+                        <span class="thumb-tag-right">下書き自動化</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Gmail×GAS 下書きボット</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.17</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-12.html">【Gmail×GAS】定型返信・一次受けを一発自動化！ChatGPTで作る「メール下書き生成ボット」</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        毎日溜まる問い合わせや日程調整メールをChatGPT×GASで自動下書き化！自動送信ではなく「下書き保存」だから誤送信リスクゼロでメール対応時間を80%削減。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#10b981;"><img src="images/author-mizuno.jpg?v=20261016d" alt="水野 結衣" width="26" height="26" loading="lazy"></div>
+                          <span>水野 結衣（メール自動化）</span>
+                        </div>
+                        <span>読了目安 5分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #0369a1, #0284c7);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第13弾</span>
+                          <span class="category-tag cat-biz">現場実務・Web自作DX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Claude社内ツール爆速自作</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.18</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-13.html">【Claude 3.5×Artifacts】プログラミング不要！社内ツール＆簡易Webアプリを10分で作る実務術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        エンジニアへの依頼や高額なSaaS契約はもう不要！Claudeの「Artifacts（アーティファクト）」機能を使い、見積もりシミュレーターや文字数チェッカーなどの実務Webツールを日本語の指示だけで10分で自作する方法。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0284c7;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡（ツール自作DX）" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（ツール自作DX）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #1d4ed8, #2563eb);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第15弾</span>
+                          <span class="category-tag cat-office">Office・文書作成DX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Office×Copilot実務術</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.20</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-15.html">【Microsoft Copilot】Word・Excel・パワポが激変！Officeで使うAI実践テクニック｜BizHack AI</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        社内でCopilotが導入されたけど使いこなせない？Wordの長文自動要約、Excelのデータ分析、PowerPointのスライド一発生成まで、現場ですぐ役立つOffice×AIの活用ワザを徹底解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#2563eb;"><img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太（Office時短）" width="26" height="26" loading="lazy"></div>
+                          <span>桐生 健太（Office時短）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #b45309, #d97706);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第17弾</span>
+                          <span class="category-tag cat-biz">個人DX・タスク管理</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">音声AI×Notionタスク自動化</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.22</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-17.html">【音声AI×Notion】歩きながら話すだけでタスク化完了！スマホ手ぶらToDo管理術｜BizHack AI</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        PCを開く時間すらない多忙なビジネスパーソン必見！歩きながらスマホに吹き込んだ音声メモを、Whisper×ChatGPTで期日・優先度付きのToDoタスクに自動変換し、Notionへ整理する手ぶら仕事術。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#d97706;"><img src="images/author-tachibana.jpg?v=20261016d" alt="橘 颯太（音声・Notion）" width="26" height="26" loading="lazy"></div>
+                          <span>橘 颯太（音声・Notion）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #047857, #10b981);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第20弾</span>
+                          <span class="category-tag cat-field">現場実務・スプシ自動化</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">スプシ×GAS定型通知全自動化</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.25</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-20.html">【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        プログラミング未経験でも大丈夫！ChatGPTに自然言語で要件を投げるだけで、Googleスプレッドシートの集計からGmail・Slackへの定期自動通知までを全自動化するGAS（Google Apps Script）コード生成プロンプトと設定手順を完全図解。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#10b981;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡（自動化エンジニア）" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（自動化エンジニア）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #0284c7, #38bdf8);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第22弾</span>
+                          <span class="category-tag cat-field">現場実務・社内AI自作</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Dify社内マニュアルボット</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.27</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-22.html">【Dify超入門】社内マニュアルを読み込ませた「専用AIボット」自作手順</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        「あの申請書の書き方は？」「社内規程のどこに書いてある？」と毎日繰り返される社内質問。ノーコードAI開発ツール「Dify」を活用し、社内のPDFやWordマニュアルをドラッグ＆ドロップするだけで、嘘をつかずに正確に回答する「社内専用AI質問ボット」を30分で自作する全手順を徹底解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#0284c7;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡（ツール自作DX）" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（ツール自作DX）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #059669, #10b981);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第23弾</span>
+                          <span class="category-tag cat-biz">個人DX・店舗自動化</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">LINE×AI店舗予約自動化</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.28</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-23.html">【LINE公式×ChatGPT】個人事業・店舗のための24時間問い合わせ・予約自動化術</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        施術中や接客中、深夜に届くLINEの問い合わせで商機を逃していませんか？LINE公式アカウントとChatGPTを連携させ、店舗の道案内・料金案内・空き状況の確認から予約受付までを24時間完全自動で丁寧に対応する仕組みの作り方を徹底解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#10b981;"><img src="images/author-tachibana.jpg?v=20261016d" alt="橘 颯太（スモールビジネスDX）" width="26" height="26" loading="lazy"></div>
+                          <span>橘 颯太（スモールビジネスDX）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+
+          <article class="article-card" data-category="automate">
+                    <div class="card-thumb" style="background: linear-gradient(135deg, #4338ca, #6366f1);">
+                      <div class="thumb-pattern"></div>
+                      <div class="thumb-glow"></div>
+                      <div class="thumb-header">
+                        <div class="thumb-header-left">
+                          <span class="series-badge">第25弾</span>
+                          <span class="category-tag cat-field">現場実務・Web自作DX</span>
+                        </div>
+                        <span class="thumb-tag-right">NEW・コピペOK</span>
+                      </div>
+                      <div class="thumb-visual">
+                        <div class="thumb-main-title">Cursor社内見積Webアプリ</div>
+                      </div>
+                      <div class="thumb-footer">
+                        <span class="thumb-date">公開日：2026.10.30</span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <a href="article-25.html">【CursorでWebアプリ自作】文系事務職が社内用見積シミュレーターをAIと開発する手順</a>
+                      </h3>
+                      <p class="card-excerpt">
+                        「計算式が壊れやすい巨大Excelの見積書をなんとかしたい」「Web上で誰でもサクサク計算できる社内ツールが欲しい」。プログラミング経験ゼロの文系事務職が、AI特化型エディタ『Cursor（カーソル）』を使って、わずか1時間で自社専用の見積シミュレーターを開発する手順を完全解説。
+                      </p>
+                      <div class="card-meta">
+                        <div class="author-chip">
+                          <div class="author-avatar" style="border-color:#6366f1;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡（ツール自作DX）" width="26" height="26" loading="lazy"></div>
+                          <span>神崎 聡（ツール自作DX）</span>
+                        </div>
+                        <span>読了目安 6分</span>
+                      </div>
+                    </div>
+                  </article>
+        
+
+        <!-- 記事（第26弾 自動追加） -->
+        <article class="article-card" data-category="creative">
+          <div class="card-thumb" style="background: linear-gradient(135deg, #db2777, #f43f5e);">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-glow"></div>
+            <div class="thumb-header">
+              <div class="thumb-header-left">
+                <span class="series-badge">第26弾</span>
+                <span class="category-tag cat-design">企画・デザインDX</span>
+              </div>
+              <span class="thumb-tag-right">NEW・コピペOK</span>
+            </div>
+            <div class="thumb-visual">
+              <div class="thumb-main-title">Canva×ChatGPTバナー量産</div>
+            </div>
+            <div class="thumb-footer">
+              <span class="thumb-date">公開日：2026.10.31</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">
+              <a href="article-26.html">【Canva×ChatGPT一括生成】30枚のSNS告知バナーを10分で量産するテンプレ流し込み術</a>
+            </h3>
+            <p class="card-excerpt">
+              InstagramやX（旧Twitter）の投稿画像、セミナー告知バナーを1枚ずつ手作業で作っていませんか？ChatGPTでキャッチコピーやテキスト案をCSV形式で一括出力し、Canvaの「一括作成機能」に流し込むだけで、わずか10分で30枚のデザイン画像を自動生成する神ワザを徹底解説。
+            </p>
+            <div class="card-meta">
+              <div class="author-chip">
+                <div class="author-avatar" style="border-color:#f43f5e;"><img src="images/author-mizuno.jpg?v=20261016d" alt="水野 結衣（SNSクリエイティブ）" width="26" height="26" loading="lazy"></div>
+                <span>水野 結衣（SNSクリエイティブ）</span>
+              </div>
+              <span>読了目安 6分</span>
+            </div>
+          </div>
+        </article>
+
+      
+
+        <!-- 記事（第27弾 自動追加） -->
+        <article class="article-card" data-category="creative">
+          <div class="card-thumb" style="background: linear-gradient(135deg, #1e1b4b, #312e81);">
+            <div class="thumb-pattern"></div>
+            <div class="thumb-glow"></div>
+            <div class="thumb-header">
+              <div class="thumb-header-left">
+                <span class="series-badge">第27弾</span>
+                <span class="category-tag cat-creative">企画・リサーチDX</span>
+              </div>
+              <span class="thumb-tag-right">NEW・コピペOK</span>
+            </div>
+            <div class="thumb-visual">
+              <div class="thumb-main-title">自律型AI競合ニュース部隊</div>
+            </div>
+            <div class="thumb-footer">
+              <span class="thumb-date">公開日：2026.11.01</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">
+              <a href="article-27.html">【自律型AIエージェント入門】毎朝の競合・業界ニュース収集を完全自動化するAI部隊</a>
+            </h3>
+            <p class="card-excerpt">
+              毎朝30分かけて業界ニュースや競合企業のWebサイトをチェックしていませんか？自律型AIエージェントとWebリサーチツールを連携させ、競合のプレスリリースや新機能、業界の重大トレンドだけを自動巡回・要約し、毎朝8時にSlackやメールへお届けする「専属情報部隊」の構築手順を徹底解説。
+            </p>
+            <div class="card-meta">
+              <div class="author-chip">
+                <div class="author-avatar" style="border-color:#312e81;"><img src="images/author-kurosawa.jpg?v=20261016d" alt="黒澤 拓海（企画戦略リサーチ）" width="26" height="26" loading="lazy"></div>
+                <span>黒澤 拓海（企画戦略リサーチ）</span>
+              </div>
+              <span>読了目安 6分</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- 執筆陣（E-E-A-T）＆ 公式イメージキャラクター紹介セクション -->
+    <section id="authors" style="margin-top:2.5rem;">
+      <div class="section-header">
+        <h2 class="section-title">BizHack AI 公式イメージキャラクター ＆ 実務家執筆陣</h2>
+        <span style="font-size:0.85rem; color:var(--text-muted);">公式イメージキャラクター「栞」と世代別スペシャリスト6名が、現場の一次情報・動作検証データを担保</span>
+      </div>
+
+      <!-- 公式イメージキャラクター「栞（しおり）」スポットライトカード -->
+      <div class="shiori-character-spotlight">
+        <div class="shiori-spotlight-avatar">
+          <img src="images/avatar-shiori.jpg?v=20261025c" alt="栞（しおり）｜BizHack AI 公式イメージキャラクター" width="84" height="84" loading="lazy">
+        </div>
+        <div class="shiori-spotlight-body">
+          <div class="shiori-spotlight-header">
+            <span class="shiori-official-badge">✨ BizHack AI 公式イメージキャラクター</span>
+            <h3 class="shiori-spotlight-name">栞<span>（しおり / Shiori）</span></h3>
+          </div>
+          <p class="shiori-spotlight-bio">
+            「日々のPC業務で迷ったとき、いつでも開ける頼れる道しるべ（本の栞）になりたい」という想いから誕生したBizHack AIの公式イメージキャラクター。トップページの『栞のひとこと』や各記事の『栞のワンポイント』、note・X配信のアイキャッチを通じて、忙しいデスクワーカーの定時退社を明るくナビゲートします。
+          </p>
+        </div>
+      </div>
+
+      <div class="authors-grid">
+        <div class="author-profile-card">
+          <div>
+            <div class="author-profile-header">
+              <div class="author-profile-avatar" style="border-color:#10b981;">
+                <img src="images/author-mizuno.jpg?v=20261016d" alt="水野 結衣" width="68" height="68" loading="lazy">
+              </div>
+              <div class="author-profile-meta">
+                <span class="author-role-badge" style="background:#dcfce7; color:#047857;">初心者サポート・AI入門担当</span>
+                <h3 class="author-profile-name">水野 結衣<span>（みずの ゆい・34歳）</span></h3>
+                <div class="author-profile-title">IT未経験者向けAI活用インストラクター / 元・大手メーカー事務教育担当</div>
+              </div>
+            </div>
+            <p class="author-profile-bio">社内ヘルプデスク・新人事務研修に8年従事し、PCやIT用語に苦手意識を持つ社員延べ1,200名以上の業務ツール定着を支援。専門用語を一切使わず、スマホ・PCで初日から使えるChatGPT超入門プロンプトやGmail下書き自動化を担当。</p>
+          </div>
+          <div class="author-articles-links">
+            <a href="article-1.html" class="author-article-pill">第1弾：ChatGPT超入門 →</a>
+            <a href="article-12.html" class="author-article-pill">第12弾：Gmail×GAS下書きボット →</a>
+          </div>
+        </div>
+        <div class="author-profile-card">
+          <div>
+            <div class="author-profile-header">
+              <div class="author-profile-avatar" style="border-color:#059669;">
+                <img src="images/author-kiryu.jpg?v=20261016d" alt="桐生 健太" width="68" height="68" loading="lazy">
+              </div>
+              <div class="author-profile-meta">
+                <span class="author-role-badge" style="background:#d1fae5; color:#065f46;">現場実務・時短ノウハウ担当</span>
+                <h3 class="author-profile-name">桐生 健太<span>（きりゅう けんた・38歳）</span></h3>
+                <div class="author-profile-title">業務プロセス改善リード / 元・総合商社 営業企画＆バックオフィス統括</div>
+              </div>
+            </div>
+            <p class="author-profile-bio">営業・総務の現場で10年以上のマネジメント経験。かつて月60時間超だった自身の残業を、生成AIプロンプトの標準化で月5時間未満（約90%削減）へ圧縮。角が立たないビジネスメールや会議後3分で終わる議事録作成術を担当。</p>
+          </div>
+          <div class="author-articles-links">
+            <a href="article-2.html" class="author-article-pill">第2弾：ビジネスメール作成 →</a>
+            <a href="article-3.html" class="author-article-pill">第3弾：議事録3分作成 →</a>
+          </div>
+        </div>
+        <div class="author-profile-card">
+          <div>
+            <div class="author-profile-header">
+              <div class="author-profile-avatar" style="border-color:#0ea5e9;">
+                <img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="68" height="68" loading="lazy">
+              </div>
+              <div class="author-profile-meta">
+                <span class="author-role-badge" style="background:#e0f2fe; color:#0369a1;">データ実務・バックオフィスDX担当</span>
+                <h3 class="author-profile-name">神崎 聡<span>（かんざき さとし・51歳）</span></h3>
+                <div class="author-profile-title">熟練業務自動化コンサルタント（Excel / スプシ / 経理・法務文書DX）</div>
+              </div>
+            </div>
+            <p class="author-profile-bio">中堅・中小企業を中心に25年以上にわたり累計50社以上の総務・経理部門のペーパーレス化と表計算自動化を牽引。関数不要のエクセル・スプレッドシート集計、インボイス対応の請求書PDF自動仕訳、契約書・規程のAI要約で月末工数を平均80%削減。</p>
+          </div>
+          <div class="author-articles-links">
+            <a href="article-4.html" class="author-article-pill">第4弾：エクセル集計 →</a>
+            <a href="article-9.html" class="author-article-pill">第9弾：契約書・PDF要約 →</a>
+            <a href="article-10.html" class="author-article-pill">第10弾：請求書PDF自動仕訳 →</a>
+            <a href="article-11.html" class="author-article-pill">第11弾：スプシ丸投げ自動化 →</a>
+            <a href="article-13.html" class="author-article-pill">第13弾：Claudeツール自作 →</a>
+          </div>
+        </div>
+        <div class="author-profile-card">
+          <div>
+            <div class="author-profile-header">
+              <div class="author-profile-avatar" style="border-color:#ec4899;">
+                <img src="images/author-kurosawa.jpg?v=20261016d" alt="黒澤 拓海" width="68" height="68" loading="lazy">
+              </div>
+              <div class="author-profile-meta">
+                <span class="author-role-badge" style="background:#fce7f3; color:#be185d;">企画・プレゼン・組織導入担当</span>
+                <h3 class="author-profile-name">黒澤 拓海<span>（くろさわ たくみ・44歳）</span></h3>
+                <div class="author-profile-title">現役BizDev部長 / 法人AI導入・セキュリティ推進アドバイザー</div>
+              </div>
+            </div>
+            <p class="author-profile-bio">IT・SaaS業界にて年間150本以上の経営会議・クライアント向け提案書を作成し、稟議通過率90%超を記録。白紙から3分で骨子を組む「PREP法スライド構成術」と、情報漏洩を防ぎ経営陣・情シスを納得させる社内AI導入ガイドライン策定を担当。</p>
+          </div>
+          <div class="author-articles-links">
+            <a href="article-5.html" class="author-article-pill">第5弾：パワポ構成案 →</a>
+            <a href="article-8.html" class="author-article-pill">第8弾：職場セキュリティ・提案書 →</a>
+            <a href="article-14.html" class="author-article-pill">第14弾：競合リサーチ →</a>
+          </div>
+        </div>
+        <div class="author-profile-card">
+          <div>
+            <div class="author-profile-header">
+              <div class="author-profile-avatar" style="border-color:#8b5cf6;">
+                <img src="images/author-shiraishi.jpg?v=20261016d" alt="白石 彩乃" width="68" height="68" loading="lazy">
+              </div>
+              <div class="author-profile-meta">
+                <span class="author-role-badge" style="background:#ede9fe; color:#6d28d9;">Webデザイン・マーケティング担当</span>
+                <h3 class="author-profile-name">白石 彩乃<span>（しらいし あやの・27歳）</span></h3>
+                <div class="author-profile-title">現役Webマーケター / ノンデザイナー向けクリエイティブディレクター</div>
+              </div>
+            </div>
+            <p class="author-profile-bio">広告代理店・事業会社にてSNS運用・Web広告のインハウス化に5年従事。デザイン未経験の広報担当向けに「ChatGPT×無料Canva」の高速バナー制作術を体系化し、制作時間を1/4（30分以内）に短縮しつつ広告CTR平均1.8倍改善を実現。</p>
+          </div>
+          <div class="author-articles-links">
+            <a href="article-6.html" class="author-article-pill">第6弾：Canva×SNS画像・バナー →</a>
+          </div>
+        </div>
+        <div class="author-profile-card">
+          <div>
+            <div class="author-profile-header">
+              <div class="author-profile-avatar" style="border-color:#f59e0b;">
+                <img src="images/author-tachibana.jpg?v=20261016d" alt="橘 颯太" width="68" height="68" loading="lazy">
+              </div>
+              <div class="author-profile-meta">
+                <span class="author-role-badge" style="background:#fef3c7; color:#b45309;">ソロプレナー・副業DX担当</span>
+                <h3 class="author-profile-name">橘 颯太<span>（たちばな そうた・31歳）</span></h3>
+                <div class="author-profile-title">現役ひとり起業家 / Notion×AI ワークフロー設計士</div>
+              </div>
+            </div>
+            <p class="author-profile-bio">20代後半で会社員時代の副業から独立し、外注最小限の「ワンオペ法人」を経営。Notion×生成AI×クラウド会計を連携させたタスク・顧客一元管理術を構築し、個人事業主・フリーランス延べ400名以上へ「事務雑務を週1時間にする仕事術」を指導。</p>
+          </div>
+          <div class="author-articles-links">
+            <a href="article-7.html" class="author-article-pill">第7弾：Notion×AI副業・一人起業 →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 専属読者モニター制度・品質保証 -->
+    <section style="margin: 3.5rem 0 2rem 0; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-lg); padding: 2rem;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.5rem;">
+        <div style="max-width: 680px;">
+          <div style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.25rem 0.75rem; background:#e0e7ff; color:#4338ca; border-radius:999px; font-size:0.75rem; font-weight:700; margin-bottom:0.75rem;">
+            品質保証：専属読者モニター検証制度
+          </div>
+          <h3 style="font-size:1.35rem; font-weight:800; color:#0f172a; margin-bottom:0.6rem;">
+            全記事、現場の読者モニターが「本当につまずかないか」を実証テスト済み
+          </h3>
+          <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.7; margin-bottom:0;">
+            「専門用語が難しくて動かない」「プロンプトを貼ってもエラーが出る」といった事態を防ぐため、BizHack AIでは各カテゴリー専属の読者モニター（事務職、若手営業、現場リーダー、ノンデザイナー、個人事業主等）が全プロンプトを事前検証。「読者モニター検証メモ」として各記事に掲載しています。
+          </p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:0.5rem; background:white; padding:1rem 1.25rem; border:1px solid #cbd5e1; border-radius:var(--radius-md); font-size:0.82rem; color:#475569;">
+          <div>・<strong>AI超入門</strong>：40代事務職がスマホ・PCでテスト</div>
+          <div>・<strong>メール・議事録</strong>：若手営業・PMが現場実務でテスト</div>
+          <div>・<strong>エクセル・企画</strong>：総務経理・企画職が実データでテスト</div>
+          <div>・<strong>デザイン・副業</strong>：広報兼務・ソロプレナーが実稼働テスト</div>
+          <div>・<strong>文書・PDF要約</strong>：40代総務法務が公募要領・NDAでテスト</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="article-1.html">AI超入門</a></li>
+          <li><a href="article-2.html">日常実務・メール術</a></li>
+          <li><a href="article-3.html">現場実務・時短</a></li>
+          <li><a href="article-4.html">事務職・エクセル時短</a></li>
+          <li><a href="article-5.html">企画・プレゼン</a></li>
+          <li><a href="article-6.html">デザイン・Web作成</a></li>
+          <li><a href="article-7.html">個人事業・副業DX</a></li>
+          <li><a href="article-8.html">職場導入・セキュリティ</a></li>
+          <li><a href="article-9.html">文書・PDF時短</a></li>
+          <li><a href="article-10.html">経理・バックオフィスDX</a></li>
+          <li><a href="article-11.html">現場実務・スプシ時短</a></li>
+          <li><a href="article-12.html">Gmail×GASメール自動化</a></li>
+          <li><a href="article-13.html">Claude社内ツール自作</a></li>
+          <li><a href="article-14.html">Perplexityリサーチ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">当サイトについて（運営者情報）</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BizHack AI 運営委員会. All rights reserved.</span>
+      <span>Verified Editorial & Compliance Standards</span>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>

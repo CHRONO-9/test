@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXPDE46RFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXPDE46RFR');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4599027497639401"
+       crossorigin="anonymous"></script>
+  <title>【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック｜BizHack AI</title>
+  <meta name="description" content="Googleスプレッドシート特有の難解な関数（QUERYやARRAYFORMULA）やGASに挫折していませんか？ChatGPTにやりたいことを日本語で伝えるだけで、コピペで動く関数式や自動化スクリプトを一瞬で生成する実務テクニックを解説！">
+  <link rel="canonical" href="https://www.bizhack-ai.com/article-11.html">
+  <!-- OGP & Twitter Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック｜BizHack AI">
+  <meta property="og:description" content="Googleスプレッドシート特有の難解な関数（QUERYやARRAYFORMULA）やGASに挫折していませんか？ChatGPTにやりたいことを日本語で伝えるだけで、コピペで動く関数式や自動化スクリプトを一瞬で生成する実務テクニックを解説！">
+  <meta property="og:url" content="https://www.bizhack-ai.com/article-11.html">
+  <meta property="og:site_name" content="BizHack AI">
+  <meta property="og:image" content="https://www.bizhack-ai.com/images/ogp/article-11.png?v=20261025">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック｜BizHack AI">
+  <meta name="twitter:description" content="Googleスプレッドシート特有の難解な関数（QUERYやARRAYFORMULA）やGASに挫折していませんか？ChatGPTにやりたいことを日本語で伝えるだけで、コピペで動く関数式や自動化スクリプトを一瞬で生成する実務テクニックを解説！">
+  <meta name="twitter:image" content="https://www.bizhack-ai.com/images/ogp/article-11.png?v=20261025">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック｜BizHack AI",
+        "description": "Googleスプレッドシート特有の難解な関数（QUERYやARRAYFORMULA）やGASに挫折していませんか？ChatGPTにやりたいことを日本語で伝えるだけで、コピペで動く関数式や自動化スクリプトを一瞬で生成する実務テクニックを解説！",
+        "image": "https://www.bizhack-ai.com/images/ogp/article-11.png?v=20261025",
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-16",
+        "author": {
+          "@type": "Person",
+          "name": "神崎 聡",
+          "jobTitle": "熟練業務自動化コンサルタント（Excel / スプシ / 経理・法務文書DX）",
+          "image": "https://www.bizhack-ai.com/images/author-kanzaki.jpg?v=20261016d"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BizHack AI 運営委員会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bizhack-ai.com/images/bizhack-icon-main.jpg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.bizhack-ai.com/article-11.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.bizhack-ai.com/" },
+          { "@type": "ListItem", "position": 2, "name": "現場実務・スプシ時短", "item": "https://www.bizhack-ai.com/article-11.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261101d">
+  <link rel="icon" type="image/jpeg" href="images/bizhack-icon-main.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+          <div class="logo-mark"><img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="46" height="46"></div>
+          <div>
+            <span class="logo-title">BizHack AI</span>
+            <span class="logo-tagline">現場の仕事を3時間短縮する実践マガジン</span>
+          </div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="about.html" class="nav-link">当サイトについて</a>
+        <a href="index.html#featured" class="nav-link">特集記事</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+        <a href="privacy.html" class="nav-link">規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 最新記事お知らせバー ＆ サイト最終更新日時（上段左右バランス配置） -->
+  <aside class="announcement-bar" aria-label="最新記事のお知らせと最終更新日時">
+    <div class="announcement-container">
+      <a href="index.html#latest-pickup" class="announcement-bar-link">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">最新第11弾「スプレッドシート自動化」＆ 第10弾「請求書PDF自動仕訳」を公開！</span>
+        <span class="announcement-cta">特集を見る →</span>
+      </a>
+      <div class="site-update-pill" aria-label="サイト最終更新日時">
+        <span class="update-dot" aria-hidden="true"></span>
+        <span class="update-label">最終更新</span>
+        <time datetime="2026-10-16T11:57:00+09:00" class="update-time">2026.10.16 11:57</time>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="article-layout">
+      <!-- 記事メインコンテンツ -->
+      <main class="article-main">
+
+        <header class="article-header">
+          <span class="category-tag cat-tech">現場実務・スプシ時短</span>
+          <h1 class="article-title">【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック</h1>
+          <div class="article-meta-bar">
+            <span>更新日：2026年10月15日</span>
+            <span>読了目安：約7分</span>
+            <span>ライター［業務自動化］神崎 聡（かんざき さとし・51歳）</span>
+          </div>
+        </header>
+
+        <!-- 記事トップ：公式アイキャッチ（栞さん） -->
+        <figure class="article-eyecatch">
+          <img src="images/ogp/article-11.png" alt="【関数不要】スプレッドシートの面倒な集計・コピペは全部ChatGPTにお任せ！コピペで動く超実務テクニック" width="1280" height="670" loading="eager" decoding="async">
+        </figure>
+
+                <!-- 即離脱防止：ファーストビュー即効バリューカード -->
+        <section class="fv-summary-card fv-theme-kanzaki" aria-label="記事の要点と即効プロンプト">
+          <div class="fv-author-lead">
+            <div class="fv-author-avatar">
+              <img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="58" height="58" loading="lazy">
+            </div>
+            <div class="fv-author-speech">
+              <div class="fv-author-name-tag">
+                <span class="fv-author-name">神崎 聡（かんざき さとし・51歳）</span>
+                <span class="fv-author-badge">データ実務・バックオフィスDX担当</span>
+              </div>
+              <p class="fv-author-comment">
+                「平均3分以上も熱心にお読みいただき、心より感謝申し上げます！スプレッドシートとChatGPTを組み合わせると、関数だけでなくGoogle Apps Script（GAS）まで会話だけで組めるようになります。まずは明日から即戦力になる下の<strong>【10秒お試し神関数プロンプト】</strong>をお試しください。」
+              </p>
+            </div>
+          </div>
+
+          <!-- 10秒お試しプロンプト（コピペボタン付き） -->
+          <div class="fv-try-box">
+            <div class="fv-try-header">
+              <span class="fv-try-title">⚡ 10秒お試し：まずはこのままコピペ！</span>
+              <button class="copy-btn fv-copy-btn" data-target="p-fv-11">プロンプトをコピー</button>
+            </div>
+            <pre id="p-fv-11" class="fv-try-code">Googleスプレッドシートで以下の集計を自動化したいです。QUERY関数を活用して、別シートのデータを自動集計する最適な数式を教えてください：
+「『売上データ』シートから、2026年10月以降かつ金額が10万円以上のデータを抽出し、日付順に並び替えたい。」</pre>
+            <p class="fv-try-hint"><span class="shiori-hint-badge"><img src="images/avatar-shiori.jpg?v=20261025c" alt="栞" width="22" height="22" class="shiori-hint-icon">栞のワンポイント：</span>複雑なQUERYやARRAYFORMULAも、やりたい条件を伝えるだけで一発で数式が完成します。</p>
+          </div>
+
+          <!-- 本記事で持ち帰れる3大成果 -->
+          <div class="fv-takeaways-title">📌 この記事で持ち帰れる3大成果</div>
+          <ul class="fv-takeaways-list">
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon">✓</span>
+              <div><strong>QUERY関数の即時生成</strong><br>コピペ不要で動く高機能データ抽出</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon">✓</span>
+              <div><strong>GASスクリプトの自動生成</strong><br>メール自動送信や日次更新を完全無人化</div>
+            </li>
+            <li class="fv-takeaway-item">
+              <span class="fv-takeaway-icon">✓</span>
+              <div><strong>データクレンジング自動化</strong><br>表記ゆれや全角半角の瞬時統一</div>
+            </li>
+          </ul>
+
+          <!-- クイックジャンプ -->
+          <div class="fv-quick-links">
+            <a href="#sec-3" class="fv-quick-btn primary">📋 スプシ神関数テクニックへジャンプ ↓</a>
+            <a href="#sec-4" class="fv-quick-btn secondary">⚡ GAS自動化スクリプト ↓</a>
+            <a href="article-10.html" class="fv-quick-btn secondary">🧾 請求書PDF自動仕訳（第10弾）→</a>
+          </div>
+        </section>
+        <!-- 目次 -->
+        <nav class="toc-box">
+          <div class="toc-title">目次</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. エクセルと何が違う？スプレッドシート×ChatGPTの相乗効果</a></li>
+            <li><a href="#sec-2">2. 【神プロンプト①】難解なQUERY関数・ARRAYFORMULAを一撃作成</a></li>
+            <li><a href="#sec-3">3. 【神プロンプト②】バラバラなデータの「名寄せ・重複削除」プロンプト</a></li>
+            <li><a href="#sec-4">4. 【神プロンプト③】コピペで動く！フォーム連動の自動通知GAS作成術</a></li>
+            <li><a href="#sec-5">5. チーム共有シートを壊さないための「安全ガードレール」</a></li>
+            <li><a href="#sec-6">6. まとめ ＆ 明日からのスプレッドシート時短術</a></li>
+          </ul>
+        </nav>
+
+        <div class="article-content">
+          <p>
+            社内の情報共有や顧客リストの管理で標準ツールとなっている<strong>Googleスプレッドシート（スプシ）</strong>。<br>
+            「複数条件の集計でQUERY関数を使いたいけれど構文エラーになる」「行が増えるたびに関数をコピペするのが面倒」「Googleフォームの回答を自動で別シートに振り分けたいがGAS（Google Apps Script）が書けない」と悩んでいませんか？
+          </p>
+          <p>
+            本記事では、関数暗記やプログラミング知識ゼロでも、<strong>日本語でやりたいことを伝えるだけでコピペで動く関数・GASを一発生成するChatGPT活用術</strong>を徹底公開します！
+          </p>
+
+          <h2 id="sec-1">1. エクセルと何が違う？スプレッドシート×ChatGPTの相乗効果</h2>
+          <p>
+            第4弾で解説した「エクセル時短術」も大好評ですが、Googleスプレッドシートにはエクセルにはない<strong>「Web特有の強力な機能」</strong>が存在します。
+          </p>
+          <ul>
+            <li><strong>リアルタイム複数人同時編集</strong>：チーム全員で同じシートを触るため、表記揺れや入力ミスが発生しやすい。</li>
+            <li><strong>スプシ専用の神関数「QUERY」「ARRAYFORMULA」</strong>：SQLのように複雑な条件抽出ができる一方、書き方が難解でエラーが出やすい。</li>
+            <li><strong>Google Workspace（Gmail、フォーム、カレンダー）との連携</strong>：GASを使えば完全自動化できるが、コードが書けないと手が出せない。</li>
+          </ul>
+          <p>
+            これらスプレッドシート特有のハードルは、<strong>「ChatGPTにやりたい日本語を投げて数式やスクリプトを代筆してもらう」</strong>ことですべて解決します！
+          </p>
+
+          <h2 id="sec-2">2. 【神プロンプト①】難解なQUERY関数・ARRAYFORMULAを一撃作成</h2>
+          <p>
+            スプレッドシート最強の関数といえば、別シートから条件に合う行だけをごっそり抽出・集計できる<strong>「QUERY関数」</strong>です。しかし、シングルクォーテーションやカンマの配置ミスで動かないことが多々あります。<br>
+            以下のプロンプトを使えば、条件を日本語で伝えるだけで1秒で正確な数式が手に入ります。
+          </p>
+
+          <div class="code-box">
+            <div class="code-header">
+              <span class="code-title">神プロンプト①：スプレッドシート数式・QUERY関数作成</span>
+              <button class="copy-btn" data-target="prompt1">プロンプトをコピー</button>
+            </div>
+            <div class="code-content">
+              <pre id="prompt1">あなたはGoogleスプレッドシートのスペシャリストです。
+以下の要件を満たすスプレッドシートの数式（QUERY関数またはARRAYFORMULA等）を作成してください。
+
+■ シートの構成：
+・シート名：「元データ」
+・A列：受注日（YYYY/MM/DD）
+・B列：顧客名
+・C列：担当者名
+・D列：商品区分（「SaaS」「コンサル」「研修」）
+・E列：受注金額（数値）
+・F列：ステータス（「完了」「進行中」「キャンセル」）
+
+■ 実現したいこと：
+担当者が「田中」かつステータスが「完了」の行だけを抽出し、受注日の新しい順（降順）に並べ替えて別シートに表示させたい。また、E列の受注金額の合計行も下部に自動計算させたい。
+
+■ 出力ルール：
+1. 別シートのA1セルにコピペするだけで動く【完成版の数式】を提示してください。
+2. その数式がどのように動作しているか、引数の意味を初心者向けに解説してください。
+3. 行が増えても自動で反映される「ARRAYFORMULA」やオープンレンジ（A2:Fなど）を活用してください。</pre>
+            </div>
+          </div>
+
+          <h2 id="sec-3">3. 【神プロンプト②】バラバラなデータの「名寄せ・重複削除」プロンプト</h2>
+          <p>
+            複数人で編集していると、「株式会社ABC」「（株）ABC」「ABC株式会社」のように会社名がバラバラになったり、全角・半角が混在して正しく集計できない問題が頻発します。<br>
+            スプシのセル範囲をコピーしてChatGPTに貼り付け、以下のプロンプトを実行してください。
+          </p>
+
+          <div class="code-box">
+            <div class="code-header">
+              <span class="code-title">神プロンプト②：名寄せ・重複削除・表記揺れ統一</span>
+              <button class="copy-btn" data-target="prompt2">プロンプトをコピー</button>
+            </div>
+            <div class="code-content">
+              <pre id="prompt2">以下のデータはGoogleスプレッドシートからコピーした顧客リストです。
+データの表記揺れを統一し、重複を排除した綺麗なテーブルとして出力してください。
+
+■ クレンジング・整形ルール：
+1. 会社名の表記揺れを統一（例：「（株）」や「(株)」は「株式会社」に統一、前株・後株の正規化）
+2. 電話番号・郵便番号のハイフン有無を統一（半角英数、ハイフンありに統一）
+3. 顧客名およびメールアドレスが完全重複している行は最新の1件に統合
+4. 空白セルや明らかな入力誤りがあれば注記
+
+■ データ：
+[ここにスプレッドシートのセル範囲をCtrl+Vで貼り付け]</pre>
+            </div>
+          </div>
+
+          <h2 id="sec-4">4. 【神プロンプト③】コピペで動く！フォーム連動の自動通知GAS作成術</h2>
+          <p>
+            「Googleフォームから問い合わせが来たら、スプシに記録した上で担当者宛にSlackやGmailで自動通知を飛ばしたい」。<br>
+            プログラミングができない人でも、ChatGPTにコードを書かせれば、メニューバーの<strong>「拡張機能」➔「Apps Script」にコピペするだけ</strong>で誰でも完全自動化システムを作ることができます。
+          </p>
+
+          <div class="code-box">
+            <div class="code-header">
+              <span class="code-title">神プロンプト③：コピペで動くGAS（Apps Script）生成</span>
+              <button class="copy-btn" data-target="prompt3">プロンプトをコピー</button>
+            </div>
+            <div class="code-content">
+              <pre id="prompt3">Googleスプレッドシートで動作する Google Apps Script (GAS) を作成してください。
+
+■ 自動化したい内容：
+Googleフォームの回答がスプレッドシートに1行追加された時（フォーム送信時トリガー）、自動的に指定のメールアドレス（admin@example.com）へ通知メールを送信したい。
+
+■ メールの内容：
+・件名：【新規問合せ】[B列の会社名] [C列の担当者名]様より
+・本文：
+「新しい問い合わせがスプレッドシートに記録されました。
+会社名：[B列]
+お名前：[C列]
+メールアドレス：[D列]
+問い合わせ内容：[E列]
+確認用スプレッドシートURL：[このスプレッドシートのURL]」
+
+■ 初心者向けサポート：
+1. コピペで使えるGASコードを提示してください。
+2. スプレッドシートのどこに貼り付け、どうやってトリガー（自動実行設定）を有効化するかを、3ステップの手順で分かりやすく説明してください。</pre>
+            </div>
+          </div>
+
+          <h2 id="sec-5">5. チーム共有シートを壊さないための「安全ガードレール」</h2>
+          <p>
+            複数人で共有するスプレッドシートでAIが生成した数式やスクリプトを導入する際は、以下の点に気をつけましょう。
+          </p>
+          <ul>
+            <li><strong>「シートの保護」を設定する</strong>：計算式が入っている列や集計シートは、権限のないメンバーが誤って上書き消去しないよう「範囲を保護」しておく。</li>
+            <li><strong>まずは「複製シート」でテストする</strong>：本番の共有シートにいきなり数式を入れるのではなく、シートを右クリックして「コピーを作成」し、テスト用シートで動作確認を行ってから本番適用する。</li>
+          </ul>
+
+          <!-- 読者モニター検証メモ -->
+          <div class="reader-review-box">
+            <div class="reader-review-header">
+              <span class="reader-review-title">読者モニター検証メモ（高橋さん / 20代営業アシスタント）</span>
+              <span class="reader-tag">週次売上集計で検証</span>
+            </div>
+            <div class="reader-review-body">
+              <p><strong>「QUERY関数のエラーで2時間悩んでいたのが、プロンプトを入れて3秒で解決しました！」</strong><br>
+              営業部8人分の週次実績シートから完了案件だけを別シートに自動集計したかったのですが、関数がどうしてもエラーになり途方に暮れていました。このプロンプトで条件をそのまま伝えたら、ARRAYFORMULA入りの完璧な数式が返ってきて、A1セルに貼り付けただけで一瞬で表が完成しました！今では毎朝の転記作業がゼロです。</p>
+            </div>
+          </div>
+
+          <!-- 80点ドラフト検品チェックシート -->
+          <div class="draft-checklist-box">
+            <div class="draft-checklist-header">
+              <span class="draft-checklist-title">手直しゼロ化！80点ドラフト検品チェックシート</span>
+              <span class="draft-badge">シート反映前30秒確認</span>
+            </div>
+            <ul class="checklist-items">
+              <li class="checklist-item">
+                <span class="checklist-check">✓</span>
+                <span><strong>列アルファベットの一致</strong>：プロンプトで指定した列記号（A列、B列など）と実際のシートの列が合っているか</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-check">✓</span>
+                <span><strong>#REF! エラーの確認</strong>：数式の展開先セル（下や右のセル）に既存の文字が入って塞いでいないか</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-check">✓</span>
+                <span><strong>トリガーの初回権限承認</strong>：GASを動かす際、Googleアカウントの初回承認ポップアップを完了したか</span>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <h2 id="sec-6">6. まとめ ＆ 明日からのスプレッドシート時短術</h2>
+          <p>
+            Googleスプレッドシートの関数やGASは、自分でイチから勉強して書くものではなく、<strong>「AIに書いてもらってコピペするもの」</strong>に変わりました。
+          </p>
+          <ol>
+            <li><strong>「やりたいこと」を箇条書きで投げる</strong>：シート名と列の項目名を渡すだけで、AIは完璧な数式を組み立ててくれます。</li>
+            <li><strong>コピペで動作検証</strong>：複製したテストシートで動かし、問題がなければ本番シートに適用します。</li>
+            <li><strong>定型作業は自動化へ</strong>：スプシの自動化に慣れてきたら、フォーム連携やSaaSツールを活用して仕事そのものを自動化していきましょう！</li>
+          </ol>
+
+          <!-- 著者バイオカード -->
+          <!-- あわせて読みたい関連記事2選 -->
+          <div class="related-articles-box">
+            <div class="related-articles-header">
+              <h3 class="related-articles-title">あわせて読みたい！業務がさらにラクになる関連記事2選</h3>
+              <span class="related-articles-badge">おすすめ実践記事</span>
+            </div>
+            <div class="related-articles-grid">
+                            <a href="article-20.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第20弾｜現場実務・スプシ×GAS自動化</span>
+                  <div class="related-card-title">【スプレッドシート×GAS自動化】コピペで動く！毎日の定型集計とSlack/メール通知を自動完結させるAIコード生成術</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+<a href="article-4.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第4弾｜事務職・エクセル時短</span>
+                  <div class="related-card-title">【関数・マクロ不要】エクセルが苦手でも大丈夫！日本語で丸投げする超簡単データ集計術</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+              <a href="article-10.html" class="related-article-card">
+                <div>
+                  <span class="related-card-tag">第10弾｜経理・請求書PDF自動化</span>
+                  <div class="related-card-title">【事務・経理DX】ChatGPTにPDFを投げるだけ！請求書・領収書の自動仕訳＆CSV抽出術</div>
+                </div>
+                <span class="related-card-cta">この記事を読む →</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="author-bio-card">
+            <div class="bio-avatar" style="border-color:#0ea5e9;"><img src="images/author-kanzaki.jpg?v=20261016d" alt="神崎 聡" width="72" height="72" loading="lazy"></div>
+            <div>
+              <div class="bio-name">神崎 聡（かんざき さとし・51歳）｜データ実務・バックオフィスDX担当</div>
+              <div class="bio-role">熟練業務自動化コンサルタント（Excel / スプシ / 経理・法務文書DX）</div>
+              <p class="bio-desc">中堅・中小企業を中心に25年以上にわたり累計50社以上の総務・経理部門のペーパーレス化と表計算自動化を牽引。関数不要のエクセル・スプレッドシート集計、インボイス対応の請求書PDF自動仕訳、契約書・規程のAI要約で月末工数を平均80%削減。</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- サイドバー -->
+      <aside class="article-sidebar">
+        <!-- 記事ナビゲーションカード（動的マスター連携） -->
+        <div class="sidebar-card" id="sidebar-latest-articles" data-dynamic="articles">
+          <div class="sidebar-title">
+            <span>最新おすすめ記事</span>
+            <span style="font-size:0.75rem; color:var(--text-muted, #64748b); font-weight:normal;">全12弾</span>
+          </div>
+          <div class="sidebar-articles-list">
+            <div class="recent-article-item"><div class="item-meta"><span>第12弾</span><span class="sidebar-badge-new">NEW</span></div><a href="article-12.html">Gmail×GAS メール自動返信術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第11弾</span></div><a href="article-11.html">スプレッドシート×AI実務テクニック</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第10弾</span></div><a href="article-10.html">請求書・領収書PDFの自動仕訳術</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第9弾</span></div><a href="article-9.html">難解な規程・書類を3分要約</a></div>
+            <div class="recent-article-item"><div class="item-meta"><span>第8弾</span></div><a href="article-8.html">職場で安全に使う基礎＆社内提案メモ</a></div>
+          </div>
+          <div class="sidebar-cta-wrap" style="margin-top:0.85rem; padding-top:0.75rem; border-top:1px dashed var(--border-color, #e2e8f0);">
+            <a href="index.html#featured" class="sidebar-all-articles-btn">
+              全12弾の実践特集一覧を見る →
+            </a>
+          </div>
+        </div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+          <div class="logo-mark" style="width:32px; height:32px;">
+            <img src="images/bizhack-icon-main.jpg" alt="BizHack AI ロゴ" width="32" height="32">
+          </div>
+          <h4 style="margin:0;">BizHack AI（ビズハックAI）</h4>
+        </div>
+        <p style="line-height:1.7; font-size:0.85rem; margin-bottom:1rem;">
+          日々の面倒なPC仕事を3時間短縮する無料・コピペの実践生成AIマガジン。<br>
+          読者の信頼を第一に、独自検証データとコピペで動く実用コンテンツのみを発信します。
+        </p>
+        <p style="font-size:0.8rem; color:#64748b;">運営：BizHack AI 運営委員会</p>
+      </div>
+      <div class="footer-col">
+        <h4>特集カテゴリー</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#featured">事務・日常実務DX（メール・スプシ・PDF）</a></li>
+          <li><a href="index.html#featured">企画・デザイン・副業DX（パワポ・Canva・Notion）</a></li>
+          <li><a href="index.html#featured">組織導入・セキュリティ（社内規程・AI利用方針）</a></li>
+          <li><a href="index.html#featured">ゼロから始めるAI超入門</a></li>
+          <li><a href="index.html#featured" style="color:var(--primary, #3b82f6); font-weight:700;">▶ 全特集記事一覧（最新順） →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サイト規約・透明性情報</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">当サイトについて（運営者情報）</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="privacy.html#disclaimer">免責事項・著作権</a></li>
+          <li><a href="privacy.html#pr-policy">ステマ規制対応方針</a></li>
+          <li><a href="contact.html">お問い合わせ窓口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BizHack AI 運営委員会. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/articles-data.js?v=20261101d"></script>
+  <script src="js/main.js?v=20261101d"></script>
+</body>
+</html>
